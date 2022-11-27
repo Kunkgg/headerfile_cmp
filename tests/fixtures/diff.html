@@ -1,0 +1,86 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type"
+          content="text/html; charset=utf-8" />
+    <title></title>
+    <style type="text/css">
+        table.diff {font-family:Courier; border:medium;}
+        .diff_header {background-color:#e0e0e0}
+        td.diff_header {text-align:right}
+        .diff_next {background-color:#c0c0c0}
+        .diff_add {background-color:#aaffaa}
+        .diff_chg {background-color:#ffff77}
+        .diff_sub {background-color:#ffaaaa}
+    </style>
+</head>
+
+<body>
+    
+    <table class="diff" id="difflib_chg_to6__top"
+           cellspacing="0" cellpadding="0" rules="groups" >
+        <colgroup></colgroup> <colgroup></colgroup> <colgroup></colgroup>
+        <colgroup></colgroup> <colgroup></colgroup> <colgroup></colgroup>
+        <thead><tr><th class="diff_next"><br /></th><th colspan="2" class="diff_header">std</th><th class="diff_next"><br /></th><th colspan="2" class="diff_header">dev</th></tr></thead>
+        <tbody>
+            <tr><td class="diff_next"><a href="#difflib_chg_to6__top">t</a></td><td class="diff_header" id="from6_1">1</td><td nowrap="nowrap">#ifndef&nbsp;Py_AST_H</td><td class="diff_next"><a href="#difflib_chg_to6__top">t</a></td><td class="diff_header" id="to6_1">1</td><td nowrap="nowrap">#ifndef&nbsp;Py_AST_H</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from6_2">2</td><td nowrap="nowrap">#define&nbsp;Py_AST_H</td><td class="diff_next"></td><td class="diff_header" id="to6_2">2</td><td nowrap="nowrap">#define&nbsp;Py_AST_H</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from6_3">3</td><td nowrap="nowrap">#ifdef&nbsp;__cplusplus</td><td class="diff_next"></td><td class="diff_header" id="to6_3">3</td><td nowrap="nowrap">#ifdef&nbsp;__cplusplus</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from6_4">4</td><td nowrap="nowrap">extern&nbsp;"C"&nbsp;{</td><td class="diff_next"></td><td class="diff_header" id="to6_4">4</td><td nowrap="nowrap">extern&nbsp;"C"&nbsp;{</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from6_5">5</td><td nowrap="nowrap">#endif</td><td class="diff_next"></td><td class="diff_header" id="to6_5">5</td><td nowrap="nowrap">#endif</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from6_6">6</td><td nowrap="nowrap"></td><td class="diff_next"></td><td class="diff_header" id="to6_6">6</td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from6_7">7</td><td nowrap="nowrap">#include&nbsp;"Python-ast.h"&nbsp;&nbsp;&nbsp;/*&nbsp;mod_ty&nbsp;*/</td><td class="diff_next"></td><td class="diff_header" id="to6_7">7</td><td nowrap="nowrap">#include&nbsp;"Python-ast.h"&nbsp;&nbsp;&nbsp;/*&nbsp;mod_ty&nbsp;*/</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from6_8">8</td><td nowrap="nowrap">#include&nbsp;"node.h"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/*&nbsp;node&nbsp;*/</td><td class="diff_next"></td><td class="diff_header" id="to6_8">8</td><td nowrap="nowrap">#include&nbsp;"node.h"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/*&nbsp;node&nbsp;*/</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from6_9">9</td><td nowrap="nowrap"></td><td class="diff_next"></td><td class="diff_header" id="to6_9">9</td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from6_10">10</td><td nowrap="nowrap">PyAPI_FUNC(int)&nbsp;PyAST_Validate(mod_ty);</td><td class="diff_next"></td><td class="diff_header" id="to6_10">10</td><td nowrap="nowrap">PyAPI_FUNC(int)&nbsp;PyAST_Validate(mod_ty);</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from6_11">11</td><td nowrap="nowrap">PyAPI_FUNC(mod_ty)&nbsp;PyAST_FromNode(</td><td class="diff_next"></td><td class="diff_header" id="to6_11">11</td><td nowrap="nowrap">PyAPI_FUNC(mod_ty)&nbsp;PyAST_FromNode(</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from6_12">12</td><td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;node&nbsp;*n,</td><td class="diff_next"></td><td class="diff_header" id="to6_12">12</td><td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;node&nbsp;*n,</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from6_13">13</td><td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;PyCompilerFlags&nbsp;*flags,</td><td class="diff_next"></td><td class="diff_header" id="to6_13">13</td><td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;PyCompilerFlags&nbsp;*flags,</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from6_14">14</td><td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;char&nbsp;*filename,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/*&nbsp;decoded&nbsp;from&nbsp;the&nbsp;filesystem&nbsp;encoding&nbsp;*/</td><td class="diff_next"></td><td class="diff_header" id="to6_14">14</td><td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;char&nbsp;*filename,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/*&nbsp;decoded&nbsp;from&nbsp;the&nbsp;filesystem&nbsp;encoding&nbsp;*/</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from6_15">15</td><td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;PyArena&nbsp;*arena);</td><td class="diff_next"></td><td class="diff_header" id="to6_15">15</td><td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;PyArena&nbsp;*arena);</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from6_16">16</td><td nowrap="nowrap">PyAPI_FUNC(mod_ty)&nbsp;PyAST_FromNodeObject(</td><td class="diff_next"></td><td class="diff_header" id="to6_16">16</td><td nowrap="nowrap">PyAPI_FUNC(mod_ty)&nbsp;PyAST_FromNodeObject(</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from6_17">17</td><td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;node&nbsp;*n,</td><td class="diff_next"></td><td class="diff_header" id="to6_17">17</td><td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;node&nbsp;*n,</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from6_18">18</td><td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;PyCompilerFlags&nbsp;*flags,</td><td class="diff_next"></td><td class="diff_header" id="to6_18">18</td><td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;PyCompilerFlags&nbsp;*flags,</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from6_19">19</td><td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;PyObject&nbsp;*filename,</td><td class="diff_next"></td><td class="diff_header" id="to6_19">19</td><td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;PyObject&nbsp;*filename,</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from6_20">20</td><td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;PyArena&nbsp;*arena);</td><td class="diff_next"></td><td class="diff_header" id="to6_20">20</td><td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;PyArena&nbsp;*arena);</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from6_21">21</td><td nowrap="nowrap"></td><td class="diff_next"></td><td class="diff_header" id="to6_21">21</td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from6_22">22</td><td nowrap="nowrap">#ifndef&nbsp;Py_LIMITED_API</td><td class="diff_next"></td><td class="diff_header" id="to6_22">22</td><td nowrap="nowrap">#ifndef&nbsp;Py_LIMITED_API</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from6_23">23</td><td nowrap="nowrap"></td><td class="diff_next"></td><td class="diff_header" id="to6_23">23</td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from6_24">24</td><td nowrap="nowrap">/*&nbsp;_PyAST_ExprAsUnicode&nbsp;is&nbsp;defined&nbsp;in&nbsp;ast_unparse.c&nbsp;*/</td><td class="diff_next"></td><td class="diff_header" id="to6_24">24</td><td nowrap="nowrap">/*&nbsp;_PyAST_ExprAsUnicode&nbsp;is&nbsp;defined&nbsp;in&nbsp;ast_unparse.c&nbsp;*/</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from6_25">25</td><td nowrap="nowrap">PyAPI_FUNC(PyObject&nbsp;*)&nbsp;_PyAST_ExprAsUnicode(expr_ty);</td><td class="diff_next"></td><td class="diff_header" id="to6_25">25</td><td nowrap="nowrap">PyAPI_FUNC(PyObject&nbsp;*)&nbsp;_PyAST_ExprAsUnicode(expr_ty);</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from6_26">26</td><td nowrap="nowrap"></td><td class="diff_next"></td><td class="diff_header" id="to6_26">26</td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from6_27">27</td><td nowrap="nowrap">/*&nbsp;Return&nbsp;the&nbsp;borrowed&nbsp;reference&nbsp;to&nbsp;the&nbsp;first&nbsp;literal&nbsp;string&nbsp;in&nbsp;the</td><td class="diff_next"></td><td class="diff_header" id="to6_27">27</td><td nowrap="nowrap">/*&nbsp;Return&nbsp;the&nbsp;borrowed&nbsp;reference&nbsp;to&nbsp;the&nbsp;first&nbsp;literal&nbsp;string&nbsp;in&nbsp;the</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from6_28">28</td><td nowrap="nowrap">&nbsp;&nbsp;&nbsp;sequence&nbsp;of&nbsp;statemnts&nbsp;or&nbsp;NULL&nbsp;if&nbsp;it&nbsp;doesn't&nbsp;start&nbsp;from&nbsp;a&nbsp;literal&nbsp;string.</td><td class="diff_next"></td><td class="diff_header" id="to6_28">28</td><td nowrap="nowrap">&nbsp;&nbsp;&nbsp;sequence&nbsp;of&nbsp;statemnts&nbsp;or&nbsp;NULL&nbsp;if&nbsp;it&nbsp;doesn't&nbsp;start&nbsp;from&nbsp;a&nbsp;literal&nbsp;string.</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from6_29">29</td><td nowrap="nowrap">&nbsp;&nbsp;&nbsp;Doesn't&nbsp;set&nbsp;exception.&nbsp;*/</td><td class="diff_next"></td><td class="diff_header" id="to6_29">29</td><td nowrap="nowrap">&nbsp;&nbsp;&nbsp;Doesn't&nbsp;set&nbsp;exception.&nbsp;*/</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from6_30">30</td><td nowrap="nowrap">PyAPI_FUNC(PyObject&nbsp;*)&nbsp;_PyAST_GetDocString(asdl_seq&nbsp;*);</td><td class="diff_next"></td><td class="diff_header" id="to6_30">30</td><td nowrap="nowrap">PyAPI_FUNC(PyObject&nbsp;*)&nbsp;_PyAST_GetDocString(asdl_seq&nbsp;*);</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from6_31">31</td><td nowrap="nowrap"></td><td class="diff_next"></td><td class="diff_header" id="to6_31">31</td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from6_32">32</td><td nowrap="nowrap">#endif&nbsp;/*&nbsp;!Py_LIMITED_API&nbsp;*/</td><td class="diff_next"></td><td class="diff_header" id="to6_32">32</td><td nowrap="nowrap">#endif&nbsp;/*&nbsp;!Py_LIMITED_API&nbsp;*/</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from6_33">33</td><td nowrap="nowrap"></td><td class="diff_next"></td><td class="diff_header" id="to6_33">33</td><td nowrap="nowrap"></td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from6_34">34</td><td nowrap="nowrap">#ifdef&nbsp;__cplusplus</td><td class="diff_next"></td><td class="diff_header" id="to6_34">34</td><td nowrap="nowrap">#ifdef&nbsp;__cplusplus</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from6_35">35</td><td nowrap="nowrap">}</td><td class="diff_next"></td><td class="diff_header" id="to6_35">35</td><td nowrap="nowrap">}</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from6_36">36</td><td nowrap="nowrap">#endif</td><td class="diff_next"></td><td class="diff_header" id="to6_36">36</td><td nowrap="nowrap">#endif</td></tr>
+            <tr><td class="diff_next"></td><td class="diff_header" id="from6_37">37</td><td nowrap="nowrap">#endif&nbsp;/*&nbsp;!Py_AST_H&nbsp;*/</td><td class="diff_next"></td><td class="diff_header" id="to6_37">37</td><td nowrap="nowrap">#endif&nbsp;/*&nbsp;!Py_AST_H&nbsp;*/</td></tr>
+        </tbody>
+    </table>
+    <table class="diff" summary="Legends">
+        <tr> <th colspan="2"> Legends </th> </tr>
+        <tr> <td> <table border="" summary="Colors">
+                      <tr><th> Colors </th> </tr>
+                      <tr><td class="diff_add">&nbsp;Added&nbsp;</td></tr>
+                      <tr><td class="diff_chg">Changed</td> </tr>
+                      <tr><td class="diff_sub">Deleted</td> </tr>
+                  </table></td>
+             <td> <table border="" summary="Links">
+                      <tr><th colspan="2"> Links </th> </tr>
+                      <tr><td>(f)irst change</td> </tr>
+                      <tr><td>(n)ext change</td> </tr>
+                      <tr><td>(t)op</td> </tr>
+                  </table></td> </tr>
+    </table>
+</body>
+
+</html>
