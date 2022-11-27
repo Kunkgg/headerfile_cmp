@@ -1,9 +1,10 @@
 import difflib
 import filecmp
 import logging
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from functools import cached_property
 from typing import Dict, List
+import CppHeaderParser
 
 import common.init_log
 from common.utils import readlines
@@ -16,6 +17,13 @@ class DiffItem:
     name: str
     diff_html: str
 
+@dataclass
+class CmpResult:
+    is_same: bool = False
+    diff_count: int = -1
+    from_only: List = field(default_factory=list)
+    to_only: List = field(default_factory=list)
+    diffs: List = field(default_factory=list)
 
 class HeaderFileComparator:
     def __init__(self, from_fn, to_fn, from_desc="from", to_desc="to"):
@@ -26,8 +34,14 @@ class HeaderFileComparator:
         self.differ = difflib.HtmlDiff()
 
     @cached_property
-    def is_same(self):
+    def is_text_same(self):
         return filecmp.cmp(self.from_fn, self.to_fn)
+
+    @cached_property
+    def is_interface_same(self):
+        if self.is_text_same:
+            return True
+        # return all(self.is_define_same and self.is_)
 
     @cached_property
     def from_lines(self):
@@ -37,25 +51,50 @@ class HeaderFileComparator:
     def to_lines(self):
         return readlines(self.to_fn)
 
+    @cached_property
+    def from_ast(self):
+        return CppHeaderParser.CppHeader(self.from_fn)
+
+    @cached_property
+    def to_ast(self):
+        return CppHeaderParser.CppHeader(self.to_fn)
+
     def make_from_desc(self, desc_parts: List[str]) -> str:
         return "/".join([self.from_desc] + desc_parts)
 
     def make_to_desc(self, desc_parts: List[str]) -> str:
         return "/".join([self.to_desc] + desc_parts)
 
-    def cmp_text(self) -> Dict:
+    def cmp_text(self) -> CmpResult:
         text_from_desc = self.make_from_desc([self.from_fn])
         text_to_desc = self.make_to_desc([self.to_fn])
 
         text_diff = (
             ""
-            if self.is_same
+            if self.is_text_same
             else self.differ.make_table(
                 self.from_lines, self.to_lines, text_from_desc, text_to_desc
             )
         )
+        res = CmpResult(is_same=self.is_text_same, diffs=[text_diff])
 
-        return {"is_same": self.is_same, "text_diff": text_diff}
+        return res
+
+    def cmp_include(self) -> CmpResult:
+        res = CmpResult()
+        from_includes_set = set(self.from_ast.includes)
+        to_includes_set = set(self.to_ast.includes)
+        if from_includes_set == to_includes_set:
+            res.is_same = True
+            res.diff_count = 0
+        else:
+            from_only = list(from_includes_set - to_includes_set)
+            to_only = list(to_includes_set - from_includes_set)
+            res.from_only = from_only
+            res.to_only = to_only
+            res.diff_count = len(from_only) + len(to_only)
+
+        return res
 
     def cmp_define(self):
         # res = {
@@ -71,7 +110,7 @@ class HeaderFileComparator:
             "to_only": [],
             "diffs": [],
         }
-        if self.is_same:
+        if self.is_text_same:
             return res
 
     def cmp_enum(self):
@@ -81,7 +120,4 @@ class HeaderFileComparator:
         pass
 
     def cmp_struct(self):
-        pass
-
-    def cmp_include(self):
         pass

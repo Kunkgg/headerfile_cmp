@@ -3,7 +3,6 @@ import logging
 import pathlib
 from collections import namedtuple
 import subprocess
-import time
 
 import charset_normalizer
 import clang_format
@@ -90,7 +89,7 @@ def run_clang_format(input: str):
     except subprocess.CalledProcessError as e:
         logger.error(f"Failed to clang-format with {input}", e)
 
-
+# todo: preprocess https://github.com/ned14/pcpp
 def normalize_clike(input: str, output: str):
     output_path = pathlib.Path(output)
     
