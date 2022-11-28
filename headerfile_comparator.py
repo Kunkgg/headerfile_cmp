@@ -17,16 +17,20 @@ class DiffItem:
     name: str
     diff_html: str
 
+
 @dataclass
-class CmpResult:
+class SyntaxElementCmpResult:
     is_same: bool = False
     diff_count: int = -1
     from_only: List = field(default_factory=list)
     to_only: List = field(default_factory=list)
-    diffs: List = field(default_factory=list)
+    diffs: List[DiffItem | str] = field(default_factory=list)
+
 
 class HeaderFileComparator:
-    def __init__(self, from_fn, to_fn, from_desc="from", to_desc="to"):
+    def __init__(
+        self, from_fn: str, to_fn: str, from_desc: str = "from", to_desc: str = "to"
+    ):
         self.from_fn = from_fn
         self.to_fn = to_fn
         self.from_desc = from_desc
@@ -65,7 +69,7 @@ class HeaderFileComparator:
     def make_to_desc(self, desc_parts: List[str]) -> str:
         return "/".join([self.to_desc] + desc_parts)
 
-    def cmp_text(self) -> CmpResult:
+    def cmp_text(self) -> SyntaxElementCmpResult:
         text_from_desc = self.make_from_desc([self.from_fn])
         text_to_desc = self.make_to_desc([self.to_fn])
 
@@ -76,12 +80,12 @@ class HeaderFileComparator:
                 self.from_lines, self.to_lines, text_from_desc, text_to_desc
             )
         )
-        res = CmpResult(is_same=self.is_text_same, diffs=[text_diff])
+        res = SyntaxElementCmpResult(is_same=self.is_text_same, diffs=[text_diff])
 
         return res
 
-    def cmp_include(self) -> CmpResult:
-        res = CmpResult()
+    def cmp_include(self) -> SyntaxElementCmpResult:
+        res = SyntaxElementCmpResult()
         from_includes_set = set(self.from_ast.includes)
         to_includes_set = set(self.to_ast.includes)
         if from_includes_set == to_includes_set:

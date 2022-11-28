@@ -34,10 +34,12 @@ class TestHeaderFileComparator(unittest.TestCase):
         cmptor_1 = HeaderFileComparator(fn, fn_1)
         cmptor_2 = HeaderFileComparator(fn, fn_2)
         cmptor_3 = HeaderFileComparator(fn, fn_3)
-        breakpoint()
-        self.assertTrue(cmptor_1.cmp_include().is_same)
-        self.assertFalse(cmptor_2.cmp_include().is_same)
-        self.assertFalse(cmptor_3.cmp_include().is_same)
+        cmpres_1 = cmptor_1.cmp_include()
+        cmpres_2 = cmptor_2.cmp_include()
+        cmpres_3 = cmptor_3.cmp_include()
+        self.assertTrue(cmpres_1.is_same)
+        self.assertFalse(cmpres_2.is_same)
+        self.assertFalse(cmpres_3.is_same)
 
     def test_cppheader_parser(self):
         fn = "./tests/fixtures/sample.h"
