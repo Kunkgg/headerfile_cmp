@@ -13,6 +13,12 @@ logger = logging.getLogger(__name__)
 
 
 @dataclass
+class SyntaxItem:
+    name: str
+    lines: str | List[str] | None
+
+
+@dataclass
 class DiffItem:
     name: str
     diff_html: str
@@ -25,6 +31,14 @@ class SyntaxElementCmpResult:
     from_only: List = field(default_factory=list)
     to_only: List = field(default_factory=list)
     diffs: List[DiffItem | str] = field(default_factory=list)
+
+
+def parse_enum(enum: Dict) -> SyntaxItem:
+    name: str = enum.get("name", "")
+    lines = [
+        f"{value.get('name')} = {value.get('value')}" for value in enum.get("values", {})
+    ]
+    return SyntaxItem(name, lines)
 
 
 class HeaderFileComparator:
@@ -48,11 +62,11 @@ class HeaderFileComparator:
         # return all(self.is_define_same and self.is_)
 
     @cached_property
-    def from_lines(self):
+    def from_lines(self) -> List[str]:
         return readlines(self.from_fn)
 
     @cached_property
-    def to_lines(self):
+    def to_lines(self) -> List[str]:
         return readlines(self.to_fn)
 
     @cached_property
@@ -62,6 +76,14 @@ class HeaderFileComparator:
     @cached_property
     def to_ast(self):
         return CppHeaderParser.CppHeader(self.to_fn)
+
+    @cached_property
+    def from_ast_enums(self) -> List[SyntaxItem]:
+        return [parse_enum(enum) for enum in self.from_ast.enums]
+
+    @cached_property
+    def to_ast_enums(self) -> List[SyntaxItem]:
+        return [parse_enum(enum) for enum in self.to_ast.enums]
 
     def make_from_desc(self, desc_parts: List[str]) -> str:
         return "/".join([self.from_desc] + desc_parts)
@@ -118,6 +140,8 @@ class HeaderFileComparator:
             return res
 
     def cmp_enum(self):
+        res = SyntaxElementCmpResult()
+        
         pass
 
     def cmp_variable(self):

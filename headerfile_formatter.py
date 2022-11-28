@@ -28,6 +28,9 @@ def convert_encoding(input: str, output: str, encoding: str = "utf-8"):
 
     try:
         guess_best = charset_normalizer.from_path(input_path).best()
+        if not guess_best:
+            logger.warning(f'Failed to detect encoding of {input}')
+            logger.warning(f'Give up convert encoding to utf-8')
         guess_encoding = guess_best.encoding
         if guess_encoding != encoding:
             logger.debug(f"Detected {input_path} using encoding: {guess_encoding}")
