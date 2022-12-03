@@ -54,9 +54,7 @@ class TestHeaderFileParser(unittest.TestCase):
     def test_extract_define_multi_lines(self):
         define = "PyUnicode_READ_CHAR(unicode, index)                                    \\\n  (assert(PyUnicode_Check(unicode)), assert(PyUnicode_IS_READY(unicode)),      \\\n   (Py_UCS4)(PyUnicode_KIND((unicode)) == PyUnicode_1BYTE_KIND                 \\\n                 ? ((const Py_UCS1 *)(PyUnicode_DATA((unicode))))[(index)]     \\\n                 : (PyUnicode_KIND((unicode)) == PyUnicode_2BYTE_KIND          \\\n                        ? ((const Py_UCS2 *)(PyUnicode_DATA(                   \\\n                              (unicode))))[(index)]                            \\\n                        : ((const Py_UCS4 *)(PyUnicode_DATA(                   \\\n                              (unicode))))[(index)])))"
         extracted_define = self.parser.extract_define(define)
-        self.assertEqual(
-            extracted_define.name, "PyUnicode_READ_CHAR(unicode, index)"
-        )
+        self.assertEqual(extracted_define.name, "PyUnicode_READ_CHAR(unicode, index)")
         self.assertEqual(
             extracted_define.content,
             "(assert(PyUnicode_Check(unicode)), assert(PyUnicode_IS_READY(unicode)), (Py_UCS4)(PyUnicode_KIND((unicode)) == PyUnicode_1BYTE_KIND ? ((const Py_UCS1 *)(PyUnicode_DATA((unicode))))[(index)] : (PyUnicode_KIND((unicode)) == PyUnicode_2BYTE_KIND ? ((const Py_UCS2 *)(PyUnicode_DATA( (unicode))))[(index)] : ((const Py_UCS4 *)(PyUnicode_DATA( (unicode))))[(index)])))",
@@ -75,3 +73,66 @@ class TestHeaderFileParser(unittest.TestCase):
         self.assertEqual(element.syntaxType, SyntaxType.ENUM)
         self.assertIsInstance(element.name, str)
         self.assertIsInstance(element.content, list)
+
+    def test_variables(self):
+        variables = self.parser.variables
+        element = variables.elements[0]
+        self.assertEqual(element.syntaxType, SyntaxType.VARIABLE)
+        self.assertIsInstance(element.name, str)
+        self.assertIsInstance(element.content, str)
+
+    def test_extract_variable_no_inited(self):
+        # ! 依赖测试 sample 文件
+        ast_variable = {
+            "line_number": 4,
+            "name": "test_var_int_empty",
+        }
+        extracted_variable = self.parser.extract_variable(ast_variable)
+        variable_content = "int test_var_int_empty;"
+        self.assertEqual(extracted_variable.name, ast_variable["name"])
+        self.assertEqual(extracted_variable.content.strip(), variable_content)
+
+    def test_extract_variable_inited(self):
+        # ! 依赖测试 sample 文件
+        ast_variable = {
+            "line_number": 7,
+            "name": "test_var_int",
+        }
+        extracted_variable = self.parser.extract_variable(ast_variable)
+        variable_content = "int test_var_int = 10000;"
+        self.assertEqual(extracted_variable.name, ast_variable["name"])
+        self.assertEqual(extracted_variable.content.strip(), variable_content)
+
+    def test_extract_variable_expr(self):
+        # ! 依赖测试 sample 文件
+        ast_variable = {
+            "line_number": 8,
+            "name": "test_var_int_expr",
+        }
+        extracted_variable = self.parser.extract_variable(ast_variable)
+        variable_content = "int test_var_int_expr = test_var_int + 222;"
+        self.assertEqual(extracted_variable.name, ast_variable["name"])
+        self.assertEqual(extracted_variable.content.strip(), variable_content)
+
+    def test_extract_variable_muti_in_oneline(self):
+        # ! robotpy-cppheaderparser 解析多个变量在同一行声明的形式时，结果不准确
+        # ! 依赖测试 sample 文件
+        ast_variable = {
+            "line_number": 11,
+            "name": "testc",
+        }
+        extracted_variable = self.parser.extract_variable(ast_variable)
+        variable_content = "char test_a, test_b, testc;"
+        self.assertEqual(extracted_variable.name, ast_variable["name"])
+        self.assertEqual(extracted_variable.content.strip(), variable_content)
+
+    def test_extract_variable_muti_lines(self):
+        # ! 依赖测试 sample 文件
+        ast_variable = {
+            "line_number": 13,
+            "name": "xx",
+        }
+        extracted_variable = self.parser.extract_variable(ast_variable)
+        variable_content = "int xx = 5 + 50 * 100 + 3600 * 24 + 3600 * 1 - 3600 * 1 + 3600 * 24 - 3600 * 24 + 7200 * 1 - 7200 * 1;"
+        self.assertEqual(extracted_variable.name, ast_variable["name"])
+        self.assertEqual(extracted_variable.content.strip(), variable_content)

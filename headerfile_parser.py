@@ -1,6 +1,5 @@
 import logging
 import re
-from collections import namedtuple
 from dataclasses import dataclass
 from enum import Enum
 from functools import cached_property
@@ -91,8 +90,7 @@ class HeaderFileParser:
         logger.debug(f"Parsered {self.fn} by robotpy-cppheaderparser")
         return CppHeaderParser.CppHeader(self.fn)
 
-    @staticmethod
-    def extract_enum(ast_enum: Dict) -> SyntaxElement:
+    def extract_enum(self, ast_enum: Dict) -> SyntaxElement:
         name: str = ast_enum.get("name", "")
         content = [
             f"{value.get('name')} = {value.get('value')}"
@@ -100,13 +98,11 @@ class HeaderFileParser:
         ]
         return SyntaxElement(SyntaxType.ENUM, name, content)
 
-    @staticmethod
-    def extract_define(ast_define: str) -> SyntaxElement:
+    def extract_define(self, ast_define: str) -> SyntaxElement:
         # 处理 define 为空
         if " " not in ast_define:
             ast_define = ast_define + " "
 
-        # 清理换行及连续 whitespace
         cleaned_define = combine_splited_line(ast_define)
         name_match = re.match(r"(.*?\)) ", cleaned_define) or re.match(
             r"(.*?) ", ast_define
@@ -120,10 +116,21 @@ class HeaderFileParser:
         content = cleaned_define[len(name) :].strip()
         return SyntaxElement(SyntaxType.DEFINE, name, content)
 
-    @staticmethod
-    def extract_variable(ast_variable: Dict) -> SyntaxElement:
-        pass
-    #     name: str = ast_variable.get("name", "")
-    #     content = VariableContent(
-    #         variableType,
-    #     )
+    def extract_variable(self, ast_variable: Dict) -> SyntaxElement:
+        def variable_content(line_number: int) -> str:
+            lines = []
+            for line in self.lines[line_number - 1 :]:
+                lines.append(line)
+                if line.strip().endswith(";"):
+                    break
+            return combine_splited_line("".join(lines))
+
+        name: str = ast_variable.get("name", "")
+        line_number = ast_variable.get("line_number")
+        if not line_number:
+            msg = f"Not found line number of variable {name}."
+            logger.error(msg)
+            raise ValueError(msg)
+        content = variable_content(line_number)
+        logger.debug(f'Extracted variable {name}')
+        return SyntaxElement(SyntaxType.VARIABLE, name, content)
