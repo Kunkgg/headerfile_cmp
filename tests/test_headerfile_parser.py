@@ -1,12 +1,27 @@
+import pathlib
 import unittest
 from headerfile_parser import HeaderFileParser
 from headerfile_parser import SyntaxType
+from headerfile_formatter import normalize_clike
+from headerfile_ast import dump_ast
+
+FIXTURES_PATH = pathlib.Path("./tests/fixtures")
+
+
+def prepare_parser_sample(fn: str):
+    fn_path = FIXTURES_PATH / fn
+    fn_normailezed_path = FIXTURES_PATH / f"{fn_path.stem}_normalized.h"
+    json_path = FIXTURES_PATH / f"{fn_path.stem}_normalized.json"
+    normalize_clike(str(fn_path), str(fn_normailezed_path))
+    dump_ast(str(fn_normailezed_path), str(json_path))
+    return HeaderFileParser(str(fn_normailezed_path))
 
 
 class TestHeaderFileParser(unittest.TestCase):
     def setUp(self) -> None:
-        fn = "./tests/fixtures/sample_normalized.h"
-        self.parser = HeaderFileParser(fn)
+        self.parser = prepare_parser_sample("sample.h")
+        self.parser_variables = prepare_parser_sample("sample_variables.h")
+        self.parser_structs = prepare_parser_sample("sample_structs.h")
 
     def test_lines(self):
         lines = self.parser.lines
@@ -75,7 +90,7 @@ class TestHeaderFileParser(unittest.TestCase):
         self.assertIsInstance(element.content, list)
 
     def test_variables(self):
-        variables = self.parser.variables
+        variables = self.parser_variables.variables
         element = variables.elements[0]
         self.assertEqual(element.syntaxType, SyntaxType.VARIABLE)
         self.assertIsInstance(element.name, str)
@@ -87,7 +102,7 @@ class TestHeaderFileParser(unittest.TestCase):
             "line_number": 4,
             "name": "test_var_int_empty",
         }
-        extracted_variable = self.parser.extract_variable(ast_variable)
+        extracted_variable = self.parser_variables.extract_variable(ast_variable)
         variable_content = "int test_var_int_empty;"
         self.assertEqual(extracted_variable.name, ast_variable["name"])
         self.assertEqual(extracted_variable.content.strip(), variable_content)
@@ -98,7 +113,7 @@ class TestHeaderFileParser(unittest.TestCase):
             "line_number": 7,
             "name": "test_var_int",
         }
-        extracted_variable = self.parser.extract_variable(ast_variable)
+        extracted_variable = self.parser_variables.extract_variable(ast_variable)
         variable_content = "int test_var_int = 10000;"
         self.assertEqual(extracted_variable.name, ast_variable["name"])
         self.assertEqual(extracted_variable.content.strip(), variable_content)
@@ -109,7 +124,7 @@ class TestHeaderFileParser(unittest.TestCase):
             "line_number": 8,
             "name": "test_var_int_expr",
         }
-        extracted_variable = self.parser.extract_variable(ast_variable)
+        extracted_variable = self.parser_variables.extract_variable(ast_variable)
         variable_content = "int test_var_int_expr = test_var_int + 222;"
         self.assertEqual(extracted_variable.name, ast_variable["name"])
         self.assertEqual(extracted_variable.content.strip(), variable_content)
@@ -121,7 +136,7 @@ class TestHeaderFileParser(unittest.TestCase):
             "line_number": 11,
             "name": "testc",
         }
-        extracted_variable = self.parser.extract_variable(ast_variable)
+        extracted_variable = self.parser_variables.extract_variable(ast_variable)
         variable_content = "char test_a, test_b, testc;"
         self.assertEqual(extracted_variable.name, ast_variable["name"])
         self.assertEqual(extracted_variable.content.strip(), variable_content)
@@ -132,7 +147,61 @@ class TestHeaderFileParser(unittest.TestCase):
             "line_number": 13,
             "name": "xx",
         }
-        extracted_variable = self.parser.extract_variable(ast_variable)
+        extracted_variable = self.parser_variables.extract_variable(ast_variable)
         variable_content = "int xx = 5 + 50 * 100 + 3600 * 24 + 3600 * 1 - 3600 * 1 + 3600 * 24 - 3600 * 24 + 7200 * 1 - 7200 * 1;"
         self.assertEqual(extracted_variable.name, ast_variable["name"])
         self.assertEqual(extracted_variable.content.strip(), variable_content)
+
+    def test_structs(self):
+        structs = self.parser_structs.structs
+        element = structs.elements[0]
+        self.assertEqual(element.syntaxType, SyntaxType.STRUCT)
+        self.assertIsInstance(element.name, str)
+        self.assertIsInstance(element.content, list)
+
+    def test_extract_struct_normal(self):
+        # ! 依赖测试 sample 文件
+        ast_struct = {
+            "line_number": 15,
+            "name": "PyCompactUnicodeObject",
+        }
+
+        struct_content = [
+            "typedef struct {\n",
+            "  PyASCIIObject _base;\n",
+            "  Py_ssize_t utf8_length;\n",
+            "  char *utf8;\n",
+            "  Py_ssize_t wstr_length;\n",
+            "} PyCompactUnicodeObject;\n",
+        ]
+
+        extracted_struct = self.parser_structs.extract_struct(ast_struct)
+        self.assertEqual(extracted_struct.name, ast_struct["name"])
+        self.assertEqual(extracted_struct.content, struct_content)
+
+    def test_extract_struct_nested(self):
+        # ! 依赖测试 sample 文件
+        ast_struct = {
+            "line_number": 2,
+            "name": "PyASCIIObject",
+        }
+
+        struct_content = [
+            "typedef struct {\n",
+            "  PyObject_HEAD Py_ssize_t length;\n",
+            "  Py_hash_t hash;\n",
+            "  struct {\n",
+            "    unsigned int interned : 2;\n",
+            "    unsigned int kind : 3;\n",
+            "    unsigned int compact : 1;\n",
+            "    unsigned int ascii : 1;\n",
+            "    unsigned int ready : 1;\n",
+            "    unsigned int : 24;\n",
+            "  } state;\n",
+            "  wchar_t *wstr;\n",
+            "} PyASCIIObject;\n",
+        ]
+
+        extracted_struct = self.parser_structs.extract_struct(ast_struct)
+        self.assertEqual(extracted_struct.name, ast_struct["name"])
+        self.assertEqual(extracted_struct.content, struct_content)

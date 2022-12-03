@@ -1,5 +1,5 @@
 {
-    "headerFileName": "./tests/fixtures/sample_normalized.h",
+    "headerFileName": "tests/fixtures/sample_normalized.h",
     "curClass": "",
     "classes": {
         "<anon-struct-1>::<anon-struct-2>": {
@@ -11,7 +11,7 @@
             "name": "<anon-struct-2>",
             "bare_name": "<anon-struct-2>",
             "inherits": [],
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 89,
             "methods": {
                 "public": [],
@@ -23,7 +23,7 @@
                     {
                         "extern": false,
                         "array": 2,
-                        "filename": "./tests/fixtures/sample_normalized.h",
+                        "filename": "tests/fixtures/sample_normalized.h",
                         "line_number": 90,
                         "function_pointer": 0,
                         "type": "unsigned int",
@@ -48,7 +48,7 @@
                     {
                         "extern": false,
                         "array": 3,
-                        "filename": "./tests/fixtures/sample_normalized.h",
+                        "filename": "tests/fixtures/sample_normalized.h",
                         "line_number": 91,
                         "function_pointer": 0,
                         "type": "unsigned int",
@@ -73,7 +73,7 @@
                     {
                         "extern": false,
                         "array": 1,
-                        "filename": "./tests/fixtures/sample_normalized.h",
+                        "filename": "tests/fixtures/sample_normalized.h",
                         "line_number": 92,
                         "function_pointer": 0,
                         "type": "unsigned int",
@@ -98,7 +98,7 @@
                     {
                         "extern": false,
                         "array": 1,
-                        "filename": "./tests/fixtures/sample_normalized.h",
+                        "filename": "tests/fixtures/sample_normalized.h",
                         "line_number": 93,
                         "function_pointer": 0,
                         "type": "unsigned int",
@@ -123,7 +123,7 @@
                     {
                         "extern": false,
                         "array": 1,
-                        "filename": "./tests/fixtures/sample_normalized.h",
+                        "filename": "tests/fixtures/sample_normalized.h",
                         "line_number": 94,
                         "function_pointer": 0,
                         "type": "unsigned int",
@@ -148,7 +148,7 @@
                     {
                         "extern": false,
                         "array": 24,
-                        "filename": "./tests/fixtures/sample_normalized.h",
+                        "filename": "tests/fixtures/sample_normalized.h",
                         "line_number": 95,
                         "function_pointer": 0,
                         "type": "unsigned int",
@@ -203,7 +203,7 @@
                     "name": "<anon-struct-2>",
                     "bare_name": "<anon-struct-2>",
                     "inherits": [],
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 89,
                     "methods": {
                         "public": [],
@@ -215,7 +215,7 @@
                             {
                                 "extern": false,
                                 "array": 2,
-                                "filename": "./tests/fixtures/sample_normalized.h",
+                                "filename": "tests/fixtures/sample_normalized.h",
                                 "line_number": 90,
                                 "function_pointer": 0,
                                 "type": "unsigned int",
@@ -240,7 +240,7 @@
                             {
                                 "extern": false,
                                 "array": 3,
-                                "filename": "./tests/fixtures/sample_normalized.h",
+                                "filename": "tests/fixtures/sample_normalized.h",
                                 "line_number": 91,
                                 "function_pointer": 0,
                                 "type": "unsigned int",
@@ -265,7 +265,7 @@
                             {
                                 "extern": false,
                                 "array": 1,
-                                "filename": "./tests/fixtures/sample_normalized.h",
+                                "filename": "tests/fixtures/sample_normalized.h",
                                 "line_number": 92,
                                 "function_pointer": 0,
                                 "type": "unsigned int",
@@ -290,7 +290,7 @@
                             {
                                 "extern": false,
                                 "array": 1,
-                                "filename": "./tests/fixtures/sample_normalized.h",
+                                "filename": "tests/fixtures/sample_normalized.h",
                                 "line_number": 93,
                                 "function_pointer": 0,
                                 "type": "unsigned int",
@@ -315,7 +315,7 @@
                             {
                                 "extern": false,
                                 "array": 1,
-                                "filename": "./tests/fixtures/sample_normalized.h",
+                                "filename": "tests/fixtures/sample_normalized.h",
                                 "line_number": 94,
                                 "function_pointer": 0,
                                 "type": "unsigned int",
@@ -340,7 +340,7 @@
                             {
                                 "extern": false,
                                 "array": 24,
-                                "filename": "./tests/fixtures/sample_normalized.h",
+                                "filename": "tests/fixtures/sample_normalized.h",
                                 "line_number": 95,
                                 "function_pointer": 0,
                                 "type": "unsigned int",
@@ -392,7 +392,7 @@
             "name": "PyASCIIObject",
             "bare_name": "<anon-struct-1>",
             "inherits": [],
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 86,
             "methods": {
                 "public": [],
@@ -404,7 +404,7 @@
                     {
                         "extern": false,
                         "array": 0,
-                        "filename": "./tests/fixtures/sample_normalized.h",
+                        "filename": "tests/fixtures/sample_normalized.h",
                         "line_number": 87,
                         "function_pointer": 0,
                         "type": "PyObject_HEAD Py_ssize_t",
@@ -430,7 +430,7 @@
                     {
                         "extern": false,
                         "array": 0,
-                        "filename": "./tests/fixtures/sample_normalized.h",
+                        "filename": "tests/fixtures/sample_normalized.h",
                         "line_number": 88,
                         "function_pointer": 0,
                         "type": "Py_hash_t",
@@ -456,7 +456,7 @@
                     {
                         "extern": false,
                         "array": 0,
-                        "filename": "./tests/fixtures/sample_normalized.h",
+                        "filename": "tests/fixtures/sample_normalized.h",
                         "line_number": 96,
                         "function_pointer": 0,
                         "type": "<anon-struct-2>",
@@ -484,7 +484,7 @@
                     {
                         "extern": false,
                         "array": 0,
-                        "filename": "./tests/fixtures/sample_normalized.h",
+                        "filename": "tests/fixtures/sample_normalized.h",
                         "line_number": 97,
                         "function_pointer": 0,
                         "type": "wchar_t *",
@@ -537,7 +537,7 @@
             "name": "PyCompactUnicodeObject",
             "bare_name": "<anon-struct-3>",
             "inherits": [],
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 99,
             "methods": {
                 "public": [],
@@ -549,7 +549,7 @@
                     {
                         "extern": false,
                         "array": 0,
-                        "filename": "./tests/fixtures/sample_normalized.h",
+                        "filename": "tests/fixtures/sample_normalized.h",
                         "line_number": 100,
                         "function_pointer": 0,
                         "type": "PyASCIIObject",
@@ -575,7 +575,7 @@
                                     "name": "<anon-struct-2>",
                                     "bare_name": "<anon-struct-2>",
                                     "inherits": [],
-                                    "filename": "./tests/fixtures/sample_normalized.h",
+                                    "filename": "tests/fixtures/sample_normalized.h",
                                     "line_number": 89,
                                     "methods": {
                                         "public": [],
@@ -587,7 +587,7 @@
                                             {
                                                 "extern": false,
                                                 "array": 2,
-                                                "filename": "./tests/fixtures/sample_normalized.h",
+                                                "filename": "tests/fixtures/sample_normalized.h",
                                                 "line_number": 90,
                                                 "function_pointer": 0,
                                                 "type": "unsigned int",
@@ -612,7 +612,7 @@
                                             {
                                                 "extern": false,
                                                 "array": 3,
-                                                "filename": "./tests/fixtures/sample_normalized.h",
+                                                "filename": "tests/fixtures/sample_normalized.h",
                                                 "line_number": 91,
                                                 "function_pointer": 0,
                                                 "type": "unsigned int",
@@ -637,7 +637,7 @@
                                             {
                                                 "extern": false,
                                                 "array": 1,
-                                                "filename": "./tests/fixtures/sample_normalized.h",
+                                                "filename": "tests/fixtures/sample_normalized.h",
                                                 "line_number": 92,
                                                 "function_pointer": 0,
                                                 "type": "unsigned int",
@@ -662,7 +662,7 @@
                                             {
                                                 "extern": false,
                                                 "array": 1,
-                                                "filename": "./tests/fixtures/sample_normalized.h",
+                                                "filename": "tests/fixtures/sample_normalized.h",
                                                 "line_number": 93,
                                                 "function_pointer": 0,
                                                 "type": "unsigned int",
@@ -687,7 +687,7 @@
                                             {
                                                 "extern": false,
                                                 "array": 1,
-                                                "filename": "./tests/fixtures/sample_normalized.h",
+                                                "filename": "tests/fixtures/sample_normalized.h",
                                                 "line_number": 94,
                                                 "function_pointer": 0,
                                                 "type": "unsigned int",
@@ -712,7 +712,7 @@
                                             {
                                                 "extern": false,
                                                 "array": 24,
-                                                "filename": "./tests/fixtures/sample_normalized.h",
+                                                "filename": "tests/fixtures/sample_normalized.h",
                                                 "line_number": 95,
                                                 "function_pointer": 0,
                                                 "type": "unsigned int",
@@ -764,7 +764,7 @@
                             "name": "PyASCIIObject",
                             "bare_name": "<anon-struct-1>",
                             "inherits": [],
-                            "filename": "./tests/fixtures/sample_normalized.h",
+                            "filename": "tests/fixtures/sample_normalized.h",
                             "line_number": 86,
                             "methods": {
                                 "public": [],
@@ -776,7 +776,7 @@
                                     {
                                         "extern": false,
                                         "array": 0,
-                                        "filename": "./tests/fixtures/sample_normalized.h",
+                                        "filename": "tests/fixtures/sample_normalized.h",
                                         "line_number": 87,
                                         "function_pointer": 0,
                                         "type": "PyObject_HEAD Py_ssize_t",
@@ -802,7 +802,7 @@
                                     {
                                         "extern": false,
                                         "array": 0,
-                                        "filename": "./tests/fixtures/sample_normalized.h",
+                                        "filename": "tests/fixtures/sample_normalized.h",
                                         "line_number": 88,
                                         "function_pointer": 0,
                                         "type": "Py_hash_t",
@@ -828,7 +828,7 @@
                                     {
                                         "extern": false,
                                         "array": 0,
-                                        "filename": "./tests/fixtures/sample_normalized.h",
+                                        "filename": "tests/fixtures/sample_normalized.h",
                                         "line_number": 96,
                                         "function_pointer": 0,
                                         "type": "<anon-struct-2>",
@@ -856,7 +856,7 @@
                                     {
                                         "extern": false,
                                         "array": 0,
-                                        "filename": "./tests/fixtures/sample_normalized.h",
+                                        "filename": "tests/fixtures/sample_normalized.h",
                                         "line_number": 97,
                                         "function_pointer": 0,
                                         "type": "wchar_t *",
@@ -911,7 +911,7 @@
                     {
                         "extern": false,
                         "array": 0,
-                        "filename": "./tests/fixtures/sample_normalized.h",
+                        "filename": "tests/fixtures/sample_normalized.h",
                         "line_number": 101,
                         "function_pointer": 0,
                         "type": "Py_ssize_t",
@@ -937,7 +937,7 @@
                     {
                         "extern": false,
                         "array": 0,
-                        "filename": "./tests/fixtures/sample_normalized.h",
+                        "filename": "tests/fixtures/sample_normalized.h",
                         "line_number": 102,
                         "function_pointer": 0,
                         "type": "char *",
@@ -962,7 +962,7 @@
                     {
                         "extern": false,
                         "array": 0,
-                        "filename": "./tests/fixtures/sample_normalized.h",
+                        "filename": "tests/fixtures/sample_normalized.h",
                         "line_number": 103,
                         "function_pointer": 0,
                         "type": "Py_ssize_t",
@@ -1015,7 +1015,7 @@
             "name": "<anon-union-1>",
             "bare_name": "<anon-union-1>",
             "inherits": [],
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 107,
             "methods": {
                 "public": [],
@@ -1027,7 +1027,7 @@
                     {
                         "extern": false,
                         "array": 0,
-                        "filename": "./tests/fixtures/sample_normalized.h",
+                        "filename": "tests/fixtures/sample_normalized.h",
                         "line_number": 108,
                         "function_pointer": 0,
                         "type": "void *",
@@ -1052,7 +1052,7 @@
                     {
                         "extern": false,
                         "array": 0,
-                        "filename": "./tests/fixtures/sample_normalized.h",
+                        "filename": "tests/fixtures/sample_normalized.h",
                         "line_number": 109,
                         "function_pointer": 0,
                         "type": "Py_UCS1 *",
@@ -1078,7 +1078,7 @@
                     {
                         "extern": false,
                         "array": 0,
-                        "filename": "./tests/fixtures/sample_normalized.h",
+                        "filename": "tests/fixtures/sample_normalized.h",
                         "line_number": 110,
                         "function_pointer": 0,
                         "type": "Py_UCS2 *",
@@ -1104,7 +1104,7 @@
                     {
                         "extern": false,
                         "array": 0,
-                        "filename": "./tests/fixtures/sample_normalized.h",
+                        "filename": "tests/fixtures/sample_normalized.h",
                         "line_number": 111,
                         "function_pointer": 0,
                         "type": "Py_UCS4 *",
@@ -1150,7 +1150,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 108,
                     "function_pointer": 0,
                     "type": "void *",
@@ -1175,7 +1175,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 109,
                     "function_pointer": 0,
                     "type": "Py_UCS1 *",
@@ -1201,7 +1201,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 110,
                     "function_pointer": 0,
                     "type": "Py_UCS2 *",
@@ -1227,7 +1227,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 111,
                     "function_pointer": 0,
                     "type": "Py_UCS4 *",
@@ -1265,7 +1265,7 @@
                     "name": "<anon-union-1>",
                     "bare_name": "<anon-union-1>",
                     "inherits": [],
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 107,
                     "methods": {
                         "public": [],
@@ -1277,7 +1277,7 @@
                             {
                                 "extern": false,
                                 "array": 0,
-                                "filename": "./tests/fixtures/sample_normalized.h",
+                                "filename": "tests/fixtures/sample_normalized.h",
                                 "line_number": 108,
                                 "function_pointer": 0,
                                 "type": "void *",
@@ -1302,7 +1302,7 @@
                             {
                                 "extern": false,
                                 "array": 0,
-                                "filename": "./tests/fixtures/sample_normalized.h",
+                                "filename": "tests/fixtures/sample_normalized.h",
                                 "line_number": 109,
                                 "function_pointer": 0,
                                 "type": "Py_UCS1 *",
@@ -1328,7 +1328,7 @@
                             {
                                 "extern": false,
                                 "array": 0,
-                                "filename": "./tests/fixtures/sample_normalized.h",
+                                "filename": "tests/fixtures/sample_normalized.h",
                                 "line_number": 110,
                                 "function_pointer": 0,
                                 "type": "Py_UCS2 *",
@@ -1354,7 +1354,7 @@
                             {
                                 "extern": false,
                                 "array": 0,
-                                "filename": "./tests/fixtures/sample_normalized.h",
+                                "filename": "tests/fixtures/sample_normalized.h",
                                 "line_number": 111,
                                 "function_pointer": 0,
                                 "type": "Py_UCS4 *",
@@ -1400,7 +1400,7 @@
                         {
                             "extern": false,
                             "array": 0,
-                            "filename": "./tests/fixtures/sample_normalized.h",
+                            "filename": "tests/fixtures/sample_normalized.h",
                             "line_number": 108,
                             "function_pointer": 0,
                             "type": "void *",
@@ -1425,7 +1425,7 @@
                         {
                             "extern": false,
                             "array": 0,
-                            "filename": "./tests/fixtures/sample_normalized.h",
+                            "filename": "tests/fixtures/sample_normalized.h",
                             "line_number": 109,
                             "function_pointer": 0,
                             "type": "Py_UCS1 *",
@@ -1451,7 +1451,7 @@
                         {
                             "extern": false,
                             "array": 0,
-                            "filename": "./tests/fixtures/sample_normalized.h",
+                            "filename": "tests/fixtures/sample_normalized.h",
                             "line_number": 110,
                             "function_pointer": 0,
                             "type": "Py_UCS2 *",
@@ -1477,7 +1477,7 @@
                         {
                             "extern": false,
                             "array": 0,
-                            "filename": "./tests/fixtures/sample_normalized.h",
+                            "filename": "tests/fixtures/sample_normalized.h",
                             "line_number": 111,
                             "function_pointer": 0,
                             "type": "Py_UCS4 *",
@@ -1512,7 +1512,7 @@
             "name": "PyUnicodeObject",
             "bare_name": "<anon-struct-4>",
             "inherits": [],
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 105,
             "methods": {
                 "public": [],
@@ -1524,7 +1524,7 @@
                     {
                         "extern": false,
                         "array": 0,
-                        "filename": "./tests/fixtures/sample_normalized.h",
+                        "filename": "tests/fixtures/sample_normalized.h",
                         "line_number": 106,
                         "function_pointer": 0,
                         "type": "PyCompactUnicodeObject",
@@ -1548,7 +1548,7 @@
                             "name": "PyCompactUnicodeObject",
                             "bare_name": "<anon-struct-3>",
                             "inherits": [],
-                            "filename": "./tests/fixtures/sample_normalized.h",
+                            "filename": "tests/fixtures/sample_normalized.h",
                             "line_number": 99,
                             "methods": {
                                 "public": [],
@@ -1560,7 +1560,7 @@
                                     {
                                         "extern": false,
                                         "array": 0,
-                                        "filename": "./tests/fixtures/sample_normalized.h",
+                                        "filename": "tests/fixtures/sample_normalized.h",
                                         "line_number": 100,
                                         "function_pointer": 0,
                                         "type": "PyASCIIObject",
@@ -1586,7 +1586,7 @@
                                                     "name": "<anon-struct-2>",
                                                     "bare_name": "<anon-struct-2>",
                                                     "inherits": [],
-                                                    "filename": "./tests/fixtures/sample_normalized.h",
+                                                    "filename": "tests/fixtures/sample_normalized.h",
                                                     "line_number": 89,
                                                     "methods": {
                                                         "public": [],
@@ -1598,7 +1598,7 @@
                                                             {
                                                                 "extern": false,
                                                                 "array": 2,
-                                                                "filename": "./tests/fixtures/sample_normalized.h",
+                                                                "filename": "tests/fixtures/sample_normalized.h",
                                                                 "line_number": 90,
                                                                 "function_pointer": 0,
                                                                 "type": "unsigned int",
@@ -1623,7 +1623,7 @@
                                                             {
                                                                 "extern": false,
                                                                 "array": 3,
-                                                                "filename": "./tests/fixtures/sample_normalized.h",
+                                                                "filename": "tests/fixtures/sample_normalized.h",
                                                                 "line_number": 91,
                                                                 "function_pointer": 0,
                                                                 "type": "unsigned int",
@@ -1648,7 +1648,7 @@
                                                             {
                                                                 "extern": false,
                                                                 "array": 1,
-                                                                "filename": "./tests/fixtures/sample_normalized.h",
+                                                                "filename": "tests/fixtures/sample_normalized.h",
                                                                 "line_number": 92,
                                                                 "function_pointer": 0,
                                                                 "type": "unsigned int",
@@ -1673,7 +1673,7 @@
                                                             {
                                                                 "extern": false,
                                                                 "array": 1,
-                                                                "filename": "./tests/fixtures/sample_normalized.h",
+                                                                "filename": "tests/fixtures/sample_normalized.h",
                                                                 "line_number": 93,
                                                                 "function_pointer": 0,
                                                                 "type": "unsigned int",
@@ -1698,7 +1698,7 @@
                                                             {
                                                                 "extern": false,
                                                                 "array": 1,
-                                                                "filename": "./tests/fixtures/sample_normalized.h",
+                                                                "filename": "tests/fixtures/sample_normalized.h",
                                                                 "line_number": 94,
                                                                 "function_pointer": 0,
                                                                 "type": "unsigned int",
@@ -1723,7 +1723,7 @@
                                                             {
                                                                 "extern": false,
                                                                 "array": 24,
-                                                                "filename": "./tests/fixtures/sample_normalized.h",
+                                                                "filename": "tests/fixtures/sample_normalized.h",
                                                                 "line_number": 95,
                                                                 "function_pointer": 0,
                                                                 "type": "unsigned int",
@@ -1775,7 +1775,7 @@
                                             "name": "PyASCIIObject",
                                             "bare_name": "<anon-struct-1>",
                                             "inherits": [],
-                                            "filename": "./tests/fixtures/sample_normalized.h",
+                                            "filename": "tests/fixtures/sample_normalized.h",
                                             "line_number": 86,
                                             "methods": {
                                                 "public": [],
@@ -1787,7 +1787,7 @@
                                                     {
                                                         "extern": false,
                                                         "array": 0,
-                                                        "filename": "./tests/fixtures/sample_normalized.h",
+                                                        "filename": "tests/fixtures/sample_normalized.h",
                                                         "line_number": 87,
                                                         "function_pointer": 0,
                                                         "type": "PyObject_HEAD Py_ssize_t",
@@ -1813,7 +1813,7 @@
                                                     {
                                                         "extern": false,
                                                         "array": 0,
-                                                        "filename": "./tests/fixtures/sample_normalized.h",
+                                                        "filename": "tests/fixtures/sample_normalized.h",
                                                         "line_number": 88,
                                                         "function_pointer": 0,
                                                         "type": "Py_hash_t",
@@ -1839,7 +1839,7 @@
                                                     {
                                                         "extern": false,
                                                         "array": 0,
-                                                        "filename": "./tests/fixtures/sample_normalized.h",
+                                                        "filename": "tests/fixtures/sample_normalized.h",
                                                         "line_number": 96,
                                                         "function_pointer": 0,
                                                         "type": "<anon-struct-2>",
@@ -1867,7 +1867,7 @@
                                                     {
                                                         "extern": false,
                                                         "array": 0,
-                                                        "filename": "./tests/fixtures/sample_normalized.h",
+                                                        "filename": "tests/fixtures/sample_normalized.h",
                                                         "line_number": 97,
                                                         "function_pointer": 0,
                                                         "type": "wchar_t *",
@@ -1922,7 +1922,7 @@
                                     {
                                         "extern": false,
                                         "array": 0,
-                                        "filename": "./tests/fixtures/sample_normalized.h",
+                                        "filename": "tests/fixtures/sample_normalized.h",
                                         "line_number": 101,
                                         "function_pointer": 0,
                                         "type": "Py_ssize_t",
@@ -1948,7 +1948,7 @@
                                     {
                                         "extern": false,
                                         "array": 0,
-                                        "filename": "./tests/fixtures/sample_normalized.h",
+                                        "filename": "tests/fixtures/sample_normalized.h",
                                         "line_number": 102,
                                         "function_pointer": 0,
                                         "type": "char *",
@@ -1973,7 +1973,7 @@
                                     {
                                         "extern": false,
                                         "array": 0,
-                                        "filename": "./tests/fixtures/sample_normalized.h",
+                                        "filename": "tests/fixtures/sample_normalized.h",
                                         "line_number": 103,
                                         "function_pointer": 0,
                                         "type": "Py_ssize_t",
@@ -2028,7 +2028,7 @@
                     {
                         "extern": false,
                         "array": 0,
-                        "filename": "./tests/fixtures/sample_normalized.h",
+                        "filename": "tests/fixtures/sample_normalized.h",
                         "line_number": 112,
                         "function_pointer": 0,
                         "type": "<anon-union-1>",
@@ -2083,7 +2083,7 @@
             "name": "_PyUnicodeWriter",
             "bare_name": "<anon-struct-5>",
             "inherits": [],
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 247,
             "methods": {
                 "public": [],
@@ -2095,7 +2095,7 @@
                     {
                         "extern": false,
                         "array": 0,
-                        "filename": "./tests/fixtures/sample_normalized.h",
+                        "filename": "tests/fixtures/sample_normalized.h",
                         "line_number": 248,
                         "function_pointer": 0,
                         "type": "PyObject *",
@@ -2121,7 +2121,7 @@
                     {
                         "extern": false,
                         "array": 0,
-                        "filename": "./tests/fixtures/sample_normalized.h",
+                        "filename": "tests/fixtures/sample_normalized.h",
                         "line_number": 249,
                         "function_pointer": 0,
                         "type": "void *",
@@ -2146,7 +2146,7 @@
                     {
                         "extern": false,
                         "array": 0,
-                        "filename": "./tests/fixtures/sample_normalized.h",
+                        "filename": "tests/fixtures/sample_normalized.h",
                         "line_number": 250,
                         "function_pointer": 0,
                         "type": "PyUnicode_Kind",
@@ -2172,7 +2172,7 @@
                             "typedef": false,
                             "isclass": false,
                             "values": [],
-                            "filename": "./tests/fixtures/sample_normalized.h",
+                            "filename": "tests/fixtures/sample_normalized.h",
                             "line_number": 250
                         },
                         "mutable": false,
@@ -2182,7 +2182,7 @@
                     {
                         "extern": false,
                         "array": 0,
-                        "filename": "./tests/fixtures/sample_normalized.h",
+                        "filename": "tests/fixtures/sample_normalized.h",
                         "line_number": 251,
                         "function_pointer": 0,
                         "type": "Py_UCS4",
@@ -2208,7 +2208,7 @@
                     {
                         "extern": false,
                         "array": 0,
-                        "filename": "./tests/fixtures/sample_normalized.h",
+                        "filename": "tests/fixtures/sample_normalized.h",
                         "line_number": 252,
                         "function_pointer": 0,
                         "type": "Py_ssize_t",
@@ -2234,7 +2234,7 @@
                     {
                         "extern": false,
                         "array": 0,
-                        "filename": "./tests/fixtures/sample_normalized.h",
+                        "filename": "tests/fixtures/sample_normalized.h",
                         "line_number": 253,
                         "function_pointer": 0,
                         "type": "Py_ssize_t",
@@ -2260,7 +2260,7 @@
                     {
                         "extern": false,
                         "array": 0,
-                        "filename": "./tests/fixtures/sample_normalized.h",
+                        "filename": "tests/fixtures/sample_normalized.h",
                         "line_number": 254,
                         "function_pointer": 0,
                         "type": "Py_ssize_t",
@@ -2286,7 +2286,7 @@
                     {
                         "extern": false,
                         "array": 0,
-                        "filename": "./tests/fixtures/sample_normalized.h",
+                        "filename": "tests/fixtures/sample_normalized.h",
                         "line_number": 255,
                         "function_pointer": 0,
                         "type": "Py_UCS4",
@@ -2312,7 +2312,7 @@
                     {
                         "extern": false,
                         "array": 0,
-                        "filename": "./tests/fixtures/sample_normalized.h",
+                        "filename": "tests/fixtures/sample_normalized.h",
                         "line_number": 256,
                         "function_pointer": 0,
                         "type": "unsigned char",
@@ -2337,7 +2337,7 @@
                     {
                         "extern": false,
                         "array": 0,
-                        "filename": "./tests/fixtures/sample_normalized.h",
+                        "filename": "tests/fixtures/sample_normalized.h",
                         "line_number": 257,
                         "function_pointer": 0,
                         "type": "unsigned char",
@@ -2371,7 +2371,7 @@
                         "typedef": false,
                         "isclass": false,
                         "values": [],
-                        "filename": "./tests/fixtures/sample_normalized.h",
+                        "filename": "tests/fixtures/sample_normalized.h",
                         "line_number": 250
                     }
                 ],
@@ -2422,14 +2422,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 22,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 22,
                     "function_pointer": 0,
                     "type": "int ) PyAST_Validate (",
@@ -2484,14 +2484,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 23,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 23,
                     "function_pointer": 0,
                     "type": "mod_ty ) PyAST_FromNode ( const node *",
@@ -2516,7 +2516,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 23,
                     "function_pointer": 0,
                     "type": "PyCompilerFlags *",
@@ -2541,7 +2541,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 24,
                     "function_pointer": 0,
                     "type": "const char *",
@@ -2565,7 +2565,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 24,
                     "function_pointer": 0,
                     "type": "PyArena *",
@@ -2620,14 +2620,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 25,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 25,
                     "function_pointer": 0,
                     "type": "mod_ty ) PyAST_FromNodeObject ( const node *",
@@ -2652,7 +2652,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 25,
                     "function_pointer": 0,
                     "type": "PyCompilerFlags *",
@@ -2677,7 +2677,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 26,
                     "function_pointer": 0,
                     "type": "PyObject *",
@@ -2702,7 +2702,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 26,
                     "function_pointer": 0,
                     "type": "PyArena *",
@@ -2757,14 +2757,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 28,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 28,
                     "function_pointer": 0,
                     "type": "PyObject * ) _PyAST_ExprAsUnicode (",
@@ -2819,14 +2819,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 29,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 29,
                     "function_pointer": 0,
                     "type": "PyObject * ) _PyAST_GetDocString ( asdl_seq *",
@@ -2881,14 +2881,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 220,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 220,
                     "function_pointer": 0,
                     "type": "PyObject * ) PyUnicode_New ( Py_ssize_t",
@@ -2913,7 +2913,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 220,
                     "function_pointer": 0,
                     "type": "Py_UCS4",
@@ -2968,14 +2968,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 221,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 221,
                     "function_pointer": 0,
                     "type": "int ) _PyUnicode_Ready ( PyObject *",
@@ -3030,14 +3030,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 222,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 222,
                     "function_pointer": 0,
                     "type": "PyObject * ) _PyUnicode_Copy ( PyObject *",
@@ -3092,14 +3092,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 223,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 223,
                     "function_pointer": 0,
                     "type": "Py_ssize_t ) PyUnicode_CopyCharacters ( PyObject *",
@@ -3124,7 +3124,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 224,
                     "function_pointer": 0,
                     "type": "Py_ssize_t",
@@ -3149,7 +3149,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 224,
                     "function_pointer": 0,
                     "type": "PyObject *",
@@ -3174,7 +3174,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 225,
                     "function_pointer": 0,
                     "type": "Py_ssize_t",
@@ -3199,7 +3199,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 225,
                     "function_pointer": 0,
                     "type": "Py_ssize_t",
@@ -3254,14 +3254,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 226,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 226,
                     "function_pointer": 0,
                     "type": "void ) _PyUnicode_FastCopyCharacters ( PyObject *",
@@ -3286,7 +3286,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 227,
                     "function_pointer": 0,
                     "type": "Py_ssize_t",
@@ -3311,7 +3311,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 228,
                     "function_pointer": 0,
                     "type": "PyObject *",
@@ -3336,7 +3336,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 228,
                     "function_pointer": 0,
                     "type": "Py_ssize_t",
@@ -3361,7 +3361,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 229,
                     "function_pointer": 0,
                     "type": "Py_ssize_t",
@@ -3416,14 +3416,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 230,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 230,
                     "function_pointer": 0,
                     "type": "Py_ssize_t ) PyUnicode_Fill ( PyObject *",
@@ -3448,7 +3448,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 230,
                     "function_pointer": 0,
                     "type": "Py_ssize_t",
@@ -3473,7 +3473,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 231,
                     "function_pointer": 0,
                     "type": "Py_ssize_t",
@@ -3498,7 +3498,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 231,
                     "function_pointer": 0,
                     "type": "Py_UCS4",
@@ -3553,14 +3553,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 232,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 232,
                     "function_pointer": 0,
                     "type": "void ) _PyUnicode_FastFill ( PyObject *",
@@ -3585,7 +3585,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 232,
                     "function_pointer": 0,
                     "type": "Py_ssize_t",
@@ -3610,7 +3610,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 233,
                     "function_pointer": 0,
                     "type": "Py_ssize_t",
@@ -3635,7 +3635,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 233,
                     "function_pointer": 0,
                     "type": "Py_UCS4",
@@ -3690,14 +3690,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 234,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 234,
                     "function_pointer": 0,
                     "type": "PyObject * ) PyUnicode_FromUnicode ( const Py_UNICODE *",
@@ -3722,7 +3722,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 235,
                     "function_pointer": 0,
                     "type": "Py_ssize_t",
@@ -3777,14 +3777,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 236,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 236,
                     "function_pointer": 0,
                     "type": "PyObject * ) PyUnicode_FromKindAndData ( int",
@@ -3809,7 +3809,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 237,
                     "function_pointer": 0,
                     "type": "const void *",
@@ -3833,7 +3833,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 237,
                     "function_pointer": 0,
                     "type": "Py_ssize_t",
@@ -3888,14 +3888,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 238,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 238,
                     "function_pointer": 0,
                     "type": "PyObject * ) _PyUnicode_FromASCII ( const char *",
@@ -3920,7 +3920,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 239,
                     "function_pointer": 0,
                     "type": "Py_ssize_t",
@@ -3975,14 +3975,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 240,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 240,
                     "function_pointer": 0,
                     "type": "Py_UCS4 ) _PyUnicode_FindMaxChar ( PyObject *",
@@ -4007,7 +4007,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 241,
                     "function_pointer": 0,
                     "type": "Py_ssize_t",
@@ -4032,7 +4032,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 241,
                     "function_pointer": 0,
                     "type": "Py_ssize_t",
@@ -4087,14 +4087,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 242,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 242,
                     "function_pointer": 0,
                     "type": "Py_UNICODE * ) PyUnicode_AsUnicode ( PyObject *",
@@ -4151,14 +4151,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 243,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 243,
                     "function_pointer": 0,
                     "type": "const Py_UNICODE * ) _PyUnicode_AsUnicode ( PyObject *",
@@ -4215,14 +4215,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 244,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 244,
                     "function_pointer": 0,
                     "type": "Py_UNICODE * ) PyUnicode_AsUnicodeAndSize ( PyObject *",
@@ -4250,7 +4250,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 245,
                     "function_pointer": 0,
                     "type": "Py_ssize_t *",
@@ -4305,14 +4305,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 246,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 246,
                     "function_pointer": 0,
                     "type": "3.3 ) PyAPI_FUNC ( Py_UNICODE ) PyUnicode_GetMax ( void",
@@ -4367,14 +4367,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 259,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 259,
                     "function_pointer": 0,
                     "type": "void ) _PyUnicodeWriter_Init ( _PyUnicodeWriter *",
@@ -4429,14 +4429,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 267,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 267,
                     "function_pointer": 0,
                     "type": "int ) _PyUnicodeWriter_PrepareInternal ( _PyUnicodeWriter *",
@@ -4461,7 +4461,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 269,
                     "function_pointer": 0,
                     "type": "Py_ssize_t",
@@ -4486,7 +4486,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 269,
                     "function_pointer": 0,
                     "type": "Py_UCS4",
@@ -4541,14 +4541,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 275,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 275,
                     "function_pointer": 0,
                     "type": "int ) _PyUnicodeWriter_PrepareKindInternal ( _PyUnicodeWriter *",
@@ -4573,7 +4573,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 276,
                     "function_pointer": 0,
                     "type": "enum PyUnicode_Kind",
@@ -4630,14 +4630,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 277,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 277,
                     "function_pointer": 0,
                     "type": "int ) _PyUnicodeWriter_WriteChar ( _PyUnicodeWriter *",
@@ -4662,7 +4662,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 278,
                     "function_pointer": 0,
                     "type": "Py_UCS4",
@@ -4717,14 +4717,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 279,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 279,
                     "function_pointer": 0,
                     "type": "int ) _PyUnicodeWriter_WriteStr ( _PyUnicodeWriter *",
@@ -4749,7 +4749,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 280,
                     "function_pointer": 0,
                     "type": "PyObject *",
@@ -4804,14 +4804,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 281,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 281,
                     "function_pointer": 0,
                     "type": "int ) _PyUnicodeWriter_WriteSubstring ( _PyUnicodeWriter *",
@@ -4836,7 +4836,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 282,
                     "function_pointer": 0,
                     "type": "PyObject *",
@@ -4861,7 +4861,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 283,
                     "function_pointer": 0,
                     "type": "Py_ssize_t",
@@ -4886,7 +4886,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 283,
                     "function_pointer": 0,
                     "type": "Py_ssize_t",
@@ -4941,14 +4941,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 284,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 284,
                     "function_pointer": 0,
                     "type": "int ) _PyUnicodeWriter_WriteASCIIString ( _PyUnicodeWriter *",
@@ -4973,7 +4973,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 285,
                     "function_pointer": 0,
                     "type": "const char *",
@@ -4997,7 +4997,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 286,
                     "function_pointer": 0,
                     "type": "Py_ssize_t",
@@ -5052,14 +5052,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 287,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 287,
                     "function_pointer": 0,
                     "type": "int ) _PyUnicodeWriter_WriteLatin1String ( _PyUnicodeWriter *",
@@ -5084,7 +5084,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 289,
                     "function_pointer": 0,
                     "type": "const char *",
@@ -5108,7 +5108,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 289,
                     "function_pointer": 0,
                     "type": "Py_ssize_t",
@@ -5163,14 +5163,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 290,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 290,
                     "function_pointer": 0,
                     "type": "PyObject * ) _PyUnicodeWriter_Finish ( _PyUnicodeWriter *",
@@ -5225,14 +5225,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 291,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 291,
                     "function_pointer": 0,
                     "type": "void ) _PyUnicodeWriter_Dealloc ( _PyUnicodeWriter *",
@@ -5287,14 +5287,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 292,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 292,
                     "function_pointer": 0,
                     "type": "int ) _PyUnicode_FormatAdvancedWriter ( _PyUnicodeWriter *",
@@ -5319,7 +5319,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 293,
                     "function_pointer": 0,
                     "type": "PyObject *",
@@ -5344,7 +5344,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 294,
                     "function_pointer": 0,
                     "type": "PyObject *",
@@ -5369,7 +5369,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 294,
                     "function_pointer": 0,
                     "type": "Py_ssize_t",
@@ -5394,7 +5394,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 295,
                     "function_pointer": 0,
                     "type": "Py_ssize_t",
@@ -5449,14 +5449,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 297,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 297,
                     "function_pointer": 0,
                     "type": "void * ) _PyUnicode_AsKind ( PyObject *",
@@ -5481,7 +5481,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 297,
                     "function_pointer": 0,
                     "type": "unsigned int",
@@ -5535,14 +5535,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 299,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 299,
                     "function_pointer": 0,
                     "type": "const char * ) PyUnicode_AsUTF8AndSize ( PyObject *",
@@ -5567,7 +5567,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 300,
                     "function_pointer": 0,
                     "type": "Py_ssize_t *",
@@ -5622,14 +5622,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 302,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 302,
                     "function_pointer": 0,
                     "type": "const char * ) PyUnicode_AsUTF8 ( PyObject *",
@@ -5684,14 +5684,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 304,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 304,
                     "function_pointer": 0,
                     "type": "3.3 ) PyAPI_FUNC ( PyObject * ) PyUnicode_Encode ( const Py_UNICODE *",
@@ -5716,7 +5716,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 305,
                     "function_pointer": 0,
                     "type": "Py_ssize_t",
@@ -5741,7 +5741,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 305,
                     "function_pointer": 0,
                     "type": "const char *",
@@ -5765,7 +5765,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 306,
                     "function_pointer": 0,
                     "type": "const char *",
@@ -5819,14 +5819,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 307,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 307,
                     "function_pointer": 0,
                     "type": "3.3 ) PyAPI_FUNC ( PyObject * ) PyUnicode_EncodeUTF7 ( const Py_UNICODE *",
@@ -5851,7 +5851,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 308,
                     "function_pointer": 0,
                     "type": "Py_ssize_t",
@@ -5876,7 +5876,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 309,
                     "function_pointer": 0,
                     "type": "int",
@@ -5900,7 +5900,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 309,
                     "function_pointer": 0,
                     "type": "int",
@@ -5924,7 +5924,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 310,
                     "function_pointer": 0,
                     "type": "const char *",
@@ -5978,14 +5978,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 311,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 311,
                     "function_pointer": 0,
                     "type": "PyObject * ) _PyUnicode_EncodeUTF7 ( PyObject *",
@@ -6010,7 +6010,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 312,
                     "function_pointer": 0,
                     "type": "int",
@@ -6034,7 +6034,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 313,
                     "function_pointer": 0,
                     "type": "int",
@@ -6058,7 +6058,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 313,
                     "function_pointer": 0,
                     "type": "const char *",
@@ -6112,14 +6112,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 314,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 314,
                     "function_pointer": 0,
                     "type": "PyObject * ) _PyUnicode_AsUTF8String ( PyObject *",
@@ -6144,7 +6144,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 315,
                     "function_pointer": 0,
                     "type": "const char *",
@@ -6198,14 +6198,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 316,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 316,
                     "function_pointer": 0,
                     "type": "3.3 ) PyAPI_FUNC ( PyObject * ) PyUnicode_EncodeUTF8 ( const Py_UNICODE *",
@@ -6230,7 +6230,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 317,
                     "function_pointer": 0,
                     "type": "Py_ssize_t",
@@ -6255,7 +6255,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 318,
                     "function_pointer": 0,
                     "type": "const char *",
@@ -6309,14 +6309,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 319,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 319,
                     "function_pointer": 0,
                     "type": "3.3 ) PyAPI_FUNC ( PyObject * ) PyUnicode_EncodeUTF32 ( const Py_UNICODE *",
@@ -6341,7 +6341,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 320,
                     "function_pointer": 0,
                     "type": "Py_ssize_t",
@@ -6366,7 +6366,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 321,
                     "function_pointer": 0,
                     "type": "const char *",
@@ -6390,7 +6390,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 321,
                     "function_pointer": 0,
                     "type": "int",
@@ -6444,14 +6444,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 322,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 322,
                     "function_pointer": 0,
                     "type": "PyObject * ) _PyUnicode_EncodeUTF32 ( PyObject *",
@@ -6476,7 +6476,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 323,
                     "function_pointer": 0,
                     "type": "const char *",
@@ -6500,7 +6500,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 323,
                     "function_pointer": 0,
                     "type": "int",
@@ -6554,14 +6554,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 324,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 324,
                     "function_pointer": 0,
                     "type": "3.3 ) PyAPI_FUNC ( PyObject * ) PyUnicode_EncodeUTF16 ( const Py_UNICODE *",
@@ -6586,7 +6586,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 325,
                     "function_pointer": 0,
                     "type": "Py_ssize_t",
@@ -6611,7 +6611,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 326,
                     "function_pointer": 0,
                     "type": "const char *",
@@ -6635,7 +6635,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 326,
                     "function_pointer": 0,
                     "type": "int",
@@ -6689,14 +6689,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 327,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 327,
                     "function_pointer": 0,
                     "type": "PyObject * ) _PyUnicode_EncodeUTF16 ( PyObject *",
@@ -6721,7 +6721,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 328,
                     "function_pointer": 0,
                     "type": "const char *",
@@ -6745,7 +6745,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 329,
                     "function_pointer": 0,
                     "type": "int",
@@ -6799,14 +6799,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 330,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 330,
                     "function_pointer": 0,
                     "type": "PyObject * ) _PyUnicode_DecodeUnicodeEscape ( const char *",
@@ -6831,7 +6831,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 331,
                     "function_pointer": 0,
                     "type": "Py_ssize_t",
@@ -6856,7 +6856,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 332,
                     "function_pointer": 0,
                     "type": "const char *",
@@ -6880,7 +6880,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 333,
                     "function_pointer": 0,
                     "type": "const char * *",
@@ -6934,14 +6934,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 334,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 334,
                     "function_pointer": 0,
                     "type": "3.3 ) PyAPI_FUNC ( PyObject * ) PyUnicode_EncodeUnicodeEscape ( const Py_UNICODE *",
@@ -6966,7 +6966,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 335,
                     "function_pointer": 0,
                     "type": "Py_ssize_t",
@@ -7021,14 +7021,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 336,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 336,
                     "function_pointer": 0,
                     "type": "3.3 ) PyAPI_FUNC ( PyObject * ) PyUnicode_EncodeRawUnicodeEscape ( const Py_UNICODE *",
@@ -7053,7 +7053,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 337,
                     "function_pointer": 0,
                     "type": "Py_ssize_t",
@@ -7108,14 +7108,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 338,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 338,
                     "function_pointer": 0,
                     "type": "PyObject * ) _PyUnicode_AsLatin1String ( PyObject *",
@@ -7140,7 +7140,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 339,
                     "function_pointer": 0,
                     "type": "const char *",
@@ -7194,14 +7194,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 340,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 340,
                     "function_pointer": 0,
                     "type": "3.3 ) PyAPI_FUNC ( PyObject * ) PyUnicode_EncodeLatin1 ( const Py_UNICODE *",
@@ -7226,7 +7226,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 341,
                     "function_pointer": 0,
                     "type": "Py_ssize_t",
@@ -7251,7 +7251,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 342,
                     "function_pointer": 0,
                     "type": "const char *",
@@ -7305,14 +7305,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 343,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 343,
                     "function_pointer": 0,
                     "type": "PyObject * ) _PyUnicode_AsASCIIString ( PyObject *",
@@ -7337,7 +7337,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 344,
                     "function_pointer": 0,
                     "type": "const char *",
@@ -7391,14 +7391,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 345,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 345,
                     "function_pointer": 0,
                     "type": "3.3 ) PyAPI_FUNC ( PyObject * ) PyUnicode_EncodeASCII ( const Py_UNICODE *",
@@ -7423,7 +7423,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 346,
                     "function_pointer": 0,
                     "type": "Py_ssize_t",
@@ -7448,7 +7448,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 347,
                     "function_pointer": 0,
                     "type": "const char *",
@@ -7502,14 +7502,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 348,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 348,
                     "function_pointer": 0,
                     "type": "3.3 ) PyAPI_FUNC ( PyObject * ) PyUnicode_EncodeCharmap ( const Py_UNICODE *",
@@ -7534,7 +7534,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 349,
                     "function_pointer": 0,
                     "type": "Py_ssize_t",
@@ -7559,7 +7559,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 350,
                     "function_pointer": 0,
                     "type": "PyObject *",
@@ -7584,7 +7584,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 350,
                     "function_pointer": 0,
                     "type": "const char *",
@@ -7638,14 +7638,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 351,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 351,
                     "function_pointer": 0,
                     "type": "PyObject * ) _PyUnicode_EncodeCharmap ( PyObject *",
@@ -7670,7 +7670,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 352,
                     "function_pointer": 0,
                     "type": "PyObject *",
@@ -7695,7 +7695,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 353,
                     "function_pointer": 0,
                     "type": "const char *",
@@ -7749,14 +7749,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 354,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 354,
                     "function_pointer": 0,
                     "type": "3.3 ) PyAPI_FUNC ( PyObject * ) PyUnicode_TranslateCharmap ( const Py_UNICODE *",
@@ -7781,7 +7781,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 355,
                     "function_pointer": 0,
                     "type": "Py_ssize_t",
@@ -7806,7 +7806,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 356,
                     "function_pointer": 0,
                     "type": "PyObject *",
@@ -7831,7 +7831,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 356,
                     "function_pointer": 0,
                     "type": "const char *",
@@ -7885,14 +7885,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 358,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 358,
                     "function_pointer": 0,
                     "type": "3.3 ) PyAPI_FUNC ( PyObject * ) PyUnicode_EncodeMBCS ( const Py_UNICODE *",
@@ -7917,7 +7917,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 359,
                     "function_pointer": 0,
                     "type": "Py_ssize_t",
@@ -7942,7 +7942,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 360,
                     "function_pointer": 0,
                     "type": "const char *",
@@ -7996,14 +7996,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 362,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 362,
                     "function_pointer": 0,
                     "type": "int ) PyUnicode_EncodeDecimal ( Py_UNICODE *",
@@ -8028,7 +8028,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 362,
                     "function_pointer": 0,
                     "type": "Py_ssize_t",
@@ -8053,7 +8053,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 363,
                     "function_pointer": 0,
                     "type": "char *",
@@ -8077,7 +8077,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 363,
                     "function_pointer": 0,
                     "type": "const char *",
@@ -8131,14 +8131,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 364,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 364,
                     "function_pointer": 0,
                     "type": "PyObject * ) PyUnicode_TransformDecimalToASCII ( Py_UNICODE *",
@@ -8163,7 +8163,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 365,
                     "function_pointer": 0,
                     "type": "Py_ssize_t",
@@ -8218,14 +8218,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 366,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 366,
                     "function_pointer": 0,
                     "type": "PyObject * ) _PyUnicode_TransformDecimalAndSpaceToASCII ( PyObject *",
@@ -8280,14 +8280,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 368,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 368,
                     "function_pointer": 0,
                     "type": "PyObject * ) _PyUnicode_JoinArray ( PyObject *",
@@ -8312,7 +8312,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 369,
                     "function_pointer": 0,
                     "type": "PyObject * const *",
@@ -8337,7 +8337,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 370,
                     "function_pointer": 0,
                     "type": "Py_ssize_t",
@@ -8392,14 +8392,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 371,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 371,
                     "function_pointer": 0,
                     "type": "int ) _PyUnicode_EqualToASCIIId ( PyObject *",
@@ -8424,7 +8424,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 372,
                     "function_pointer": 0,
                     "type": "_Py_Identifier *",
@@ -8480,14 +8480,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 373,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 373,
                     "function_pointer": 0,
                     "type": "int ) _PyUnicode_EqualToASCIIString ( PyObject *",
@@ -8512,7 +8512,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 374,
                     "function_pointer": 0,
                     "type": "const char *",
@@ -8566,14 +8566,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 375,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 375,
                     "function_pointer": 0,
                     "type": "PyObject * ) _PyUnicode_XStrip ( PyObject *",
@@ -8598,7 +8598,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 376,
                     "function_pointer": 0,
                     "type": "int",
@@ -8622,7 +8622,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 376,
                     "function_pointer": 0,
                     "type": "PyObject *",
@@ -8677,14 +8677,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 377,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 377,
                     "function_pointer": 0,
                     "type": "Py_ssize_t ) _PyUnicode_InsertThousandsGrouping ( _PyUnicodeWriter *",
@@ -8709,7 +8709,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 378,
                     "function_pointer": 0,
                     "type": "Py_ssize_t",
@@ -8734,7 +8734,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 378,
                     "function_pointer": 0,
                     "type": "PyObject *",
@@ -8759,7 +8759,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 379,
                     "function_pointer": 0,
                     "type": "Py_ssize_t",
@@ -8784,7 +8784,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 379,
                     "function_pointer": 0,
                     "type": "Py_ssize_t",
@@ -8809,7 +8809,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 379,
                     "function_pointer": 0,
                     "type": "Py_ssize_t",
@@ -8834,7 +8834,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 380,
                     "function_pointer": 0,
                     "type": "const char *",
@@ -8858,7 +8858,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 380,
                     "function_pointer": 0,
                     "type": "PyObject *",
@@ -8883,7 +8883,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 380,
                     "function_pointer": 0,
                     "type": "Py_UCS4 *",
@@ -8938,14 +8938,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 381,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 381,
                     "function_pointer": 0,
                     "type": "const unsigned char",
@@ -8998,14 +8998,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 382,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 382,
                     "function_pointer": 0,
                     "type": "int ) _PyUnicode_IsLowercase ( Py_UCS4",
@@ -9060,14 +9060,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 383,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 383,
                     "function_pointer": 0,
                     "type": "int ) _PyUnicode_IsUppercase ( Py_UCS4",
@@ -9122,14 +9122,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 384,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 384,
                     "function_pointer": 0,
                     "type": "int ) _PyUnicode_IsTitlecase ( Py_UCS4",
@@ -9184,14 +9184,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 385,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 385,
                     "function_pointer": 0,
                     "type": "int ) _PyUnicode_IsXidStart ( Py_UCS4",
@@ -9246,14 +9246,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 386,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 386,
                     "function_pointer": 0,
                     "type": "int ) _PyUnicode_IsXidContinue ( Py_UCS4",
@@ -9308,14 +9308,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 387,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 387,
                     "function_pointer": 0,
                     "type": "int ) _PyUnicode_IsWhitespace ( const Py_UCS4",
@@ -9370,14 +9370,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 388,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 388,
                     "function_pointer": 0,
                     "type": "int ) _PyUnicode_IsLinebreak ( const Py_UCS4",
@@ -9432,14 +9432,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 389,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 389,
                     "function_pointer": 0,
                     "type": "Py_UCS4 ) _PyUnicode_ToLowercase ( Py_UCS4",
@@ -9494,14 +9494,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 390,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 390,
                     "function_pointer": 0,
                     "type": "Py_UCS4 ) _PyUnicode_ToUppercase ( Py_UCS4",
@@ -9556,14 +9556,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 391,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 391,
                     "function_pointer": 0,
                     "type": "3.3 ) PyAPI_FUNC ( Py_UCS4 ) _PyUnicode_ToTitlecase ( Py_UCS4",
@@ -9618,14 +9618,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 392,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 392,
                     "function_pointer": 0,
                     "type": "int ) _PyUnicode_ToLowerFull ( Py_UCS4",
@@ -9650,7 +9650,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 392,
                     "function_pointer": 0,
                     "type": "Py_UCS4 *",
@@ -9705,14 +9705,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 393,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 393,
                     "function_pointer": 0,
                     "type": "int ) _PyUnicode_ToTitleFull ( Py_UCS4",
@@ -9737,7 +9737,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 393,
                     "function_pointer": 0,
                     "type": "Py_UCS4 *",
@@ -9792,14 +9792,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 394,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 394,
                     "function_pointer": 0,
                     "type": "int ) _PyUnicode_ToUpperFull ( Py_UCS4",
@@ -9824,7 +9824,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 394,
                     "function_pointer": 0,
                     "type": "Py_UCS4 *",
@@ -9879,14 +9879,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 395,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 395,
                     "function_pointer": 0,
                     "type": "int ) _PyUnicode_ToFoldedFull ( Py_UCS4",
@@ -9911,7 +9911,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 395,
                     "function_pointer": 0,
                     "type": "Py_UCS4 *",
@@ -9966,14 +9966,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 396,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 396,
                     "function_pointer": 0,
                     "type": "int ) _PyUnicode_IsCaseIgnorable ( Py_UCS4",
@@ -10028,14 +10028,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 397,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 397,
                     "function_pointer": 0,
                     "type": "int ) _PyUnicode_IsCased ( Py_UCS4",
@@ -10090,14 +10090,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 398,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 398,
                     "function_pointer": 0,
                     "type": "int ) _PyUnicode_ToDecimalDigit ( Py_UCS4",
@@ -10152,14 +10152,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 399,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 399,
                     "function_pointer": 0,
                     "type": "int ) _PyUnicode_ToDigit ( Py_UCS4",
@@ -10214,14 +10214,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 400,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 400,
                     "function_pointer": 0,
                     "type": "double ) _PyUnicode_ToNumeric ( Py_UCS4",
@@ -10276,14 +10276,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 401,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 401,
                     "function_pointer": 0,
                     "type": "int ) _PyUnicode_IsDecimalDigit ( Py_UCS4",
@@ -10338,14 +10338,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 402,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 402,
                     "function_pointer": 0,
                     "type": "int ) _PyUnicode_IsDigit ( Py_UCS4",
@@ -10400,14 +10400,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 403,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 403,
                     "function_pointer": 0,
                     "type": "int ) _PyUnicode_IsNumeric ( Py_UCS4",
@@ -10462,14 +10462,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 404,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 404,
                     "function_pointer": 0,
                     "type": "int ) _PyUnicode_IsPrintable ( Py_UCS4",
@@ -10524,14 +10524,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 405,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 405,
                     "function_pointer": 0,
                     "type": "int ) _PyUnicode_IsAlpha ( Py_UCS4",
@@ -10586,14 +10586,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 406,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 406,
                     "function_pointer": 0,
                     "type": "3.3 ) PyAPI_FUNC ( size_t ) Py_UNICODE_strlen ( const Py_UNICODE *",
@@ -10648,14 +10648,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 407,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 407,
                     "function_pointer": 0,
                     "type": "3.3 ) PyAPI_FUNC ( Py_UNICODE * ) Py_UNICODE_strcpy ( Py_UNICODE *",
@@ -10680,7 +10680,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 408,
                     "function_pointer": 0,
                     "type": "const Py_UNICODE *",
@@ -10738,14 +10738,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 409,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 409,
                     "function_pointer": 0,
                     "type": "3.3 ) PyAPI_FUNC ( Py_UNICODE * ) Py_UNICODE_strcat ( Py_UNICODE *",
@@ -10770,7 +10770,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 410,
                     "function_pointer": 0,
                     "type": "const Py_UNICODE *",
@@ -10828,14 +10828,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 411,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 411,
                     "function_pointer": 0,
                     "type": "3.3 ) PyAPI_FUNC ( Py_UNICODE * ) Py_UNICODE_strncpy ( Py_UNICODE *",
@@ -10860,7 +10860,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 412,
                     "function_pointer": 0,
                     "type": "const Py_UNICODE *",
@@ -10888,7 +10888,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 412,
                     "function_pointer": 0,
                     "type": "size_t",
@@ -10942,14 +10942,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 413,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 413,
                     "function_pointer": 0,
                     "type": "3.3 ) PyAPI_FUNC ( int ) Py_UNICODE_strcmp ( const Py_UNICODE *",
@@ -10974,7 +10974,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 414,
                     "function_pointer": 0,
                     "type": "const Py_UNICODE *",
@@ -11032,14 +11032,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 415,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 415,
                     "function_pointer": 0,
                     "type": "3.3 ) PyAPI_FUNC ( int ) Py_UNICODE_strncmp ( const Py_UNICODE *",
@@ -11064,7 +11064,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 416,
                     "function_pointer": 0,
                     "type": "const Py_UNICODE *",
@@ -11092,7 +11092,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 416,
                     "function_pointer": 0,
                     "type": "size_t",
@@ -11146,14 +11146,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 417,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 417,
                     "function_pointer": 0,
                     "type": "3.3 ) PyAPI_FUNC ( Py_UNICODE * ) Py_UNICODE_strchr ( const Py_UNICODE *",
@@ -11178,7 +11178,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 418,
                     "function_pointer": 0,
                     "type": "Py_UNICODE",
@@ -11236,14 +11236,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 419,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 419,
                     "function_pointer": 0,
                     "type": "3.3 ) PyAPI_FUNC ( Py_UNICODE * ) Py_UNICODE_strrchr ( const Py_UNICODE *",
@@ -11268,7 +11268,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 420,
                     "function_pointer": 0,
                     "type": "Py_UNICODE",
@@ -11326,14 +11326,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 421,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 421,
                     "function_pointer": 0,
                     "type": "PyObject * ) _PyUnicode_FormatLong ( PyObject *",
@@ -11358,7 +11358,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 421,
                     "function_pointer": 0,
                     "type": "int",
@@ -11382,7 +11382,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 421,
                     "function_pointer": 0,
                     "type": "int",
@@ -11406,7 +11406,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 421,
                     "function_pointer": 0,
                     "type": "int",
@@ -11460,14 +11460,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 422,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 422,
                     "function_pointer": 0,
                     "type": "3.3 ) PyAPI_FUNC ( Py_UNICODE * ) PyUnicode_AsUnicodeCopy ( PyObject *",
@@ -11522,14 +11522,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 424,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 424,
                     "function_pointer": 0,
                     "type": "PyObject * ) _PyUnicode_FromId ( _Py_Identifier *",
@@ -11584,14 +11584,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 425,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 425,
                     "function_pointer": 0,
                     "type": "void ) _PyUnicode_ClearStaticStrings ( void",
@@ -11646,14 +11646,14 @@
             "default": false,
             "ref_qualifiers": "",
             "returns_reference": false,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 426,
             "vararg": false,
             "parameters": [
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 426,
                     "function_pointer": 0,
                     "type": "int ) _PyUnicode_EQ ( PyObject *",
@@ -11678,7 +11678,7 @@
                 {
                     "extern": false,
                     "array": 0,
-                    "filename": "./tests/fixtures/sample_normalized.h",
+                    "filename": "tests/fixtures/sample_normalized.h",
                     "line_number": 426,
                     "function_pointer": 0,
                     "type": "PyObject *",
@@ -11768,287 +11768,287 @@
     "defines_detail": [
         {
             "value": "Py_AST_H",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 16
         },
         {
             "value": "PY_UNICODE_TYPE wchar_t",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 41
         },
         {
             "value": "Py_UNICODE_ISSPACE(ch)                                                 \\\n  ((ch) < 128U ? _Py_ascii_whitespace[(ch)] : _PyUnicode_IsWhitespace(ch))",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 43
         },
         {
             "value": "Py_UNICODE_ISLOWER(ch) _PyUnicode_IsLowercase(ch)",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 45
         },
         {
             "value": "Py_UNICODE_ISUPPER(ch) _PyUnicode_IsUppercase(ch)",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 46
         },
         {
             "value": "Py_UNICODE_ISTITLE(ch) _PyUnicode_IsTitlecase(ch)",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 47
         },
         {
             "value": "Py_UNICODE_ISLINEBREAK(ch) _PyUnicode_IsLinebreak(ch)",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 48
         },
         {
             "value": "Py_UNICODE_TOLOWER(ch) _PyUnicode_ToLowercase(ch)",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 49
         },
         {
             "value": "Py_UNICODE_TOUPPER(ch) _PyUnicode_ToUppercase(ch)",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 50
         },
         {
             "value": "Py_UNICODE_TOTITLE(ch) _PyUnicode_ToTitlecase(ch)",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 51
         },
         {
             "value": "Py_UNICODE_ISDECIMAL(ch) _PyUnicode_IsDecimalDigit(ch)",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 52
         },
         {
             "value": "Py_UNICODE_ISDIGIT(ch) _PyUnicode_IsDigit(ch)",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 53
         },
         {
             "value": "Py_UNICODE_ISNUMERIC(ch) _PyUnicode_IsNumeric(ch)",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 54
         },
         {
             "value": "Py_UNICODE_ISPRINTABLE(ch) _PyUnicode_IsPrintable(ch)",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 55
         },
         {
             "value": "Py_UNICODE_TODECIMAL(ch) _PyUnicode_ToDecimalDigit(ch)",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 56
         },
         {
             "value": "Py_UNICODE_TODIGIT(ch) _PyUnicode_ToDigit(ch)",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 57
         },
         {
             "value": "Py_UNICODE_TONUMERIC(ch) _PyUnicode_ToNumeric(ch)",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 58
         },
         {
             "value": "Py_UNICODE_ISALPHA(ch) _PyUnicode_IsAlpha(ch)",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 59
         },
         {
             "value": "Py_UNICODE_ISALNUM(ch)                                                 \\\n  (Py_UNICODE_ISALPHA(ch) || Py_UNICODE_ISDECIMAL(ch) ||                       \\\n   Py_UNICODE_ISDIGIT(ch) || Py_UNICODE_ISNUMERIC(ch))",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 60
         },
         {
             "value": "Py_UNICODE_COPY(target, source, length)                                \\\n  memcpy((target), (source), (length) * sizeof(Py_UNICODE))",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 63
         },
         {
             "value": "Py_UNICODE_FILL(target, value, length)                                 \\\n  do {                                                                         \\\n    Py_ssize_t i_;                                                             \\\n    Py_UNICODE *t_ = (target);                                                 \\\n    Py_UNICODE v_ = (value);                                                   \\\n    for (i_ = 0; i_ < (length); i_++)                                          \\\n      t_[i_] = v_;                                                             \\\n  } while (0)",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 65
         },
         {
             "value": "Py_UNICODE_IS_SURROGATE(ch) (0xD800 <= (ch) && (ch) <= 0xDFFF)",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 73
         },
         {
             "value": "Py_UNICODE_IS_HIGH_SURROGATE(ch) (0xD800 <= (ch) && (ch) <= 0xDBFF)",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 74
         },
         {
             "value": "Py_UNICODE_IS_LOW_SURROGATE(ch) (0xDC00 <= (ch) && (ch) <= 0xDFFF)",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 75
         },
         {
             "value": "Py_UNICODE_JOIN_SURROGATES(high, low)                                  \\\n  (((((Py_UCS4)(high)&0x03FF) << 10) | ((Py_UCS4)(low)&0x03FF)) + 0x10000)",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 76
         },
         {
             "value": "Py_UNICODE_HIGH_SURROGATE(ch) (0xD800 - (0x10000 >> 10) + ((ch) >> 10))",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 78
         },
         {
             "value": "Py_UNICODE_LOW_SURROGATE(ch) (0xDC00 + ((ch)&0x3FF))",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 79
         },
         {
             "value": "Py_UNICODE_MATCH(string, offset, substring)                            \\\n  ((*((string)->wstr + (offset)) == *((substring)->wstr)) &&                   \\\n   ((*((string)->wstr + (offset) + (substring)->wstr_length - 1) ==            \\\n     *((substring)->wstr + (substring)->wstr_length - 1))) &&                  \\\n   !memcmp((string)->wstr + (offset), (substring)->wstr,                       \\\n           (substring)->wstr_length * sizeof(Py_UNICODE)))",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 80
         },
         {
             "value": "PyUnicode_WSTR_LENGTH(op)                                              \\\n  (PyUnicode_IS_COMPACT_ASCII(op)                                              \\\n       ? ((PyASCIIObject *)op)->length                                         \\\n       : ((PyCompactUnicodeObject *)op)->wstr_length)",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 114
         },
         {
             "value": "PyUnicode_GET_SIZE(op)                                                 \\\n  (assert(PyUnicode_Check(op)),                                                \\\n   (((PyASCIIObject *)(op))->wstr)                                             \\\n       ? PyUnicode_WSTR_LENGTH(op)                                             \\\n       : ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),                       \\\n          assert(((PyASCIIObject *)(op))->wstr), PyUnicode_WSTR_LENGTH(op)))",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 118
         },
         {
             "value": "PyUnicode_GET_DATA_SIZE(op) (PyUnicode_GET_SIZE(op) * Py_UNICODE_SIZE)",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 124
         },
         {
             "value": "PyUnicode_AS_UNICODE(op)                                               \\\n  (assert(PyUnicode_Check(op)), (((PyASCIIObject *)(op))->wstr)                \\\n                                    ? (((PyASCIIObject *)(op))->wstr)          \\\n                                    : PyUnicode_AsUnicode(_PyObject_CAST(op)))",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 125
         },
         {
             "value": "PyUnicode_AS_DATA(op) ((const char *)(PyUnicode_AS_UNICODE(op)))",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 129
         },
         {
             "value": "SSTATE_NOT_INTERNED 0",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 130
         },
         {
             "value": "SSTATE_INTERNED_MORTAL 1",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 131
         },
         {
             "value": "SSTATE_INTERNED_IMMORTAL 2",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 132
         },
         {
             "value": "PyUnicode_IS_ASCII(op)                                                 \\\n  (assert(PyUnicode_Check(op)), assert(PyUnicode_IS_READY(op)),                \\\n   ((PyASCIIObject *)op)->state.ascii)",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 133
         },
         {
             "value": "PyUnicode_IS_COMPACT(op) (((PyASCIIObject *)(op))->state.compact)",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 136
         },
         {
             "value": "PyUnicode_IS_COMPACT_ASCII(op)                                         \\\n  (((PyASCIIObject *)op)->state.ascii && PyUnicode_IS_COMPACT(op))",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 137
         },
         {
             "value": "PyUnicode_1BYTE_DATA(op) ((Py_UCS1 *)PyUnicode_DATA(op))",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 157
         },
         {
             "value": "PyUnicode_2BYTE_DATA(op) ((Py_UCS2 *)PyUnicode_DATA(op))",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 158
         },
         {
             "value": "PyUnicode_4BYTE_DATA(op) ((Py_UCS4 *)PyUnicode_DATA(op))",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 159
         },
         {
             "value": "PyUnicode_KIND(op)                                                     \\\n  (assert(PyUnicode_Check(op)), assert(PyUnicode_IS_READY(op)),                \\\n   ((PyASCIIObject *)(op))->state.kind)",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 160
         },
         {
             "value": "_PyUnicode_COMPACT_DATA(op)                                            \\\n  (PyUnicode_IS_ASCII(op) ? ((void *)((PyASCIIObject *)(op) + 1))              \\\n                          : ((void *)((PyCompactUnicodeObject *)(op) + 1)))",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 163
         },
         {
             "value": "_PyUnicode_NONCOMPACT_DATA(op)                                         \\\n  (assert(((PyUnicodeObject *)(op))->data.any),                                \\\n   ((((PyUnicodeObject *)(op))->data.any)))",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 166
         },
         {
             "value": "PyUnicode_DATA(op)                                                     \\\n  (assert(PyUnicode_Check(op)), PyUnicode_IS_COMPACT(op)                       \\\n                                    ? _PyUnicode_COMPACT_DATA(op)              \\\n                                    : _PyUnicode_NONCOMPACT_DATA(op))",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 169
         },
         {
             "value": "PyUnicode_WRITE(kind, data, index, value)                              \\\n  do {                                                                         \\\n    switch ((kind)) {                                                          \\\n    case PyUnicode_1BYTE_KIND: {                                               \\\n      ((Py_UCS1 *)(data))[(index)] = (Py_UCS1)(value);                         \\\n      break;                                                                   \\\n    }                                                                          \\\n    case PyUnicode_2BYTE_KIND: {                                               \\\n      ((Py_UCS2 *)(data))[(index)] = (Py_UCS2)(value);                         \\\n      break;                                                                   \\\n    }                                                                          \\\n    default: {                                                                 \\\n      assert((kind) == PyUnicode_4BYTE_KIND);                                  \\\n      ((Py_UCS4 *)(data))[(index)] = (Py_UCS4)(value);                         \\\n    }                                                                          \\\n    }                                                                          \\\n  } while (0)",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 173
         },
         {
             "value": "PyUnicode_READ(kind, data, index)                                      \\\n  ((Py_UCS4)((kind) == PyUnicode_1BYTE_KIND                                    \\\n                 ? ((const Py_UCS1 *)(data))[(index)]                          \\\n                 : ((kind) == PyUnicode_2BYTE_KIND                             \\\n                        ? ((const Py_UCS2 *)(data))[(index)]                   \\\n                        : ((const Py_UCS4 *)(data))[(index)])))",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 190
         },
         {
             "value": "PyUnicode_READ_CHAR(unicode, index)                                    \\\n  (assert(PyUnicode_Check(unicode)), assert(PyUnicode_IS_READY(unicode)),      \\\n   (Py_UCS4)(PyUnicode_KIND((unicode)) == PyUnicode_1BYTE_KIND                 \\\n                 ? ((const Py_UCS1 *)(PyUnicode_DATA((unicode))))[(index)]     \\\n                 : (PyUnicode_KIND((unicode)) == PyUnicode_2BYTE_KIND          \\\n                        ? ((const Py_UCS2 *)(PyUnicode_DATA(                   \\\n                              (unicode))))[(index)]                            \\\n                        : ((const Py_UCS4 *)(PyUnicode_DATA(                   \\\n                              (unicode))))[(index)])))",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 196
         },
         {
             "value": "PyUnicode_GET_LENGTH(op)                                               \\\n  (assert(PyUnicode_Check(op)), assert(PyUnicode_IS_READY(op)),                \\\n   ((PyASCIIObject *)(op))->length)",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 205
         },
         {
             "value": "PyUnicode_IS_READY(op) (((PyASCIIObject *)op)->state.ready)",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 208
         },
         {
             "value": "PyUnicode_READY(op)                                                    \\\n  (assert(PyUnicode_Check(op)),                                                \\\n   (PyUnicode_IS_READY(op) ? 0 : _PyUnicode_Ready(_PyObject_CAST(op))))",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 209
         },
         {
             "value": "PyUnicode_MAX_CHAR_VALUE(op)                                           \\\n  (assert(PyUnicode_IS_READY(op)),                                             \\\n   (PyUnicode_IS_ASCII(op)                                                     \\\n        ? (0x7f)                                                               \\\n        : (PyUnicode_KIND(op) == PyUnicode_1BYTE_KIND                          \\\n               ? (0xffU)                                                       \\\n               : (PyUnicode_KIND(op) == PyUnicode_2BYTE_KIND ? (0xffffU)       \\\n                                                             : (0x10ffffU)))))",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 212
         },
         {
             "value": "_PyUnicodeWriter_Prepare(WRITER, LENGTH, MAXCHAR)                      \\\n  (((MAXCHAR) <= (WRITER)->maxchar &&                                          \\\n    (LENGTH) <= (WRITER)->size - (WRITER)->pos)                                \\\n       ? 0                                                                     \\\n       : (((LENGTH) == 0) ? 0                                                  \\\n                          : _PyUnicodeWriter_PrepareInternal(                  \\\n                                (WRITER), (LENGTH), (MAXCHAR))))",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 260
         },
         {
             "value": "_PyUnicodeWriter_PrepareKind(WRITER, KIND)                             \\\n  (assert((KIND) != PyUnicode_WCHAR_KIND),                                     \\\n   (KIND) <= (WRITER)->kind                                                    \\\n       ? 0                                                                     \\\n       : _PyUnicodeWriter_PrepareKindInternal((WRITER), (KIND)))",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 270
         },
         {
             "value": "_PyUnicode_AsStringAndSize PyUnicode_AsUTF8AndSize",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 301
         },
         {
             "value": "_PyUnicode_AsString PyUnicode_AsUTF8",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 303
         }
     ],
@@ -12062,32 +12062,32 @@
     "includes_detail": [
         {
             "value": "\"test-node1.h\"",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 1
         },
         {
             "value": "\"test-node2.h\"",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 2
         },
         {
             "value": "\"test-node3.h\"",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 3
         },
         {
             "value": "\"Python-ast.h\"",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 20
         },
         {
             "value": "\"node.h\"",
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 21
         }
     ],
     "headerFileNames": [
-        "./tests/fixtures/sample_normalized.h"
+        "tests/fixtures/sample_normalized.h"
     ],
     "enums": [
         {
@@ -12113,7 +12113,7 @@
                     "value": 4
                 }
             ],
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 139,
             "type": "???"
         },
@@ -12140,7 +12140,7 @@
                     "value": 4
                 }
             ],
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 145,
             "type": "???"
         },
@@ -12167,7 +12167,7 @@
                     "value": 4
                 }
             ],
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 151,
             "type": "???"
         }
@@ -12177,7 +12177,7 @@
         {
             "extern": false,
             "array": 0,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 4,
             "function_pointer": 0,
             "type": "int",
@@ -12201,7 +12201,7 @@
         {
             "extern": false,
             "array": 0,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 5,
             "function_pointer": 0,
             "type": "float",
@@ -12225,7 +12225,7 @@
         {
             "extern": false,
             "array": 0,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 6,
             "function_pointer": 0,
             "type": "char",
@@ -12249,7 +12249,7 @@
         {
             "extern": false,
             "array": 0,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 7,
             "function_pointer": 0,
             "type": "int",
@@ -12275,7 +12275,7 @@
         {
             "extern": false,
             "array": 0,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 8,
             "function_pointer": 0,
             "type": "int",
@@ -12301,7 +12301,7 @@
         {
             "extern": false,
             "array": 0,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 9,
             "function_pointer": 0,
             "type": "int",
@@ -12327,7 +12327,7 @@
         {
             "extern": false,
             "array": 0,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 10,
             "function_pointer": 0,
             "type": "int",
@@ -12353,7 +12353,7 @@
         {
             "extern": false,
             "array": 0,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 11,
             "function_pointer": 0,
             "type": "char test_a, test_b,",
@@ -12378,7 +12378,7 @@
         {
             "extern": false,
             "array": 0,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 12,
             "function_pointer": 0,
             "type": "int",
@@ -12404,7 +12404,7 @@
         {
             "extern": false,
             "array": 0,
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 13,
             "function_pointer": 0,
             "type": "int",
@@ -12452,7 +12452,7 @@
                     "value": 4
                 }
             ],
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 139,
             "type": "???"
         },
@@ -12479,7 +12479,7 @@
                     "value": 4
                 }
             ],
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 145,
             "type": "???"
         },
@@ -12506,7 +12506,7 @@
                     "value": 4
                 }
             ],
-            "filename": "./tests/fixtures/sample_normalized.h",
+            "filename": "tests/fixtures/sample_normalized.h",
             "line_number": 151,
             "type": "???"
         }

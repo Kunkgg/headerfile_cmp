@@ -80,7 +80,13 @@ class HeaderFileParser:
 
     @cached_property
     def structs(self):
-        pass
+        extracted_structs = [
+            self.extract_struct(ast_class)
+            for ast_class_name, ast_class in self._ast.classes.items()
+            if 'anon-struct' not in ast_class_name
+        ]
+        logger.debug(f"Extracted structs: {len(extracted_structs)}")
+        return SyntaxElementCollection(extracted_structs)
 
     def to_json(self, fn: str, encoding: str = "utf-8"):
         pass
@@ -128,9 +134,35 @@ class HeaderFileParser:
         name: str = ast_variable.get("name", "")
         line_number = ast_variable.get("line_number")
         if not line_number:
-            msg = f"Not found line number of variable {name}."
+            msg = f"Not found line number of variable: {name}."
             logger.error(msg)
             raise ValueError(msg)
         content = variable_content(line_number)
-        logger.debug(f'Extracted variable {name}')
+        logger.debug(f'Extracted variable: {name}')
         return SyntaxElement(SyntaxType.VARIABLE, name, content)
+
+    def extract_struct(self, ast_class: Dict) -> SyntaxElement:
+        def struct_content(line_number: int) -> List[str]:
+            lines = []
+            in_brace = 0
+            for line in self.lines[line_number - 1 :]:
+                for cha in line:
+                    if cha == '{':
+                        in_brace += 1
+                    elif cha == '}':
+                        in_brace -= 1
+                lines.append(line)
+                if in_brace == 0 and line.strip().endswith(';'):
+                    break
+
+            return lines
+
+        name: str = ast_class.get("name", "")
+        line_number = ast_class.get("line_number")
+        if not line_number:
+            msg = f"Not found line number of struct: {name}."
+            logger.error(msg)
+            raise ValueError(msg)
+        content = struct_content(line_number)
+        logger.debug(f'Extracted struct: {name}')
+        return SyntaxElement(SyntaxType.STRUCT, name, content)
