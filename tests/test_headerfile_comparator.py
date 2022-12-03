@@ -40,13 +40,3 @@ class TestHeaderFileComparator(unittest.TestCase):
         self.assertTrue(cmpres_1.is_same)
         self.assertFalse(cmpres_2.is_same)
         self.assertFalse(cmpres_3.is_same)
-
-    def test_cppheader_parser(self):
-        fn = "./tests/fixtures/sample.h"
-        fn_normalized = "./tests/fixtures/sample_normalized.h"
-        # json_normalized = "./tests/fixtures/sample_normalized.json"
-        normalize_clike(fn, fn_normalized)
-        header = CppHeaderParser.CppHeader(fn_normalized)
-        # with open(json_normalized, 'w') as fp:
-        #     fp.write(header.toJSON())
-        self.assertIsInstance(header.includes, list)

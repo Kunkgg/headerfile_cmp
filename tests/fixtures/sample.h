@@ -1,3 +1,18 @@
+#include "test-node1.h"         /* test-node */
+#include "test-node2.h"         /* test-node */
+#include "test-node3.h"         /* test-node */
+
+// test-variables
+int test_var_int_empty;
+float test_var_float_empty;
+char test_var_char_empty;
+int test_var_int = 10000;
+int test_var_int_expr = test_var_int + 222;
+int test_var_float = 3.14;
+int test_var_char = 'aaa';
+char test_a, test_b, testc;
+
+
 #ifndef Py_AST_H
 #define Py_AST_H
 #ifdef __cplusplus

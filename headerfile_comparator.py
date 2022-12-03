@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 
 
 @dataclass
-class SyntaxItem:
+class SyntaxElement:
     name: str
     lines: str | List[str] | None
 
@@ -33,12 +33,12 @@ class SyntaxElementCmpResult:
     diffs: List[DiffItem | str] = field(default_factory=list)
 
 
-def parse_enum(enum: Dict) -> SyntaxItem:
+def parse_enum(enum: Dict) -> SyntaxElement:
     name: str = enum.get("name", "")
     lines = [
         f"{value.get('name')} = {value.get('value')}" for value in enum.get("values", {})
     ]
-    return SyntaxItem(name, lines)
+    return SyntaxElement(name, lines)
 
 
 class HeaderFileComparator:
@@ -78,11 +78,11 @@ class HeaderFileComparator:
         return CppHeaderParser.CppHeader(self.to_fn)
 
     @cached_property
-    def from_ast_enums(self) -> List[SyntaxItem]:
+    def from_ast_enums(self) -> List[SyntaxElement]:
         return [parse_enum(enum) for enum in self.from_ast.enums]
 
     @cached_property
-    def to_ast_enums(self) -> List[SyntaxItem]:
+    def to_ast_enums(self) -> List[SyntaxElement]:
         return [parse_enum(enum) for enum in self.to_ast.enums]
 
     def make_from_desc(self, desc_parts: List[str]) -> str:
@@ -141,7 +141,7 @@ class HeaderFileComparator:
 
     def cmp_enum(self):
         res = SyntaxElementCmpResult()
-        
+
         pass
 
     def cmp_variable(self):

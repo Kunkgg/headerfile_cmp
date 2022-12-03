@@ -11,6 +11,8 @@ def readlines(fn: str, encoding="utf-8") -> List[str]:
             lines = fp.readlines()
         return lines
     except FileNotFoundError as e:
-        logger.error(f"Failed to read file {fn}", e)
+        msg = f"Not Found: {fn}"
+        logger.error(msg)
+        raise FileNotFoundError(msg)
     return []
 
