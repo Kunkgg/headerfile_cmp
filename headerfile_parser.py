@@ -1,6 +1,7 @@
+import json
 import logging
 import re
-from dataclasses import dataclass
+from dataclasses import asdict, dataclass, field
 from enum import Enum
 from functools import cached_property
 from typing import Dict, List, NamedTuple, Tuple
@@ -27,37 +28,70 @@ class SyntaxType(Enum):
 class SyntaxElement:
     syntaxType: SyntaxType
     name: str
-    content: str | List[str] | None
+    content: List[str]
 
 
 @dataclass
 class SyntaxElementCollection:
-    elements: List[SyntaxElement]
+    elements: List[SyntaxElement] = field(default_factory=list)
+
+
+@dataclass
+class ParsedHeaderFile:
+    includes: SyntaxElementCollection
+    defines: SyntaxElementCollection
+    enums: SyntaxElementCollection
+    variables: SyntaxElementCollection
+    structs: SyntaxElementCollection
 
 
 class HeaderFileParser:
     def __init__(self, fn: str):
         self.fn = fn
 
-    @cached_property
     def parse(self):
-        pass
+        return ParsedHeaderFile(
+            includes=self.includes,
+            defines=self.defines,
+            enums=self.enums,
+            variables=self.variables,
+            structs=self.structs
+        )
+
+    def to_dict(self) -> Dict:
+        return asdict(self.parse())
+
+    def to_json(self, fn: str, encoding: str = "utf-8"):
+        class ParsedHeaderFileJSONEncoder(json.JSONEncoder):
+            def default(self, obj):
+                if isinstance(obj, SyntaxType):
+                    return obj.value
+                return json.JSONEncoder.default(self, obj)
+        
+        with open(fn, 'w', encoding=encoding) as fp:
+            json.dump(self.to_dict(), fp, indent=2, cls=ParsedHeaderFileJSONEncoder)
+        logger.info(f'Dumped headerfile parse result to: {fn}')
 
     @cached_property
     def lines(self) -> List[str]:
         return readlines(self.fn)
 
     @cached_property
+    def _ast(self):
+        logger.debug(f"Parsered {self.fn} by robotpy-cppheaderparser")
+        return CppHeaderParser.CppHeader(self.fn)
+
+    @cached_property
     def includes(self) -> SyntaxElementCollection:
         extracted_includes = [
-            SyntaxElement(SyntaxType.INCLUDE, include, None)
+            SyntaxElement(SyntaxType.INCLUDE, include, [])
             for include in self._ast.includes
         ]
         logger.debug(f"Extracted includes: {len(extracted_includes)}")
         return SyntaxElementCollection(extracted_includes)
 
     @cached_property
-    def defines(self):
+    def defines(self) -> SyntaxElementCollection:
         extracted_defines = [
             self.extract_define(define) for define in self._ast.defines
         ]
@@ -83,21 +117,13 @@ class HeaderFileParser:
         extracted_structs = [
             self.extract_struct(ast_class)
             for ast_class_name, ast_class in self._ast.classes.items()
-            if 'anon-struct' not in ast_class_name
+            if "anon-struct" not in ast_class_name
         ]
         logger.debug(f"Extracted structs: {len(extracted_structs)}")
         return SyntaxElementCollection(extracted_structs)
 
-    def to_json(self, fn: str, encoding: str = "utf-8"):
-        pass
-
-    @cached_property
-    def _ast(self):
-        logger.debug(f"Parsered {self.fn} by robotpy-cppheaderparser")
-        return CppHeaderParser.CppHeader(self.fn)
-
     def extract_enum(self, ast_enum: Dict) -> SyntaxElement:
-        name: str = ast_enum.get("name", "")
+        name: str = str(ast_enum.get("name", "")) # 直接返回的不是 str
         content = [
             f"{value.get('name')} = {value.get('value')}"
             for value in ast_enum.get("values", {})
@@ -106,8 +132,10 @@ class HeaderFileParser:
 
     def extract_define(self, ast_define: str) -> SyntaxElement:
         # 处理 define 为空
+        is_empty = False
         if " " not in ast_define:
             ast_define = ast_define + " "
+            is_empty = True
 
         cleaned_define = combine_splited_line(ast_define)
         name_match = re.match(r"(.*?\)) ", cleaned_define) or re.match(
@@ -119,7 +147,9 @@ class HeaderFileParser:
             raise ValueError(msg)
 
         name = name_match.group(1)
-        content = cleaned_define[len(name) :].strip()
+        content = [cleaned_define[len(name) :].strip()]
+        if is_empty:
+            content = [] # define 为空
         return SyntaxElement(SyntaxType.DEFINE, name, content)
 
     def extract_variable(self, ast_variable: Dict) -> SyntaxElement:
@@ -129,16 +159,16 @@ class HeaderFileParser:
                 lines.append(line)
                 if line.strip().endswith(";"):
                     break
-            return combine_splited_line("".join(lines))
+            return combine_splited_line("".join(lines)).strip()
 
-        name: str = ast_variable.get("name", "")
+        name: str = str(ast_variable.get("name", "")) # 直接返回的不是 str
         line_number = ast_variable.get("line_number")
         if not line_number:
             msg = f"Not found line number of variable: {name}."
             logger.error(msg)
             raise ValueError(msg)
-        content = variable_content(line_number)
-        logger.debug(f'Extracted variable: {name}')
+        content = [variable_content(line_number)]
+        logger.debug(f"Extracted variable: {name}")
         return SyntaxElement(SyntaxType.VARIABLE, name, content)
 
     def extract_struct(self, ast_class: Dict) -> SyntaxElement:
@@ -147,22 +177,30 @@ class HeaderFileParser:
             in_brace = 0
             for line in self.lines[line_number - 1 :]:
                 for cha in line:
-                    if cha == '{':
+                    if cha == "{":
                         in_brace += 1
-                    elif cha == '}':
+                    elif cha == "}":
                         in_brace -= 1
                 lines.append(line)
-                if in_brace == 0 and line.strip().endswith(';'):
+                if in_brace == 0 and line.strip().endswith(";"):
                     break
 
             return lines
 
-        name: str = ast_class.get("name", "")
+        name: str = str(ast_class.get("name", "")) # 直接返回的不是 str
         line_number = ast_class.get("line_number")
         if not line_number:
             msg = f"Not found line number of struct: {name}."
             logger.error(msg)
             raise ValueError(msg)
         content = struct_content(line_number)
-        logger.debug(f'Extracted struct: {name}')
+        logger.debug(f"Extracted struct: {name}")
         return SyntaxElement(SyntaxType.STRUCT, name, content)
+
+if __name__ == '__main__':
+    fn = './tests/fixtures/sample_normalized.h'
+    fn_json = './tests/fixtures/parsed_sample_normalized.json'
+    parser = HeaderFileParser(fn)
+    # import ipdb; ipdb.set_trace()
+    parser.to_json(fn_json)
+

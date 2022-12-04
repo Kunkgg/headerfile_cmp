@@ -1,9 +1,10 @@
 import pathlib
 import unittest
-from headerfile_parser import HeaderFileParser
-from headerfile_parser import SyntaxType
-from headerfile_formatter import normalize_clike
+from dataclasses import asdict
+
 from headerfile_ast import dump_ast
+from headerfile_formatter import normalize_clike
+from headerfile_parser import HeaderFileParser, SyntaxType
 
 FIXTURES_PATH = pathlib.Path("./tests/fixtures")
 
@@ -32,19 +33,19 @@ class TestHeaderFileParser(unittest.TestCase):
         element = includes.elements[0]
         self.assertEqual(element.syntaxType, SyntaxType.INCLUDE)
         self.assertIsInstance(element.name, str)
-        self.assertIsNone(element.content)
+        self.assertEqual(element.content, [])
 
     def test_extract_define_empty(self):
         define = "Py_AST_H"
         extracted_define = self.parser.extract_define(define)
         self.assertEqual(extracted_define.name, define)
-        self.assertEqual(extracted_define.content, "")
+        self.assertEqual(extracted_define.content, [])
 
     def test_extract_define_normal(self):
         define = "Py_UNICODE_ISLOWER(ch) _PyUnicode_IsLowercase(ch)"
         extracted_define = self.parser.extract_define(define)
         self.assertEqual(extracted_define.name, "Py_UNICODE_ISLOWER(ch)")
-        self.assertEqual(extracted_define.content, "_PyUnicode_IsLowercase(ch)")
+        self.assertEqual(extracted_define.content, ["_PyUnicode_IsLowercase(ch)"])
 
     def test_extract_define_long(self):
         define = "Py_UNICODE_ISSPACE(ch)                                                 \\\n  ((ch) < 128U ? _Py_ascii_whitespace[(ch)] : _PyUnicode_IsWhitespace(ch))"
@@ -52,7 +53,7 @@ class TestHeaderFileParser(unittest.TestCase):
         self.assertEqual(extracted_define.name, "Py_UNICODE_ISSPACE(ch)")
         self.assertEqual(
             extracted_define.content,
-            "((ch) < 128U ? _Py_ascii_whitespace[(ch)] : _PyUnicode_IsWhitespace(ch))",
+            ["((ch) < 128U ? _Py_ascii_whitespace[(ch)] : _PyUnicode_IsWhitespace(ch))"],
         )
 
     def test_extract_define_multi_args(self):
@@ -63,7 +64,7 @@ class TestHeaderFileParser(unittest.TestCase):
         )
         self.assertEqual(
             extracted_define.content,
-            "memcpy((target), (source), (length) * sizeof(Py_UNICODE))",
+            ["memcpy((target), (source), (length) * sizeof(Py_UNICODE))"],
         )
 
     def test_extract_define_multi_lines(self):
@@ -72,7 +73,7 @@ class TestHeaderFileParser(unittest.TestCase):
         self.assertEqual(extracted_define.name, "PyUnicode_READ_CHAR(unicode, index)")
         self.assertEqual(
             extracted_define.content,
-            "(assert(PyUnicode_Check(unicode)), assert(PyUnicode_IS_READY(unicode)), (Py_UCS4)(PyUnicode_KIND((unicode)) == PyUnicode_1BYTE_KIND ? ((const Py_UCS1 *)(PyUnicode_DATA((unicode))))[(index)] : (PyUnicode_KIND((unicode)) == PyUnicode_2BYTE_KIND ? ((const Py_UCS2 *)(PyUnicode_DATA( (unicode))))[(index)] : ((const Py_UCS4 *)(PyUnicode_DATA( (unicode))))[(index)])))",
+            ["(assert(PyUnicode_Check(unicode)), assert(PyUnicode_IS_READY(unicode)), (Py_UCS4)(PyUnicode_KIND((unicode)) == PyUnicode_1BYTE_KIND ? ((const Py_UCS1 *)(PyUnicode_DATA((unicode))))[(index)] : (PyUnicode_KIND((unicode)) == PyUnicode_2BYTE_KIND ? ((const Py_UCS2 *)(PyUnicode_DATA( (unicode))))[(index)] : ((const Py_UCS4 *)(PyUnicode_DATA( (unicode))))[(index)])))"],
         )
 
     def test_defines(self):
@@ -80,7 +81,7 @@ class TestHeaderFileParser(unittest.TestCase):
         element = defines.elements[0]
         self.assertEqual(element.syntaxType, SyntaxType.DEFINE)
         self.assertIsInstance(element.name, str)
-        self.assertIsInstance(element.content, str)
+        self.assertIsInstance(element.content, list)
 
     def test_enums(self):
         enums_ = self.parser.enums
@@ -94,7 +95,7 @@ class TestHeaderFileParser(unittest.TestCase):
         element = variables.elements[0]
         self.assertEqual(element.syntaxType, SyntaxType.VARIABLE)
         self.assertIsInstance(element.name, str)
-        self.assertIsInstance(element.content, str)
+        self.assertIsInstance(element.content, list)
 
     def test_extract_variable_no_inited(self):
         # ! 依赖测试 sample 文件
@@ -105,7 +106,7 @@ class TestHeaderFileParser(unittest.TestCase):
         extracted_variable = self.parser_variables.extract_variable(ast_variable)
         variable_content = "int test_var_int_empty;"
         self.assertEqual(extracted_variable.name, ast_variable["name"])
-        self.assertEqual(extracted_variable.content.strip(), variable_content)
+        self.assertEqual(extracted_variable.content, [variable_content])
 
     def test_extract_variable_inited(self):
         # ! 依赖测试 sample 文件
@@ -116,7 +117,7 @@ class TestHeaderFileParser(unittest.TestCase):
         extracted_variable = self.parser_variables.extract_variable(ast_variable)
         variable_content = "int test_var_int = 10000;"
         self.assertEqual(extracted_variable.name, ast_variable["name"])
-        self.assertEqual(extracted_variable.content.strip(), variable_content)
+        self.assertEqual(extracted_variable.content, [variable_content])
 
     def test_extract_variable_expr(self):
         # ! 依赖测试 sample 文件
@@ -127,7 +128,7 @@ class TestHeaderFileParser(unittest.TestCase):
         extracted_variable = self.parser_variables.extract_variable(ast_variable)
         variable_content = "int test_var_int_expr = test_var_int + 222;"
         self.assertEqual(extracted_variable.name, ast_variable["name"])
-        self.assertEqual(extracted_variable.content.strip(), variable_content)
+        self.assertEqual(extracted_variable.content, [variable_content])
 
     def test_extract_variable_muti_in_oneline(self):
         # ! robotpy-cppheaderparser 解析多个变量在同一行声明的形式时，结果不准确
@@ -139,7 +140,7 @@ class TestHeaderFileParser(unittest.TestCase):
         extracted_variable = self.parser_variables.extract_variable(ast_variable)
         variable_content = "char test_a, test_b, testc;"
         self.assertEqual(extracted_variable.name, ast_variable["name"])
-        self.assertEqual(extracted_variable.content.strip(), variable_content)
+        self.assertEqual(extracted_variable.content, [variable_content])
 
     def test_extract_variable_muti_lines(self):
         # ! 依赖测试 sample 文件
@@ -150,7 +151,7 @@ class TestHeaderFileParser(unittest.TestCase):
         extracted_variable = self.parser_variables.extract_variable(ast_variable)
         variable_content = "int xx = 5 + 50 * 100 + 3600 * 24 + 3600 * 1 - 3600 * 1 + 3600 * 24 - 3600 * 24 + 7200 * 1 - 7200 * 1;"
         self.assertEqual(extracted_variable.name, ast_variable["name"])
-        self.assertEqual(extracted_variable.content.strip(), variable_content)
+        self.assertEqual(extracted_variable.content, [variable_content])
 
     def test_structs(self):
         structs = self.parser_structs.structs
@@ -205,3 +206,8 @@ class TestHeaderFileParser(unittest.TestCase):
         extracted_struct = self.parser_structs.extract_struct(ast_struct)
         self.assertEqual(extracted_struct.name, ast_struct["name"])
         self.assertEqual(extracted_struct.content, struct_content)
+
+    def test_parse(self):
+        parsed = self.parser.parse()
+        self.assertIsNotNone(parsed)
+
