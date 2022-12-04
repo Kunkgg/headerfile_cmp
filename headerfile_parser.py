@@ -22,7 +22,7 @@ class SyntaxType(Enum):
     DEFINE = "define"
     ENUM = "enum"
     VARIABLE = "variable"
-    STRUCT = "variable"
+    STRUCT = "struct"
 
 
 @dataclass
