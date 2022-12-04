@@ -1,4 +1,5 @@
 {
+  "file": "./tests/fixtures/sample_normalized.h",
   "includes": {
     "elements": [
       {
@@ -33,9 +34,7 @@
       {
         "syntaxType": "define",
         "name": "Py_AST_H",
-        "content": [
-          ""
-        ]
+        "content": []
       },
       {
         "syntaxType": "define",
@@ -471,70 +470,70 @@
         "syntaxType": "variable",
         "name": "test_var_int_empty",
         "content": [
-          "int test_var_int_empty; "
+          "int test_var_int_empty;"
         ]
       },
       {
         "syntaxType": "variable",
         "name": "test_var_float_empty",
         "content": [
-          "float test_var_float_empty; "
+          "float test_var_float_empty;"
         ]
       },
       {
         "syntaxType": "variable",
         "name": "test_var_char_empty",
         "content": [
-          "char test_var_char_empty; "
+          "char test_var_char_empty;"
         ]
       },
       {
         "syntaxType": "variable",
         "name": "test_var_int",
         "content": [
-          "int test_var_int = 10000; "
+          "int test_var_int = 10000;"
         ]
       },
       {
         "syntaxType": "variable",
         "name": "test_var_int_expr",
         "content": [
-          "int test_var_int_expr = test_var_int + 222; "
+          "int test_var_int_expr = test_var_int + 222;"
         ]
       },
       {
         "syntaxType": "variable",
         "name": "test_var_float",
         "content": [
-          "int test_var_float = 3.14; "
+          "int test_var_float = 3.14;"
         ]
       },
       {
         "syntaxType": "variable",
         "name": "test_var_char",
         "content": [
-          "int test_var_char = 'aaa'; "
+          "int test_var_char = 'aaa';"
         ]
       },
       {
         "syntaxType": "variable",
         "name": "testc",
         "content": [
-          "char test_a, test_b, testc; "
+          "char test_a, test_b, testc;"
         ]
       },
       {
         "syntaxType": "variable",
         "name": "x",
         "content": [
-          "int x = 5, y = 6, z = 50; "
+          "int x = 5, y = 6, z = 50;"
         ]
       },
       {
         "syntaxType": "variable",
         "name": "xx",
         "content": [
-          "int xx = 5 + 50 * 100 + 3600 * 24 + 3600 * 1 - 3600 * 1 + 3600 * 24 - 3600 * 24 + 7200 * 1 - 7200 * 1; "
+          "int xx = 5 + 50 * 100 + 3600 * 24 + 3600 * 1 - 3600 * 1 + 3600 * 24 - 3600 * 24 + 7200 * 1 - 7200 * 1;"
         ]
       }
     ]

@@ -1,4 +1,5 @@
 import json
+import pathlib
 import logging
 import re
 from dataclasses import asdict, dataclass, field
@@ -28,7 +29,7 @@ class SyntaxType(Enum):
 class SyntaxElement:
     syntaxType: SyntaxType
     name: str
-    content: List[str]
+    content: List[str] = field(repr=False)
 
 
 @dataclass
@@ -38,11 +39,25 @@ class SyntaxElementCollection:
 
 @dataclass
 class ParsedHeaderFile:
+    file: str
     includes: SyntaxElementCollection
     defines: SyntaxElementCollection
     enums: SyntaxElementCollection
     variables: SyntaxElementCollection
     structs: SyntaxElementCollection
+
+    def __repr__(self):
+        fn = pathlib.Path(self.file).name
+        includes_count = len(self.includes.elements)
+        defines_count = len(self.defines.elements)
+        enums_count = len(self.enums.elements)
+        variables_count = len(self.variables.elements)
+        structs_count = len(self.structs.elements)
+        return (
+            f"<ParsedHeaderFile: {fn} [includes: {includes_count}]"
+            + f" [defines: {defines_count}] [enums: {enums_count}]"
+            + f" [variables: {variables_count}] [structs: {structs_count}]>"
+        )
 
 
 class HeaderFileParser:
@@ -51,11 +66,12 @@ class HeaderFileParser:
 
     def parse(self):
         return ParsedHeaderFile(
+            file=self.fn,
             includes=self.includes,
             defines=self.defines,
             enums=self.enums,
             variables=self.variables,
-            structs=self.structs
+            structs=self.structs,
         )
 
     def to_dict(self) -> Dict:
@@ -67,10 +83,10 @@ class HeaderFileParser:
                 if isinstance(obj, SyntaxType):
                     return obj.value
                 return json.JSONEncoder.default(self, obj)
-        
-        with open(fn, 'w', encoding=encoding) as fp:
+
+        with open(fn, "w", encoding=encoding) as fp:
             json.dump(self.to_dict(), fp, indent=2, cls=ParsedHeaderFileJSONEncoder)
-        logger.info(f'Dumped headerfile parse result to: {fn}')
+        logger.info(f"Dumped headerfile parse result to: {fn}")
 
     @cached_property
     def lines(self) -> List[str]:
@@ -123,7 +139,7 @@ class HeaderFileParser:
         return SyntaxElementCollection(extracted_structs)
 
     def extract_enum(self, ast_enum: Dict) -> SyntaxElement:
-        name: str = str(ast_enum.get("name", "")) # 直接返回的不是 str
+        name: str = str(ast_enum.get("name", ""))  # 直接返回的不是 str
         content = [
             f"{value.get('name')} = {value.get('value')}"
             for value in ast_enum.get("values", {})
@@ -149,7 +165,7 @@ class HeaderFileParser:
         name = name_match.group(1)
         content = [cleaned_define[len(name) :].strip()]
         if is_empty:
-            content = [] # define 为空
+            content = []  # define 为空
         return SyntaxElement(SyntaxType.DEFINE, name, content)
 
     def extract_variable(self, ast_variable: Dict) -> SyntaxElement:
@@ -161,7 +177,7 @@ class HeaderFileParser:
                     break
             return combine_splited_line("".join(lines)).strip()
 
-        name: str = str(ast_variable.get("name", "")) # 直接返回的不是 str
+        name: str = str(ast_variable.get("name", ""))  # 直接返回的不是 str
         line_number = ast_variable.get("line_number")
         if not line_number:
             msg = f"Not found line number of variable: {name}."
@@ -187,7 +203,7 @@ class HeaderFileParser:
 
             return lines
 
-        name: str = str(ast_class.get("name", "")) # 直接返回的不是 str
+        name: str = str(ast_class.get("name", ""))  # 直接返回的不是 str
         line_number = ast_class.get("line_number")
         if not line_number:
             msg = f"Not found line number of struct: {name}."
@@ -197,10 +213,10 @@ class HeaderFileParser:
         logger.debug(f"Extracted struct: {name}")
         return SyntaxElement(SyntaxType.STRUCT, name, content)
 
-if __name__ == '__main__':
-    fn = './tests/fixtures/sample_normalized.h'
-    fn_json = './tests/fixtures/parsed_sample_normalized.json'
-    parser = HeaderFileParser(fn)
-    # import ipdb; ipdb.set_trace()
-    parser.to_json(fn_json)
 
+if __name__ == "__main__":
+    fn = "./tests/fixtures/sample_normalized.h"
+    fn_json = "./tests/fixtures/parsed_sample_normalized.json"
+    parser = HeaderFileParser(fn)
+    print(parser.parse())
+    parser.to_json(fn_json)
