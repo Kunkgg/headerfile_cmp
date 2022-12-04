@@ -21,16 +21,12 @@ class TestHeaderFileComparator(unittest.TestCase):
         self.assertTrue(cmptor_cp.is_text_same)
         self.assertFalse(cmptor_modi.is_text_same)
 
-    # def test_text_cmp(self):
-    #     fn = "./tests/fixtures/ast.h"
-    #     fn_copy = "./tests/fixtures/ast_copy.h"
-    #     fn_modified = "./tests/fixtures/ast_modified.h"
-    #     cmptor_copy = HeaderFileComparator(fn, fn_copy)
-    #     cmptor_modified = HeaderFileComparator(fn, fn_modified)
-    #     cmptor_copy_text_diff = cmptor_copy.cmp_text().diffs[0]
-    #     cmptor_modified_text_diff = cmptor_modified.cmp_text().diffs[0]
-    #     self.assertEqual(cmptor_copy_text_diff, "")
-    #     self.assertNotEqual(cmptor_modified_text_diff, "")
+    def test_cmp_text(self):
+        cmptor_cp = HeaderFileComparator(self.parsed, self.parsed_cp)
+        cmptor_modi = HeaderFileComparator(self.parsed, self.parsed_modi)
+        self.assertEqual(cmptor_cp.cmp_text.name, "__text__")
+        self.assertTrue(cmptor_cp.cmp_text.is_same)
+        self.assertFalse(cmptor_modi.cmp_text.is_same)
 
     # def test_include_cmp(self):
     #     fn = "./tests/fixtures/ast.h"

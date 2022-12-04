@@ -22,7 +22,7 @@ class ComparedSyntaxElement:
     to_desc: str
     differ: difflib.HtmlDiff
     is_same: bool = field(init=False)
-    diff_html: str = field(init=False)
+    diff_html: str = field(init=False, repr=False)
 
     def __post_init__(self):
         self.is_same = True if self.from_content == self.to_content else False
@@ -34,11 +34,11 @@ class ComparedSyntaxElement:
 @dataclass
 class ComparedSyntaxElementCollection:
     SyntaxType: SyntaxType
-    is_same: bool = field(init=False)
-    diff_count: int = field(init=False)
     from_onlys: List = field(default_factory=list)
     to_onlys: List = field(default_factory=list)
     commons: List[ComparedSyntaxElement] = field(default_factory=list)
+    is_same: bool = field(init=False)
+    diff_count: int = field(init=False)
     common_diffs: List[ComparedSyntaxElement] = field(init=False)
 
     def __post_init__(self):
@@ -96,6 +96,7 @@ class HeaderFileComparator:
     def make_to_desc(self, desc_parts: List[str]) -> str:
         return "/".join([self.to_desc] + desc_parts)
 
+    @cached_property
     def cmp_text(self):
         from_desc = self.make_from_desc([self.from_fn])
         to_desc = self.make_to_desc([self.to_fn])
@@ -109,8 +110,8 @@ class HeaderFileComparator:
         )
 
     def cmp_includes(self) -> ComparedSyntaxElementCollection:
-        from_desc = self.make_from_desc([self.from_fn, 'include'])
-        to_desc = self.make_to_desc([self.to_fn, 'include'])
+        from_desc = self.make_from_desc([self.from_fn, "include"])
+        to_desc = self.make_to_desc([self.to_fn, "include"])
         pass
 
         # from_includes_set = set(self.from_ast.includes)
@@ -128,21 +129,21 @@ class HeaderFileComparator:
         # return res
 
     # def cmp_defines(self):
-        # res = {
-        #     "diff_count": 5,
-        #     "from_only": ["std_only_defin_test1", "std_only_defin_test2"],
-        #     "to_only": ["dev_only_defin_test1", "dev_only_defin_test2"],
-        #     "diffs": [{"name": "define_diff_test1", "diff_html": ""}],
-        # }
+    # res = {
+    #     "diff_count": 5,
+    #     "from_only": ["std_only_defin_test1", "std_only_defin_test2"],
+    #     "to_only": ["dev_only_defin_test1", "dev_only_defin_test2"],
+    #     "diffs": [{"name": "define_diff_test1", "diff_html": ""}],
+    # }
 
-        # res = {
-        #     "diff_count": 0,
-        #     "from_only": [],
-        #     "to_only": [],
-        #     "diffs": [],
-        # }
-        # if self.is_text_same:
-        #     return res
+    # res = {
+    #     "diff_count": 0,
+    #     "from_only": [],
+    #     "to_only": [],
+    #     "diffs": [],
+    # }
+    # if self.is_text_same:
+    #     return res
 
     # def cmp_enums(self):
     #     res = SyntaxElementCmpResult()
