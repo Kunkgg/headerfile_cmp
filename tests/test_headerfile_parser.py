@@ -1,21 +1,8 @@
-import pathlib
 import unittest
-from dataclasses import asdict
 
-from headerfile_ast import dump_ast
-from headerfile_formatter import normalize_clike
-from headerfile_parser import HeaderFileParser, SyntaxType
+from headerfile_parser import SyntaxType
 
-FIXTURES_PATH = pathlib.Path("./tests/fixtures")
-
-
-def prepare_parser_sample(fn: str):
-    fn_path = FIXTURES_PATH / fn
-    fn_normailezed_path = FIXTURES_PATH / f"{fn_path.stem}_normalized.h"
-    json_path = FIXTURES_PATH / f"{fn_path.stem}_normalized.json"
-    normalize_clike(str(fn_path), str(fn_normailezed_path))
-    dump_ast(str(fn_normailezed_path), str(json_path))
-    return HeaderFileParser(str(fn_normailezed_path))
+from prepare import prepare_parser_sample
 
 
 class TestHeaderFileParser(unittest.TestCase):
@@ -53,7 +40,9 @@ class TestHeaderFileParser(unittest.TestCase):
         self.assertEqual(extracted_define.name, "Py_UNICODE_ISSPACE(ch)")
         self.assertEqual(
             extracted_define.content,
-            ["((ch) < 128U ? _Py_ascii_whitespace[(ch)] : _PyUnicode_IsWhitespace(ch))"],
+            [
+                "((ch) < 128U ? _Py_ascii_whitespace[(ch)] : _PyUnicode_IsWhitespace(ch))"
+            ],
         )
 
     def test_extract_define_multi_args(self):
@@ -73,7 +62,9 @@ class TestHeaderFileParser(unittest.TestCase):
         self.assertEqual(extracted_define.name, "PyUnicode_READ_CHAR(unicode, index)")
         self.assertEqual(
             extracted_define.content,
-            ["(assert(PyUnicode_Check(unicode)), assert(PyUnicode_IS_READY(unicode)), (Py_UCS4)(PyUnicode_KIND((unicode)) == PyUnicode_1BYTE_KIND ? ((const Py_UCS1 *)(PyUnicode_DATA((unicode))))[(index)] : (PyUnicode_KIND((unicode)) == PyUnicode_2BYTE_KIND ? ((const Py_UCS2 *)(PyUnicode_DATA( (unicode))))[(index)] : ((const Py_UCS4 *)(PyUnicode_DATA( (unicode))))[(index)])))"],
+            [
+                "(assert(PyUnicode_Check(unicode)), assert(PyUnicode_IS_READY(unicode)), (Py_UCS4)(PyUnicode_KIND((unicode)) == PyUnicode_1BYTE_KIND ? ((const Py_UCS1 *)(PyUnicode_DATA((unicode))))[(index)] : (PyUnicode_KIND((unicode)) == PyUnicode_2BYTE_KIND ? ((const Py_UCS2 *)(PyUnicode_DATA( (unicode))))[(index)] : ((const Py_UCS4 *)(PyUnicode_DATA( (unicode))))[(index)])))"
+            ],
         )
 
     def test_defines(self):
@@ -210,4 +201,3 @@ class TestHeaderFileParser(unittest.TestCase):
     def test_parse(self):
         parsed = self.parser.parse()
         self.assertIsNotNone(parsed)
-
