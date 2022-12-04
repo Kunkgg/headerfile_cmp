@@ -1,89 +1,94 @@
 import difflib
 import filecmp
 import logging
+import pathlib
 from dataclasses import dataclass, field
 from functools import cached_property
 from typing import Dict, List
-import CppHeaderParser
 
 import common.init_log
 from common.utils import readlines
+from headerfile_parser import ParsedHeaderFile, SyntaxType
 
 logger = logging.getLogger(__name__)
 
 
 @dataclass
-class SyntaxElement:
+class ComparedSyntaxElement:
     name: str
-    lines: str | List[str] | None
+    from_content: List[str] = field(repr=False)
+    to_content: List[str] = field(repr=False)
+    from_desc: str
+    to_desc: str
+    differ: difflib.HtmlDiff
+    is_same: bool = field(init=False)
+    diff_html: str = field(init=False)
+
+    def __post_init__(self):
+        self.is_same = True if self.from_content == self.to_content else False
+        self.diff_html = self.differ.make_table(
+            self.from_content, self.to_content, self.from_desc, self.to_desc
+        )
 
 
 @dataclass
-class DiffItem:
-    name: str
-    diff_html: str
+class ComparedSyntaxElementCollection:
+    SyntaxType: SyntaxType
+    is_same: bool = field(init=False)
+    diff_count: int = field(init=False)
+    from_onlys: List = field(default_factory=list)
+    to_onlys: List = field(default_factory=list)
+    commons: List[ComparedSyntaxElement] = field(default_factory=list)
+    common_diffs: List[ComparedSyntaxElement] = field(init=False)
 
-
-@dataclass
-class SyntaxElementCmpResult:
-    is_same: bool = False
-    diff_count: int = -1
-    from_only: List = field(default_factory=list)
-    to_only: List = field(default_factory=list)
-    diffs: List[DiffItem | str] = field(default_factory=list)
-
-
-def parse_enum(enum: Dict) -> SyntaxElement:
-    name: str = enum.get("name", "")
-    lines = [
-        f"{value.get('name')} = {value.get('value')}" for value in enum.get("values", {})
-    ]
-    return SyntaxElement(name, lines)
+    def __post_init__(self):
+        self.common_diffs = [
+            common_compared
+            for common_compared in self.commons
+            if not common_compared.is_same
+        ]
+        self.diff_count = (
+            len(self.from_onlys) + len(self.to_onlys) + len(self.common_diffs)
+        )
+        self.is_same = True if self.diff_count == 0 else False
 
 
 class HeaderFileComparator:
     def __init__(
-        self, from_fn: str, to_fn: str, from_desc: str = "from", to_desc: str = "to"
+        self,
+        from_: ParsedHeaderFile,
+        to_: ParsedHeaderFile,
+        from_desc: str = "from",
+        to_desc: str = "to",
+        differ=difflib.HtmlDiff(),
     ):
-        self.from_fn = from_fn
-        self.to_fn = to_fn
+        self.from_ = from_
+        self.to_ = to_
         self.from_desc = from_desc
         self.to_desc = to_desc
-        self.differ = difflib.HtmlDiff()
+        self.differ = differ
+        self.from_fn = pathlib.Path(self.from_.file).name
+        self.to_fn = pathlib.Path(self.to_.file).name
+
+    def compare(self):
+        pass
 
     @cached_property
     def is_text_same(self):
-        return filecmp.cmp(self.from_fn, self.to_fn)
+        return filecmp.cmp(self.from_.file, self.to_.file)
 
     @cached_property
     def is_interface_same(self):
-        if self.is_text_same:
-            return True
-        # return all(self.is_define_same and self.is_)
+        pass
+        # return self.from_ == self.to_
 
     @cached_property
-    def from_lines(self) -> List[str]:
-        return readlines(self.from_fn)
+    def from_lines(self):
+        return readlines(self.from_.file)
 
     @cached_property
-    def to_lines(self) -> List[str]:
-        return readlines(self.to_fn)
-
-    @cached_property
-    def from_ast(self):
-        return CppHeaderParser.CppHeader(self.from_fn)
-
-    @cached_property
-    def to_ast(self):
-        return CppHeaderParser.CppHeader(self.to_fn)
-
-    @cached_property
-    def from_ast_enums(self) -> List[SyntaxElement]:
-        return [parse_enum(enum) for enum in self.from_ast.enums]
-
-    @cached_property
-    def to_ast_enums(self) -> List[SyntaxElement]:
-        return [parse_enum(enum) for enum in self.to_ast.enums]
+    def to_lines(self):
+        return readlines(self.to_.file)
 
     def make_from_desc(self, desc_parts: List[str]) -> str:
         return "/".join([self.from_desc] + desc_parts)
@@ -91,38 +96,38 @@ class HeaderFileComparator:
     def make_to_desc(self, desc_parts: List[str]) -> str:
         return "/".join([self.to_desc] + desc_parts)
 
-    def cmp_text(self) -> SyntaxElementCmpResult:
-        text_from_desc = self.make_from_desc([self.from_fn])
-        text_to_desc = self.make_to_desc([self.to_fn])
-
-        text_diff = (
-            ""
-            if self.is_text_same
-            else self.differ.make_table(
-                self.from_lines, self.to_lines, text_from_desc, text_to_desc
-            )
+    def cmp_text(self):
+        from_desc = self.make_from_desc([self.from_fn])
+        to_desc = self.make_to_desc([self.to_fn])
+        return ComparedSyntaxElement(
+            name="__text__",
+            from_content=self.from_lines,
+            to_content=self.to_lines,
+            from_desc=from_desc,
+            to_desc=to_desc,
+            differ=self.differ,
         )
-        res = SyntaxElementCmpResult(is_same=self.is_text_same, diffs=[text_diff])
 
-        return res
+    def cmp_includes(self) -> ComparedSyntaxElementCollection:
+        from_desc = self.make_from_desc([self.from_fn, 'include'])
+        to_desc = self.make_to_desc([self.to_fn, 'include'])
+        pass
 
-    def cmp_include(self) -> SyntaxElementCmpResult:
-        res = SyntaxElementCmpResult()
-        from_includes_set = set(self.from_ast.includes)
-        to_includes_set = set(self.to_ast.includes)
-        if from_includes_set == to_includes_set:
-            res.is_same = True
-            res.diff_count = 0
-        else:
-            from_only = list(from_includes_set - to_includes_set)
-            to_only = list(to_includes_set - from_includes_set)
-            res.from_only = from_only
-            res.to_only = to_only
-            res.diff_count = len(from_only) + len(to_only)
+        # from_includes_set = set(self.from_ast.includes)
+        # to_includes_set = set(self.to_ast.includes)
+        # if from_includes_set == to_includes_set:
+        #     res.is_same = True
+        #     res.diff_count = 0
+        # else:
+        #     from_only = list(from_includes_set - to_includes_set)
+        #     to_only = list(to_includes_set - from_includes_set)
+        #     res.from_only = from_only
+        #     res.to_only = to_only
+        #     res.diff_count = len(from_only) + len(to_only)
 
-        return res
+        # return res
 
-    def cmp_define(self):
+    # def cmp_defines(self):
         # res = {
         #     "diff_count": 5,
         #     "from_only": ["std_only_defin_test1", "std_only_defin_test2"],
@@ -130,22 +135,22 @@ class HeaderFileComparator:
         #     "diffs": [{"name": "define_diff_test1", "diff_html": ""}],
         # }
 
-        res = {
-            "diff_count": 0,
-            "from_only": [],
-            "to_only": [],
-            "diffs": [],
-        }
-        if self.is_text_same:
-            return res
+        # res = {
+        #     "diff_count": 0,
+        #     "from_only": [],
+        #     "to_only": [],
+        #     "diffs": [],
+        # }
+        # if self.is_text_same:
+        #     return res
 
-    def cmp_enum(self):
-        res = SyntaxElementCmpResult()
+    # def cmp_enums(self):
+    #     res = SyntaxElementCmpResult()
 
-        pass
+    #     pass
 
-    def cmp_variable(self):
-        pass
+    # def cmp_variables(self):
+    #     pass
 
-    def cmp_struct(self):
-        pass
+    # def cmp_structs(self):
+    #     pass

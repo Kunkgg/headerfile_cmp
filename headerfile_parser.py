@@ -25,21 +25,21 @@ class SyntaxType(Enum):
     STRUCT = "struct"
 
 
-@dataclass
+@dataclass(frozen=True)
 class SyntaxElement:
     syntaxType: SyntaxType
     name: str
     content: List[str] = field(repr=False)
 
 
-@dataclass
+@dataclass(frozen=True)
 class SyntaxElementCollection:
     elements: List[SyntaxElement] = field(default_factory=list)
 
 
-@dataclass
+@dataclass(frozen=True)
 class ParsedHeaderFile:
-    file: str
+    file: str = field(compare=False)
     includes: SyntaxElementCollection
     defines: SyntaxElementCollection
     enums: SyntaxElementCollection

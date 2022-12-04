@@ -541,7 +541,7 @@
   "structs": {
     "elements": [
       {
-        "syntaxType": "variable",
+        "syntaxType": "struct",
         "name": "PyASCIIObject",
         "content": [
           "typedef struct {\n",
@@ -560,7 +560,7 @@
         ]
       },
       {
-        "syntaxType": "variable",
+        "syntaxType": "struct",
         "name": "PyCompactUnicodeObject",
         "content": [
           "typedef struct {\n",
@@ -572,7 +572,7 @@
         ]
       },
       {
-        "syntaxType": "variable",
+        "syntaxType": "struct",
         "name": "PyUnicodeObject",
         "content": [
           "typedef struct {\n",
@@ -587,7 +587,7 @@
         ]
       },
       {
-        "syntaxType": "variable",
+        "syntaxType": "struct",
         "name": "_PyUnicodeWriter",
         "content": [
           "typedef struct {\n",
