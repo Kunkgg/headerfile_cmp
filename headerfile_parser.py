@@ -5,7 +5,7 @@ import re
 from dataclasses import asdict, dataclass, field
 from enum import Enum
 from functools import cached_property
-from typing import Dict, List, NamedTuple, Tuple
+from typing import Dict, List, NamedTuple, Tuple, Optional
 
 import CppHeaderParser
 
@@ -25,16 +25,57 @@ class SyntaxType(Enum):
     STRUCT = "struct"
 
 
-@dataclass(frozen=True)
+@dataclass(unsafe_hash=True)
 class SyntaxElement:
-    syntaxType: SyntaxType
+    syntaxType: SyntaxType = field(hash=False)
     name: str
-    content: List[str] = field(repr=False)
+    content: List[str] = field(repr=False, hash=False)
 
 
-@dataclass(frozen=True)
+@dataclass
 class SyntaxElementCollection:
     elements: List[SyntaxElement] = field(default_factory=list)
+
+    def __sub__(self, other):
+        self_only_set = set(self) - set(other)
+        return [element for element in self.elements if element.name in self_only_set]
+
+    # def __set__(self):
+    #     return set([element.name for element in self.elements])
+
+    def __iter__(self):
+        self.n = 0
+        return self
+
+    def __next__(self):
+        if self.n < len(self.elements):
+            res = self.elements[self.n].name
+            self.n += 1
+            return res
+        else:
+            raise StopIteration
+
+    def common_names(self, other) -> List[str]:
+        # other_name_set = set([element.name for element in other.elements])
+        other_name_set = set(other)
+        return [
+            element.name for element in self.elements if element.name in other_name_set
+        ]
+
+    def commons(self, other) -> List[Dict]:
+        res = []
+        for name in self.common_names(other):
+            self_element = self.find_element_by_name(name)
+            other_element = other.find_element_by_name(name)
+            d = {**self_element.__dict__}
+            d["other_content"] = other_element.content
+            res.append(d)
+        return res
+
+    def find_element_by_name(self, name):
+        for element in self.elements:
+            if element.name == name:
+                return element
 
 
 @dataclass(frozen=True)

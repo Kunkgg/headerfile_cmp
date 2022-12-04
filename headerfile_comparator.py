@@ -3,7 +3,7 @@ import filecmp
 import logging
 import pathlib
 from dataclasses import dataclass, field
-from functools import cached_property
+from functools import cached_property, partial
 from typing import Dict, List
 
 import common.init_log
@@ -109,49 +109,39 @@ class HeaderFileComparator:
             differ=self.differ,
         )
 
+    @cached_property
     def cmp_includes(self) -> ComparedSyntaxElementCollection:
         from_desc = self.make_from_desc([self.from_fn, "include"])
         to_desc = self.make_to_desc([self.to_fn, "include"])
-        pass
+        DescComparedSyntaxElement = partial(
+            ComparedSyntaxElement,
+            from_desc=from_desc,
+            to_desc=to_desc,
+            differ=self.differ,
+        )
+        from_onlys = self.from_.includes - self.to_.includes
+        to_onlys = self.to_.includes - self.from_.includes
+        # common_names = self.from_.includes.common_names(self.to_.includes)
+        common_dicts = self.from_.includes.commons(self.to_.includes)
+        extracted_common_dicts = [
+            {
+                "name": common_dict.get("name"),
+                "from_content": common_dict.get("content"),
+                "to_content": common_dict.get("other_content"),
+            }
+            for common_dict in common_dicts
+        ]
+        common_compares = [
+            DescComparedSyntaxElement(**common_dict)
+            for common_dict in extracted_common_dicts
+        ]
 
-        # from_includes_set = set(self.from_ast.includes)
-        # to_includes_set = set(self.to_ast.includes)
-        # if from_includes_set == to_includes_set:
-        #     res.is_same = True
-        #     res.diff_count = 0
-        # else:
-        #     from_only = list(from_includes_set - to_includes_set)
-        #     to_only = list(to_includes_set - from_includes_set)
-        #     res.from_only = from_only
-        #     res.to_only = to_only
-        #     res.diff_count = len(from_only) + len(to_only)
-
-        # return res
-
-    # def cmp_defines(self):
-    # res = {
-    #     "diff_count": 5,
-    #     "from_only": ["std_only_defin_test1", "std_only_defin_test2"],
-    #     "to_only": ["dev_only_defin_test1", "dev_only_defin_test2"],
-    #     "diffs": [{"name": "define_diff_test1", "diff_html": ""}],
-    # }
-
-    # res = {
-    #     "diff_count": 0,
-    #     "from_only": [],
-    #     "to_only": [],
-    #     "diffs": [],
-    # }
-    # if self.is_text_same:
-    #     return res
-
-    # def cmp_enums(self):
-    #     res = SyntaxElementCmpResult()
-
-    #     pass
-
-    # def cmp_variables(self):
-    #     pass
-
-    # def cmp_structs(self):
-    #     pass
+        # from_onlys: List = field(default_factory=list)
+        # to_onlys: List = field(default_factory=list)
+        # commons: List[ComparedSyntaxElement] = field(default_factory=list)
+        return ComparedSyntaxElementCollection(
+            SyntaxType=SyntaxType.INCLUDE,
+            from_onlys=from_onlys,
+            to_onlys=to_onlys,
+            commons=common_compares,
+        )

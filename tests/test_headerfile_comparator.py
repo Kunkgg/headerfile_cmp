@@ -27,3 +27,11 @@ class TestHeaderFileComparator(unittest.TestCase):
         self.assertEqual(cmptor_cp.cmp_text.name, "__text__")
         self.assertTrue(cmptor_cp.cmp_text.is_same)
         self.assertFalse(cmptor_modi.cmp_text.is_same)
+
+    def test_cmp_includes(self):
+        cmptor_cp = HeaderFileComparator(self.parsed, self.parsed_cp)
+        cmptor_modi = HeaderFileComparator(self.parsed, self.parsed_modi)
+        # cmp1 = cmptor_cp.cmp_includes
+        # self.assertEqual(cmptor_cp.cmp_includes.is_same)
+        # self.assertTrue(cmptor_cp.cmp_includes.is_same)
+        self.assertFalse(cmptor_modi.cmp_includes.is_same)
