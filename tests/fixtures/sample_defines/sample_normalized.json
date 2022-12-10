@@ -1,0 +1,654 @@
+{
+    "headerFileName": "tests/fixtures/sample_defines/sample_normalized.h",
+    "curClass": "",
+    "classes": {},
+    "functions": [
+        {
+            "name": "PyAPI_FUNC",
+            "rtnType": "void",
+            "noexcept": null,
+            "const": false,
+            "final": false,
+            "override": false,
+            "debug": "PyAPI_FUNC ( int ) PyAST_Validate ( mod_ty ) ;",
+            "class": null,
+            "namespace": "",
+            "defined": false,
+            "deleted": false,
+            "pure_virtual": false,
+            "operator": false,
+            "constructor": true,
+            "destructor": false,
+            "extern": false,
+            "template": false,
+            "virtual": false,
+            "static": false,
+            "explicit": false,
+            "inline": false,
+            "friend": false,
+            "returns": "",
+            "returns_pointer": 0,
+            "returns_fundamental": true,
+            "returns_class": false,
+            "default": false,
+            "ref_qualifiers": "",
+            "returns_reference": false,
+            "filename": "tests/fixtures/sample_defines/sample_normalized.h",
+            "line_number": 6,
+            "vararg": false,
+            "parameters": [
+                {
+                    "extern": false,
+                    "array": 0,
+                    "filename": "tests/fixtures/sample_defines/sample_normalized.h",
+                    "line_number": 6,
+                    "function_pointer": 0,
+                    "type": "int ) PyAST_Validate (",
+                    "name": "mod_ty",
+                    "aliases": [
+                        ")"
+                    ],
+                    "typedef": null,
+                    "constant": 0,
+                    "constexpr": 0,
+                    "reference": 0,
+                    "pointer": 0,
+                    "static": 0,
+                    "typedefs": 0,
+                    "class": 0,
+                    "fundamental": 0,
+                    "unresolved": true,
+                    "namespace": "",
+                    "mutable": false,
+                    "raw_type": "int ) PyAST_Validate ("
+                }
+            ],
+            "unresolved_parameters": true
+        },
+        {
+            "name": "PyAPI_FUNC",
+            "rtnType": "void",
+            "noexcept": null,
+            "const": false,
+            "final": false,
+            "override": false,
+            "debug": "PyAPI_FUNC ( mod_ty ) PyAST_FromNode ( const node * n , PyCompilerFlags * flags , const char * filename , PyArena * arena ) ;",
+            "class": null,
+            "namespace": "",
+            "defined": false,
+            "deleted": false,
+            "pure_virtual": false,
+            "operator": false,
+            "constructor": true,
+            "destructor": false,
+            "extern": false,
+            "template": false,
+            "virtual": false,
+            "static": false,
+            "explicit": false,
+            "inline": false,
+            "friend": false,
+            "returns": "",
+            "returns_pointer": 0,
+            "returns_fundamental": true,
+            "returns_class": false,
+            "default": false,
+            "ref_qualifiers": "",
+            "returns_reference": false,
+            "filename": "tests/fixtures/sample_defines/sample_normalized.h",
+            "line_number": 7,
+            "vararg": false,
+            "parameters": [
+                {
+                    "extern": false,
+                    "array": 0,
+                    "filename": "tests/fixtures/sample_defines/sample_normalized.h",
+                    "line_number": 7,
+                    "function_pointer": 0,
+                    "type": "mod_ty ) PyAST_FromNode ( const node *",
+                    "name": "n",
+                    "aliases": [
+                        "mod_ty"
+                    ],
+                    "typedef": null,
+                    "constant": 1,
+                    "constexpr": 0,
+                    "reference": 0,
+                    "pointer": 1,
+                    "static": 0,
+                    "typedefs": 0,
+                    "class": 0,
+                    "fundamental": 0,
+                    "unresolved": true,
+                    "namespace": "",
+                    "mutable": false,
+                    "raw_type": "mod_ty ) PyAST_FromNode ( node"
+                },
+                {
+                    "extern": false,
+                    "array": 0,
+                    "filename": "tests/fixtures/sample_defines/sample_normalized.h",
+                    "line_number": 7,
+                    "function_pointer": 0,
+                    "type": "PyCompilerFlags *",
+                    "name": "flags",
+                    "aliases": [
+                        "PyCompilerFlags"
+                    ],
+                    "typedef": null,
+                    "constant": 0,
+                    "constexpr": 0,
+                    "reference": 0,
+                    "pointer": 1,
+                    "static": 0,
+                    "typedefs": 0,
+                    "class": 0,
+                    "fundamental": 0,
+                    "unresolved": true,
+                    "namespace": "",
+                    "mutable": false,
+                    "raw_type": "PyCompilerFlags"
+                },
+                {
+                    "extern": false,
+                    "array": 0,
+                    "filename": "tests/fixtures/sample_defines/sample_normalized.h",
+                    "line_number": 8,
+                    "function_pointer": 0,
+                    "type": "const char *",
+                    "name": "filename",
+                    "aliases": [],
+                    "typedef": null,
+                    "constant": 1,
+                    "constexpr": 0,
+                    "reference": 0,
+                    "pointer": 1,
+                    "static": 0,
+                    "typedefs": 0,
+                    "class": 0,
+                    "fundamental": true,
+                    "unresolved": false,
+                    "namespace": "",
+                    "mutable": false,
+                    "ctypes_type": "ctypes.POINTER(ctypes.c_char)",
+                    "raw_type": "char"
+                },
+                {
+                    "extern": false,
+                    "array": 0,
+                    "filename": "tests/fixtures/sample_defines/sample_normalized.h",
+                    "line_number": 8,
+                    "function_pointer": 0,
+                    "type": "PyArena *",
+                    "name": "arena",
+                    "aliases": [
+                        "PyArena"
+                    ],
+                    "typedef": null,
+                    "constant": 0,
+                    "constexpr": 0,
+                    "reference": 0,
+                    "pointer": 1,
+                    "static": 0,
+                    "typedefs": 0,
+                    "class": 0,
+                    "fundamental": 0,
+                    "unresolved": true,
+                    "namespace": "",
+                    "mutable": false,
+                    "raw_type": "PyArena"
+                }
+            ],
+            "unresolved_parameters": true
+        },
+        {
+            "name": "PyAPI_FUNC",
+            "rtnType": "void",
+            "noexcept": null,
+            "const": false,
+            "final": false,
+            "override": false,
+            "debug": "PyAPI_FUNC ( mod_ty ) PyAST_FromNodeObject ( const node * n , PyCompilerFlags * flags , PyObject * filename , PyArena * arena ) ;",
+            "class": null,
+            "namespace": "",
+            "defined": false,
+            "deleted": false,
+            "pure_virtual": false,
+            "operator": false,
+            "constructor": true,
+            "destructor": false,
+            "extern": false,
+            "template": false,
+            "virtual": false,
+            "static": false,
+            "explicit": false,
+            "inline": false,
+            "friend": false,
+            "returns": "",
+            "returns_pointer": 0,
+            "returns_fundamental": true,
+            "returns_class": false,
+            "default": false,
+            "ref_qualifiers": "",
+            "returns_reference": false,
+            "filename": "tests/fixtures/sample_defines/sample_normalized.h",
+            "line_number": 9,
+            "vararg": false,
+            "parameters": [
+                {
+                    "extern": false,
+                    "array": 0,
+                    "filename": "tests/fixtures/sample_defines/sample_normalized.h",
+                    "line_number": 9,
+                    "function_pointer": 0,
+                    "type": "mod_ty ) PyAST_FromNodeObject ( const node *",
+                    "name": "n",
+                    "aliases": [
+                        "mod_ty"
+                    ],
+                    "typedef": null,
+                    "constant": 1,
+                    "constexpr": 0,
+                    "reference": 0,
+                    "pointer": 1,
+                    "static": 0,
+                    "typedefs": 0,
+                    "class": 0,
+                    "fundamental": 0,
+                    "unresolved": true,
+                    "namespace": "",
+                    "mutable": false,
+                    "raw_type": "mod_ty ) PyAST_FromNodeObject ( node"
+                },
+                {
+                    "extern": false,
+                    "array": 0,
+                    "filename": "tests/fixtures/sample_defines/sample_normalized.h",
+                    "line_number": 9,
+                    "function_pointer": 0,
+                    "type": "PyCompilerFlags *",
+                    "name": "flags",
+                    "aliases": [
+                        "PyCompilerFlags"
+                    ],
+                    "typedef": null,
+                    "constant": 0,
+                    "constexpr": 0,
+                    "reference": 0,
+                    "pointer": 1,
+                    "static": 0,
+                    "typedefs": 0,
+                    "class": 0,
+                    "fundamental": 0,
+                    "unresolved": true,
+                    "namespace": "",
+                    "mutable": false,
+                    "raw_type": "PyCompilerFlags"
+                },
+                {
+                    "extern": false,
+                    "array": 0,
+                    "filename": "tests/fixtures/sample_defines/sample_normalized.h",
+                    "line_number": 10,
+                    "function_pointer": 0,
+                    "type": "PyObject *",
+                    "name": "filename",
+                    "aliases": [
+                        "PyObject"
+                    ],
+                    "typedef": null,
+                    "constant": 0,
+                    "constexpr": 0,
+                    "reference": 0,
+                    "pointer": 1,
+                    "static": 0,
+                    "typedefs": 0,
+                    "class": 0,
+                    "fundamental": 0,
+                    "unresolved": true,
+                    "namespace": "",
+                    "mutable": false,
+                    "raw_type": "PyObject"
+                },
+                {
+                    "extern": false,
+                    "array": 0,
+                    "filename": "tests/fixtures/sample_defines/sample_normalized.h",
+                    "line_number": 10,
+                    "function_pointer": 0,
+                    "type": "PyArena *",
+                    "name": "arena",
+                    "aliases": [
+                        "PyArena"
+                    ],
+                    "typedef": null,
+                    "constant": 0,
+                    "constexpr": 0,
+                    "reference": 0,
+                    "pointer": 1,
+                    "static": 0,
+                    "typedefs": 0,
+                    "class": 0,
+                    "fundamental": 0,
+                    "unresolved": true,
+                    "namespace": "",
+                    "mutable": false,
+                    "raw_type": "PyArena"
+                }
+            ],
+            "unresolved_parameters": true
+        },
+        {
+            "name": "PyAPI_FUNC",
+            "rtnType": "void",
+            "noexcept": null,
+            "const": false,
+            "final": false,
+            "override": false,
+            "debug": "PyAPI_FUNC ( PyObject * ) _PyAST_ExprAsUnicode ( expr_ty ) ;",
+            "class": null,
+            "namespace": "",
+            "defined": false,
+            "deleted": false,
+            "pure_virtual": false,
+            "operator": false,
+            "constructor": true,
+            "destructor": false,
+            "extern": false,
+            "template": false,
+            "virtual": false,
+            "static": false,
+            "explicit": false,
+            "inline": false,
+            "friend": false,
+            "returns": "",
+            "returns_pointer": 0,
+            "returns_fundamental": true,
+            "returns_class": false,
+            "default": false,
+            "ref_qualifiers": "",
+            "returns_reference": false,
+            "filename": "tests/fixtures/sample_defines/sample_normalized.h",
+            "line_number": 12,
+            "vararg": false,
+            "parameters": [
+                {
+                    "extern": false,
+                    "array": 0,
+                    "filename": "tests/fixtures/sample_defines/sample_normalized.h",
+                    "line_number": 12,
+                    "function_pointer": 0,
+                    "type": "PyObject * ) _PyAST_ExprAsUnicode (",
+                    "name": "expr_ty",
+                    "aliases": [
+                        "PyObject"
+                    ],
+                    "typedef": null,
+                    "constant": 0,
+                    "constexpr": 0,
+                    "reference": 0,
+                    "pointer": 1,
+                    "static": 0,
+                    "typedefs": 0,
+                    "class": 0,
+                    "fundamental": 0,
+                    "unresolved": true,
+                    "namespace": "",
+                    "mutable": false,
+                    "raw_type": "PyObject ) _PyAST_ExprAsUnicode ("
+                }
+            ],
+            "unresolved_parameters": true
+        },
+        {
+            "name": "PyAPI_FUNC",
+            "rtnType": "void",
+            "noexcept": null,
+            "const": false,
+            "final": false,
+            "override": false,
+            "debug": "PyAPI_FUNC ( PyObject * ) _PyAST_GetDocString ( asdl_seq * ) ;",
+            "class": null,
+            "namespace": "",
+            "defined": false,
+            "deleted": false,
+            "pure_virtual": false,
+            "operator": false,
+            "constructor": true,
+            "destructor": false,
+            "extern": false,
+            "template": false,
+            "virtual": false,
+            "static": false,
+            "explicit": false,
+            "inline": false,
+            "friend": false,
+            "returns": "",
+            "returns_pointer": 0,
+            "returns_fundamental": true,
+            "returns_class": false,
+            "default": false,
+            "ref_qualifiers": "",
+            "returns_reference": false,
+            "filename": "tests/fixtures/sample_defines/sample_normalized.h",
+            "line_number": 13,
+            "vararg": false,
+            "parameters": [
+                {
+                    "extern": false,
+                    "array": 0,
+                    "filename": "tests/fixtures/sample_defines/sample_normalized.h",
+                    "line_number": 13,
+                    "function_pointer": 0,
+                    "type": "PyObject * ) _PyAST_GetDocString ( asdl_seq *",
+                    "name": "",
+                    "aliases": [
+                        "PyObject"
+                    ],
+                    "typedef": null,
+                    "constant": 0,
+                    "constexpr": 0,
+                    "reference": 0,
+                    "pointer": 2,
+                    "static": 0,
+                    "typedefs": 0,
+                    "class": 0,
+                    "fundamental": 0,
+                    "unresolved": true,
+                    "namespace": "",
+                    "mutable": false,
+                    "raw_type": "PyObject ) _PyAST_GetDocString ( asdl_seq"
+                }
+            ],
+            "unresolved_parameters": true
+        }
+    ],
+    "pragmas": [],
+    "pragmas_detail": [],
+    "defines": [
+        "Py_AST_H",
+        "PY_UNICODE_TYPE wchar_t",
+        "Py_UNICODE_ISSPACE(ch)                                                 \\\n  ((ch) < 128U ? _Py_ascii_whitespace[(ch)] : _PyUnicode_IsWhitespace(ch))",
+        "Py_UNICODE_ISLOWER(ch) _PyUnicode_IsLowercase(ch)",
+        "Py_UNICODE_ISUPPER(ch) _PyUnicode_IsUppercase(ch)",
+        "Py_UNICODE_ISTITLE(ch) _PyUnicode_IsTitlecase(ch)",
+        "Py_UNICODE_ISLINEBREAK(ch) _PyUnicode_IsLinebreak(ch)",
+        "Py_UNICODE_TOLOWER(ch) _PyUnicode_ToLowercase(ch)",
+        "Py_UNICODE_TOUPPER(ch) _PyUnicode_ToUppercase(ch)",
+        "Py_UNICODE_TOTITLE(ch) _PyUnicode_ToTitlecase(ch)",
+        "Py_UNICODE_ISDECIMAL(ch) _PyUnicode_IsDecimalDigit(ch)",
+        "Py_UNICODE_ISDIGIT(ch) _PyUnicode_IsDigit(ch)",
+        "Py_UNICODE_ISNUMERIC(ch) _PyUnicode_IsNumeric(ch)",
+        "Py_UNICODE_ISPRINTABLE(ch) _PyUnicode_IsPrintable(ch)",
+        "Py_UNICODE_TODECIMAL(ch) _PyUnicode_ToDecimalDigit(ch)",
+        "Py_UNICODE_TODIGIT(ch) _PyUnicode_ToDigit(ch)",
+        "Py_UNICODE_TONUMERIC(ch) _PyUnicode_ToNumeric(ch)",
+        "Py_UNICODE_ISALPHA(ch) _PyUnicode_IsAlpha(ch)",
+        "Py_UNICODE_ISALNUM(ch)                                                 \\\n  (Py_UNICODE_ISALPHA(ch) || Py_UNICODE_ISDECIMAL(ch) ||                       \\\n   Py_UNICODE_ISDIGIT(ch) || Py_UNICODE_ISNUMERIC(ch))",
+        "Py_UNICODE_COPY(target, source, length)                                \\\n  memcpy((target), (source), (length) * sizeof(Py_UNICODE))",
+        "Py_UNICODE_FILL(target, value, length)                                 \\\n  do {                                                                         \\\n    Py_ssize_t i_;                                                             \\\n    Py_UNICODE *t_ = (target);                                                 \\\n    Py_UNICODE v_ = (value);                                                   \\\n    for (i_ = 0; i_ < (length); i_++)                                          \\\n      t_[i_] = v_;                                                             \\\n  } while (0)",
+        "Py_UNICODE_IS_SURROGATE(ch) (0xD800 <= (ch) && (ch) <= 0xDFFF)",
+        "Py_UNICODE_IS_HIGH_SURROGATE(ch) (0xD800 <= (ch) && (ch) <= 0xDBFF)",
+        "Py_UNICODE_IS_LOW_SURROGATE(ch) (0xDC00 <= (ch) && (ch) <= 0xDFFF)",
+        "Py_UNICODE_JOIN_SURROGATES(high, low)                                  \\\n  (((((Py_UCS4)(high)&0x03FF) << 10) | ((Py_UCS4)(low)&0x03FF)) + 0x10000)",
+        "Py_UNICODE_HIGH_SURROGATE(ch) (0xD800 - (0x10000 >> 10) + ((ch) >> 10))",
+        "Py_UNICODE_LOW_SURROGATE(ch) (0xDC00 + ((ch)&0x3FF))",
+        "Py_UNICODE_MATCH(string, offset, substring)                            \\\n  ((*((string)->wstr + (offset)) == *((substring)->wstr)) &&                   \\\n   ((*((string)->wstr + (offset) + (substring)->wstr_length - 1) ==            \\\n     *((substring)->wstr + (substring)->wstr_length - 1))) &&                  \\\n   !memcmp((string)->wstr + (offset), (substring)->wstr,                       \\\n           (substring)->wstr_length * sizeof(Py_UNICODE)))"
+    ],
+    "defines_detail": [
+        {
+            "value": "Py_AST_H",
+            "filename": "tests/fixtures/sample_defines/sample_normalized.h",
+            "line_number": 2
+        },
+        {
+            "value": "PY_UNICODE_TYPE wchar_t",
+            "filename": "tests/fixtures/sample_defines/sample_normalized.h",
+            "line_number": 25
+        },
+        {
+            "value": "Py_UNICODE_ISSPACE(ch)                                                 \\\n  ((ch) < 128U ? _Py_ascii_whitespace[(ch)] : _PyUnicode_IsWhitespace(ch))",
+            "filename": "tests/fixtures/sample_defines/sample_normalized.h",
+            "line_number": 27
+        },
+        {
+            "value": "Py_UNICODE_ISLOWER(ch) _PyUnicode_IsLowercase(ch)",
+            "filename": "tests/fixtures/sample_defines/sample_normalized.h",
+            "line_number": 29
+        },
+        {
+            "value": "Py_UNICODE_ISUPPER(ch) _PyUnicode_IsUppercase(ch)",
+            "filename": "tests/fixtures/sample_defines/sample_normalized.h",
+            "line_number": 30
+        },
+        {
+            "value": "Py_UNICODE_ISTITLE(ch) _PyUnicode_IsTitlecase(ch)",
+            "filename": "tests/fixtures/sample_defines/sample_normalized.h",
+            "line_number": 31
+        },
+        {
+            "value": "Py_UNICODE_ISLINEBREAK(ch) _PyUnicode_IsLinebreak(ch)",
+            "filename": "tests/fixtures/sample_defines/sample_normalized.h",
+            "line_number": 32
+        },
+        {
+            "value": "Py_UNICODE_TOLOWER(ch) _PyUnicode_ToLowercase(ch)",
+            "filename": "tests/fixtures/sample_defines/sample_normalized.h",
+            "line_number": 33
+        },
+        {
+            "value": "Py_UNICODE_TOUPPER(ch) _PyUnicode_ToUppercase(ch)",
+            "filename": "tests/fixtures/sample_defines/sample_normalized.h",
+            "line_number": 34
+        },
+        {
+            "value": "Py_UNICODE_TOTITLE(ch) _PyUnicode_ToTitlecase(ch)",
+            "filename": "tests/fixtures/sample_defines/sample_normalized.h",
+            "line_number": 35
+        },
+        {
+            "value": "Py_UNICODE_ISDECIMAL(ch) _PyUnicode_IsDecimalDigit(ch)",
+            "filename": "tests/fixtures/sample_defines/sample_normalized.h",
+            "line_number": 36
+        },
+        {
+            "value": "Py_UNICODE_ISDIGIT(ch) _PyUnicode_IsDigit(ch)",
+            "filename": "tests/fixtures/sample_defines/sample_normalized.h",
+            "line_number": 37
+        },
+        {
+            "value": "Py_UNICODE_ISNUMERIC(ch) _PyUnicode_IsNumeric(ch)",
+            "filename": "tests/fixtures/sample_defines/sample_normalized.h",
+            "line_number": 38
+        },
+        {
+            "value": "Py_UNICODE_ISPRINTABLE(ch) _PyUnicode_IsPrintable(ch)",
+            "filename": "tests/fixtures/sample_defines/sample_normalized.h",
+            "line_number": 39
+        },
+        {
+            "value": "Py_UNICODE_TODECIMAL(ch) _PyUnicode_ToDecimalDigit(ch)",
+            "filename": "tests/fixtures/sample_defines/sample_normalized.h",
+            "line_number": 40
+        },
+        {
+            "value": "Py_UNICODE_TODIGIT(ch) _PyUnicode_ToDigit(ch)",
+            "filename": "tests/fixtures/sample_defines/sample_normalized.h",
+            "line_number": 41
+        },
+        {
+            "value": "Py_UNICODE_TONUMERIC(ch) _PyUnicode_ToNumeric(ch)",
+            "filename": "tests/fixtures/sample_defines/sample_normalized.h",
+            "line_number": 42
+        },
+        {
+            "value": "Py_UNICODE_ISALPHA(ch) _PyUnicode_IsAlpha(ch)",
+            "filename": "tests/fixtures/sample_defines/sample_normalized.h",
+            "line_number": 43
+        },
+        {
+            "value": "Py_UNICODE_ISALNUM(ch)                                                 \\\n  (Py_UNICODE_ISALPHA(ch) || Py_UNICODE_ISDECIMAL(ch) ||                       \\\n   Py_UNICODE_ISDIGIT(ch) || Py_UNICODE_ISNUMERIC(ch))",
+            "filename": "tests/fixtures/sample_defines/sample_normalized.h",
+            "line_number": 44
+        },
+        {
+            "value": "Py_UNICODE_COPY(target, source, length)                                \\\n  memcpy((target), (source), (length) * sizeof(Py_UNICODE))",
+            "filename": "tests/fixtures/sample_defines/sample_normalized.h",
+            "line_number": 47
+        },
+        {
+            "value": "Py_UNICODE_FILL(target, value, length)                                 \\\n  do {                                                                         \\\n    Py_ssize_t i_;                                                             \\\n    Py_UNICODE *t_ = (target);                                                 \\\n    Py_UNICODE v_ = (value);                                                   \\\n    for (i_ = 0; i_ < (length); i_++)                                          \\\n      t_[i_] = v_;                                                             \\\n  } while (0)",
+            "filename": "tests/fixtures/sample_defines/sample_normalized.h",
+            "line_number": 49
+        },
+        {
+            "value": "Py_UNICODE_IS_SURROGATE(ch) (0xD800 <= (ch) && (ch) <= 0xDFFF)",
+            "filename": "tests/fixtures/sample_defines/sample_normalized.h",
+            "line_number": 57
+        },
+        {
+            "value": "Py_UNICODE_IS_HIGH_SURROGATE(ch) (0xD800 <= (ch) && (ch) <= 0xDBFF)",
+            "filename": "tests/fixtures/sample_defines/sample_normalized.h",
+            "line_number": 58
+        },
+        {
+            "value": "Py_UNICODE_IS_LOW_SURROGATE(ch) (0xDC00 <= (ch) && (ch) <= 0xDFFF)",
+            "filename": "tests/fixtures/sample_defines/sample_normalized.h",
+            "line_number": 59
+        },
+        {
+            "value": "Py_UNICODE_JOIN_SURROGATES(high, low)                                  \\\n  (((((Py_UCS4)(high)&0x03FF) << 10) | ((Py_UCS4)(low)&0x03FF)) + 0x10000)",
+            "filename": "tests/fixtures/sample_defines/sample_normalized.h",
+            "line_number": 60
+        },
+        {
+            "value": "Py_UNICODE_HIGH_SURROGATE(ch) (0xD800 - (0x10000 >> 10) + ((ch) >> 10))",
+            "filename": "tests/fixtures/sample_defines/sample_normalized.h",
+            "line_number": 62
+        },
+        {
+            "value": "Py_UNICODE_LOW_SURROGATE(ch) (0xDC00 + ((ch)&0x3FF))",
+            "filename": "tests/fixtures/sample_defines/sample_normalized.h",
+            "line_number": 63
+        },
+        {
+            "value": "Py_UNICODE_MATCH(string, offset, substring)                            \\\n  ((*((string)->wstr + (offset)) == *((substring)->wstr)) &&                   \\\n   ((*((string)->wstr + (offset) + (substring)->wstr_length - 1) ==            \\\n     *((substring)->wstr + (substring)->wstr_length - 1))) &&                  \\\n   !memcmp((string)->wstr + (offset), (substring)->wstr,                       \\\n           (substring)->wstr_length * sizeof(Py_UNICODE)))",
+            "filename": "tests/fixtures/sample_defines/sample_normalized.h",
+            "line_number": 64
+        }
+    ],
+    "includes": [],
+    "includes_detail": [],
+    "headerFileNames": [
+        "tests/fixtures/sample_defines/sample_normalized.h"
+    ],
+    "enums": [],
+    "extern_templates": [],
+    "variables": [],
+    "global_enums": {},
+    "typedefs": {
+        "Py_UNICODE": "wchar_t"
+    },
+    "namespaces": [],
+    "using": {}
+}
