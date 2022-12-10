@@ -2,13 +2,14 @@ import difflib
 import filecmp
 import logging
 import pathlib
-from dataclasses import dataclass, field
+import json
+from dataclasses import dataclass, field, asdict
 from functools import cached_property, partial
 from typing import Dict, List, Tuple
 
 import common.init_log
 from common.utils import readlines
-from headerfile_parser import ParsedHeaderFile, SyntaxType
+from headerfile_parser import ParsedHeaderFile, CppSyntaxType
 
 logger = logging.getLogger(__name__)
 
@@ -25,7 +26,7 @@ class ComparedSyntaxElement:
     diff_html: str = field(init=False, repr=False)
 
     def __post_init__(self):
-        self.is_same = True if self.from_content == self.to_content else False
+        self.is_same = self.from_content == self.to_content
         self.diff_html = self.differ.make_table(
             self.from_content, self.to_content, self.from_desc, self.to_desc
         )
@@ -33,7 +34,7 @@ class ComparedSyntaxElement:
 
 @dataclass
 class ComparedSyntaxElementCollection:
-    SyntaxType: SyntaxType
+    SyntaxType: CppSyntaxType
     from_onlys: List = field(default_factory=list)
     to_onlys: List = field(default_factory=list)
     intersection: List[ComparedSyntaxElement] = field(default_factory=list)
@@ -50,23 +51,64 @@ class ComparedSyntaxElementCollection:
         self.diff_count = (
             len(self.from_onlys) + len(self.to_onlys) + len(self.intersection_diffs)
         )
-        self.is_same = (self.diff_count == 0)
+        self.is_same = self.diff_count == 0
 
 
 @dataclass
 class ComparedHeaderFile:
     from_fn: str
-    to_fn: pathlib.Path
+    to_fn: str
     from_desc: str
     to_desc: str
     is_text_same: bool
     is_interface_same: bool
+    diff_count: int
     cmp_text: ComparedSyntaxElement
     cmp_includes: ComparedSyntaxElementCollection
     cmp_defines: ComparedSyntaxElementCollection
     cmp_enums: ComparedSyntaxElementCollection
     cmp_variables: ComparedSyntaxElementCollection
     cmp_structs: ComparedSyntaxElementCollection
+
+    def __repr__(self):
+        from_name = pathlib.Path(self.from_fn).name
+        to_name = pathlib.Path(self.to_fn).name
+        from_desc = self.from_desc
+        to_desc = self.to_desc
+        text_same = self.is_text_same
+        interface_smae = self.is_interface_same
+        diff_count = self.diff_count
+
+        cmp_includes = self.cmp_includes.is_same
+        cmp_defines = self.cmp_defines.is_same
+        cmp_enums = self.cmp_enums.is_same
+        cmp_variables = self.cmp_variables.is_same
+        cmp_structs = self.cmp_structs.is_same
+
+        return (
+            f"<ComparedHeaderFile: [file from: {from_name}, to: {to_name}]"
+            + f" [desc: from: {from_desc}, to: {to_desc}]"
+            + f" [text_same: {text_same}] [interface_same: {interface_smae}]"
+            + f" [diff_count: {diff_count}] [cmp_includes: {cmp_includes}]"
+            + f" [cmp_defines: {cmp_defines}] [cmp_enums: {cmp_enums}]"
+            + f" [cmp_variables: {cmp_variables}] [cmp_structs: {cmp_structs}]>"
+        )
+
+    def to_dict(self):
+        return asdict(self)
+
+    def to_json(self, fn, encoding="utf-8"):
+        class ComparedHeaderFileJSONEncoder(json.JSONEncoder):
+            def default(self, obj):
+                if isinstance(obj, difflib.HtmlDiff):
+                    return "<difflib.HtmlDiff>"
+                elif isinstance(obj, CppSyntaxType):
+                    return obj.value
+                return json.JSONEncoder.default(self, obj)
+
+        with open(fn, "w", encoding=encoding) as fp:
+            json.dump(self.to_dict(), fp, indent=2, cls=ComparedHeaderFileJSONEncoder)
+        logger.info(f"Dumped ComparedHeaderFile to: {fn}")
 
 
 class HeaderFileComparator:
@@ -87,7 +129,21 @@ class HeaderFileComparator:
         self.to_fn = pathlib.Path(self.to_.file).name
 
     def compare(self):
-        pass
+        return ComparedHeaderFile(
+            from_fn=str(self.from_fn),
+            to_fn=str(self.to_fn),
+            from_desc=self.from_desc,
+            to_desc=self.to_desc,
+            is_text_same=self.is_text_same,
+            is_interface_same=self.is_interface_same,
+            diff_count=self.diff_count,
+            cmp_text=self.cmp_text,
+            cmp_includes=self.cmp_includes,
+            cmp_defines=self.cmp_defines,
+            cmp_enums=self.cmp_enums,
+            cmp_variables=self.cmp_variables,
+            cmp_structs=self.cmp_structs,
+        )
 
     @cached_property
     def is_text_same(self) -> bool:
@@ -99,11 +155,27 @@ class HeaderFileComparator:
             return True
 
         cmps = []
-        for syntax_type in SyntaxType:
-            attr_name = f'cmp_{syntax_type.value}s'
+        for syntax_type in CppSyntaxType:
+            attr_name = f"cmp_{syntax_type.value}s"
             cmps.append(getattr(self, attr_name).is_same)
-
         return all(cmps)
+
+    @cached_property
+    def diff_count(self) -> int:
+        if self.is_text_same:
+            return 0
+
+        cmps = []
+        for syntax_type in CppSyntaxType:
+            attr_name = f"cmp_{syntax_type.value}s"
+            cmps.append(getattr(self, attr_name).diff_count)
+        return sum(cmps)
+
+    def to_dict(self) -> Dict:
+        return self.compare().to_dict()
+
+    def to_json(self, fn: str, encoding: str = "utf-8"):
+        return self.compare().to_json(fn, encoding)
 
     @cached_property
     def from_lines(self):
@@ -132,7 +204,7 @@ class HeaderFileComparator:
             differ=self.differ,
         )
 
-    def cmp_syntax_element_collection(self, syntax_type: SyntaxType):
+    def cmp_syntax_element_collection(self, syntax_type: CppSyntaxType):
         attr_name = f"{syntax_type.value}s"
         from_attr = getattr(self.from_, attr_name)
         to_attr = getattr(self.to_, attr_name)
@@ -146,14 +218,14 @@ class HeaderFileComparator:
         # to_onlys: List = field(default_factory=list)
         # intersection: List[ComparedSyntaxElement] = field(default_factory=list)
         return ComparedSyntaxElementCollection(
-            SyntaxType=SyntaxType.INCLUDE,
+            SyntaxType=CppSyntaxType.INCLUDE,
             from_onlys=from_onlys,
             to_onlys=to_onlys,
             intersection=intersection_compares,
         )
 
     def cmp_syntax_element_collection_intersection(
-        self, syntax_type: SyntaxType
+        self, syntax_type: CppSyntaxType
     ) -> List[ComparedSyntaxElement]:
         attr_name = f"{syntax_type.value}s"
         from_attr = getattr(self.from_, attr_name)
@@ -187,40 +259,59 @@ class HeaderFileComparator:
 
     @cached_property
     def cmp_includes(self) -> ComparedSyntaxElementCollection:
-        return self.cmp_syntax_element_collection(SyntaxType.INCLUDE)
+        return self.cmp_syntax_element_collection(CppSyntaxType.INCLUDE)
 
     @cached_property
     def cmp_includes_intersection(self):
-        return self.cmp_syntax_element_collection_intersection(SyntaxType.INCLUDE)
+        return self.cmp_syntax_element_collection_intersection(CppSyntaxType.INCLUDE)
 
     @cached_property
     def cmp_defines(self) -> ComparedSyntaxElementCollection:
-        return self.cmp_syntax_element_collection(SyntaxType.DEFINE)
+        return self.cmp_syntax_element_collection(CppSyntaxType.DEFINE)
 
     @cached_property
     def cmp_defines_intersection(self):
-        return self.cmp_syntax_element_collection_intersection(SyntaxType.DEFINE)
+        return self.cmp_syntax_element_collection_intersection(CppSyntaxType.DEFINE)
 
     @cached_property
     def cmp_enums(self) -> ComparedSyntaxElementCollection:
-        return self.cmp_syntax_element_collection(SyntaxType.ENUM)
+        return self.cmp_syntax_element_collection(CppSyntaxType.ENUM)
 
     @cached_property
     def cmp_enums_intersection(self):
-        return self.cmp_syntax_element_collection_intersection(SyntaxType.ENUM)
+        return self.cmp_syntax_element_collection_intersection(CppSyntaxType.ENUM)
 
     @cached_property
     def cmp_variables(self) -> ComparedSyntaxElementCollection:
-        return self.cmp_syntax_element_collection(SyntaxType.VARIABLE)
+        return self.cmp_syntax_element_collection(CppSyntaxType.VARIABLE)
 
     @cached_property
     def cmp_variables_intersection(self):
-        return self.cmp_syntax_element_collection_intersection(SyntaxType.VARIABLE)
+        return self.cmp_syntax_element_collection_intersection(CppSyntaxType.VARIABLE)
 
     @cached_property
     def cmp_structs(self) -> ComparedSyntaxElementCollection:
-        return self.cmp_syntax_element_collection(SyntaxType.STRUCT)
+        return self.cmp_syntax_element_collection(CppSyntaxType.STRUCT)
 
     @cached_property
     def cmp_structs_intersection(self):
-        return self.cmp_syntax_element_collection_intersection(SyntaxType.STRUCT)
+        return self.cmp_syntax_element_collection_intersection(CppSyntaxType.STRUCT)
+
+
+if __name__ == "__main__":
+    from tests.prepare import prepare_comparator_sample
+
+    subdir = "sample_is_same"
+
+    (
+        cmptor_cp,
+        cmptor_modi,
+        cmptor_modi_seq,
+        cmptor_modi_add,
+        cmptor_modi_del,
+    ) = prepare_comparator_sample(subdir)
+
+    print(cmptor_modi.compare())
+    cmp_dict = cmptor_modi.to_dict()
+    fn_json = "./tests/fixtures/compared_sample.json"
+    cmptor_modi.to_json(fn_json)

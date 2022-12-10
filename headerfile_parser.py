@@ -16,7 +16,7 @@ from headerfile_formatter import combine_splited_line
 logger = logging.getLogger(__name__)
 
 
-class SyntaxType(Enum):
+class CppSyntaxType(Enum):
     INCLUDE = "include"
     DEFINE = "define"
     ENUM = "enum"
@@ -26,7 +26,7 @@ class SyntaxType(Enum):
 
 @dataclass(unsafe_hash=True)
 class SyntaxElement:
-    syntaxType: SyntaxType = field(hash=False)
+    syntaxType: CppSyntaxType = field(hash=False)
     name: str
     content: List[str] = field(repr=False, hash=False)
 
@@ -101,13 +101,13 @@ class ParsedHeaderFile:
     def to_json(self, fn, encoding='utf-8'):
         class ParsedHeaderFileJSONEncoder(json.JSONEncoder):
             def default(self, obj):
-                if isinstance(obj, SyntaxType):
+                if isinstance(obj, CppSyntaxType):
                     return obj.value
                 return json.JSONEncoder.default(self, obj)
 
         with open(fn, "w", encoding=encoding) as fp:
             json.dump(self.to_dict(), fp, indent=2, cls=ParsedHeaderFileJSONEncoder)
-        logger.info(f"Dumped headerfile parse result to: {fn}")
+        logger.info(f"Dumped ParsedHeaderFile to: {fn}")
 
 class HeaderFileParser:
     def __init__(self, fn: str):
@@ -141,7 +141,7 @@ class HeaderFileParser:
     @cached_property
     def includes(self) -> SyntaxElementCollection:
         extracted_includes = [
-            SyntaxElement(SyntaxType.INCLUDE, include, [])
+            SyntaxElement(CppSyntaxType.INCLUDE, include, [])
             for include in self._ast.includes
         ]
         logger.debug(f"Extracted includes: {len(extracted_includes)}")
@@ -186,7 +186,7 @@ class HeaderFileParser:
             f"{value.get('name')} = {value.get('value')}"
             for value in ast_enum.get("values", {})
         ]
-        return SyntaxElement(SyntaxType.ENUM, name, content)
+        return SyntaxElement(CppSyntaxType.ENUM, name, content)
 
     def extract_define(self, ast_define: str) -> SyntaxElement:
         # 处理 define 为空
@@ -208,7 +208,7 @@ class HeaderFileParser:
         content = [cleaned_define[len(name) :].strip()]
         if is_empty:
             content = []  # define 为空
-        return SyntaxElement(SyntaxType.DEFINE, name, content)
+        return SyntaxElement(CppSyntaxType.DEFINE, name, content)
 
     def extract_variable(self, ast_variable: Dict) -> SyntaxElement:
         def variable_content(line_number: int) -> str:
@@ -228,7 +228,7 @@ class HeaderFileParser:
             raise ValueError(msg)
         content = [variable_content(line_number)]
         logger.debug(f"Extracted variable: {name}")
-        return SyntaxElement(SyntaxType.VARIABLE, name, content)
+        return SyntaxElement(CppSyntaxType.VARIABLE, name, content)
 
     def extract_struct(self, ast_class: Dict) -> SyntaxElement:
         def struct_content(line_number: int) -> List[str]:
@@ -255,7 +255,7 @@ class HeaderFileParser:
             raise ValueError(msg)
         content = struct_content(line_number)
         logger.debug(f"Extracted struct: {name}")
-        return SyntaxElement(SyntaxType.STRUCT, name, content)
+        return SyntaxElement(CppSyntaxType.STRUCT, name, content)
 
 
 if __name__ == "__main__":

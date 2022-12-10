@@ -37,6 +37,21 @@ class TestHeaderFileComparator(unittest.TestCase):
         self.assertFalse(cmptor_modi_add.is_interface_same)
         self.assertFalse(cmptor_modi_del.is_interface_same)
 
+    def test_diff_count(self):
+        subdir = "sample_is_same"
+        (
+            cmptor_cp,
+            cmptor_modi,
+            cmptor_modi_seq,
+            cmptor_modi_add,
+            cmptor_modi_del,
+        ) = prepare_comparator_sample(subdir)
+
+        self.assertEqual(cmptor_cp.diff_count, 0)
+        self.assertGreater(cmptor_modi.diff_count, 0)
+        self.assertEqual(cmptor_modi_seq.diff_count, 0)
+        self.assertGreater(cmptor_modi_add.diff_count, 0)
+        self.assertGreater(cmptor_modi_del.diff_count, 0)
 
     def test_cmp_text(self):
         subdir = "sample_is_same"
