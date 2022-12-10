@@ -50,7 +50,23 @@ class ComparedSyntaxElementCollection:
         self.diff_count = (
             len(self.from_onlys) + len(self.to_onlys) + len(self.intersection_diffs)
         )
-        self.is_same = True if self.diff_count == 0 else False
+        self.is_same = (self.diff_count == 0)
+
+
+@dataclass
+class ComparedHeaderFile:
+    from_fn: pathlib.Path
+    to_fn: pathlib.Path
+    from_desc: str
+    to_desc: str
+    is_text_same: bool
+    is_interface_same: bool
+    cmp_text: ComparedSyntaxElement
+    cmp_includes: ComparedSyntaxElementCollection
+    cmp_defines: ComparedSyntaxElementCollection
+    cmp_enums: ComparedSyntaxElementCollection
+    cmp_variables: ComparedSyntaxElementCollection
+    cmp_structs: ComparedSyntaxElementCollection
 
 
 class HeaderFileComparator:
@@ -109,16 +125,18 @@ class HeaderFileComparator:
         )
 
     def cmp_syntax_element_collection(self, syntax_type: SyntaxType):
-        attr_name = f'{syntax_type.value}s'
+        attr_name = f"{syntax_type.value}s"
         from_attr = getattr(self.from_, attr_name)
         to_attr = getattr(self.to_, attr_name)
-        from_onlys = self.from_.includes - self.to_.includes
-        to_onlys = self.to_.includes - self.from_.includes
-        intersection_compares = self.cmp_includes_intersection()
+        from_onlys = from_attr - to_attr
+        to_onlys = to_attr - from_attr
+        intersection_compares = self.cmp_syntax_element_collection_intersection(
+            syntax_type
+        )
 
         # from_onlys: List = field(default_factory=list)
         # to_onlys: List = field(default_factory=list)
-        # commons: List[ComparedSyntaxElement] = field(default_factory=list)
+        # intersection: List[ComparedSyntaxElement] = field(default_factory=list)
         return ComparedSyntaxElementCollection(
             SyntaxType=SyntaxType.INCLUDE,
             from_onlys=from_onlys,
@@ -126,12 +144,16 @@ class HeaderFileComparator:
             intersection=intersection_compares,
         )
 
-    def cmp_syntax_element_collection_intersection(self, syntax_type: SyntaxType):
-        pass
+    def cmp_syntax_element_collection_intersection(
+        self, syntax_type: SyntaxType
+    ) -> List[ComparedSyntaxElement]:
+        attr_name = f"{syntax_type.value}s"
+        from_attr = getattr(self.from_, attr_name)
+        to_attr = getattr(self.to_, attr_name)
 
-    def cmp_includes_intersection(self):
-        from_desc = self.make_from_desc([self.from_fn, "include"])
-        to_desc = self.make_to_desc([self.to_fn, "include"])
+        from_desc = self.make_from_desc([self.from_fn, attr_name])
+        to_desc = self.make_to_desc([self.to_fn, attr_name])
+
         DescComparedSyntaxElement = partial(
             ComparedSyntaxElement,
             from_desc=from_desc,
@@ -139,7 +161,7 @@ class HeaderFileComparator:
             differ=self.differ,
         )
 
-        intersection = self.from_.includes.intersection(self.to_.includes)
+        intersection = from_attr.intersection(to_attr)
         extracted_intersection = [
             {
                 "name": intersection_el.get("name"),
@@ -152,20 +174,45 @@ class HeaderFileComparator:
             DescComparedSyntaxElement(**common_dict)
             for common_dict in extracted_intersection
         ]
+
         return intersection_compares
 
     @cached_property
     def cmp_includes(self) -> ComparedSyntaxElementCollection:
-        from_onlys = self.from_.includes - self.to_.includes
-        to_onlys = self.to_.includes - self.from_.includes
-        intersection_compares = self.cmp_includes_intersection()
+        return self.cmp_syntax_element_collection(SyntaxType.INCLUDE)
 
-        # from_onlys: List = field(default_factory=list)
-        # to_onlys: List = field(default_factory=list)
-        # commons: List[ComparedSyntaxElement] = field(default_factory=list)
-        return ComparedSyntaxElementCollection(
-            SyntaxType=SyntaxType.INCLUDE,
-            from_onlys=from_onlys,
-            to_onlys=to_onlys,
-            intersection=intersection_compares,
-        )
+    @cached_property
+    def cmp_includes_intersection(self):
+        return self.cmp_syntax_element_collection_intersection(SyntaxType.INCLUDE)
+
+    @cached_property
+    def cmp_defines(self) -> ComparedSyntaxElementCollection:
+        return self.cmp_syntax_element_collection(SyntaxType.DEFINE)
+
+    @cached_property
+    def cmp_defines_intersection(self):
+        return self.cmp_syntax_element_collection_intersection(SyntaxType.DEFINE)
+
+    @cached_property
+    def cmp_enums(self) -> ComparedSyntaxElementCollection:
+        return self.cmp_syntax_element_collection(SyntaxType.ENUM)
+
+    @cached_property
+    def cmp_enums_intersection(self):
+        return self.cmp_syntax_element_collection_intersection(SyntaxType.ENUM)
+
+    @cached_property
+    def cmp_variables(self) -> ComparedSyntaxElementCollection:
+        return self.cmp_syntax_element_collection(SyntaxType.VARIABLE)
+
+    @cached_property
+    def cmp_variables_intersection(self):
+        return self.cmp_syntax_element_collection_intersection(SyntaxType.VARIABLE)
+
+    @cached_property
+    def cmp_structs(self) -> ComparedSyntaxElementCollection:
+        return self.cmp_syntax_element_collection(SyntaxType.STRUCT)
+
+    @cached_property
+    def cmp_structs_intersection(self):
+        return self.cmp_syntax_element_collection_intersection(SyntaxType.STRUCT)
