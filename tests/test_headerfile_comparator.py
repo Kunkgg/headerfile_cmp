@@ -1,9 +1,10 @@
 import unittest
 
 from headerfile_comparator import HeaderFileComparator
-from headerfile_parser import HeaderFileParser
 
 from prepare import prepare_parser_sample
+from prepare import prepare_comparator_sample
+from prepare import prepare_comparator_sample_seq_inner
 
 
 class TestHeaderFileComparator(unittest.TestCase):
@@ -29,26 +30,14 @@ class TestHeaderFileComparator(unittest.TestCase):
         self.assertFalse(cmptor_modi.cmp_text.is_same)
 
     def test_cmp_includes(self):
-        sub_dir = "sample_includes"
-        fn = f"{sub_dir}/sample.h"
-        fn_cp = f"{sub_dir}/sample_copy.h"
-        fn_modi = f"{sub_dir}/sample_modified.h"
-        fn_modi_seq = f"{sub_dir}/sample_modified_sequence.h"
-        fn_modi_add = f"{sub_dir}/sample_modified_add.h"
-        fn_modi_del = f"{sub_dir}/sample_modified_del.h"
-
-        parsed = prepare_parser_sample(fn).parse()
-        parsed_cp = prepare_parser_sample(fn_cp).parse()
-        parsed_modi = prepare_parser_sample(fn_modi).parse()
-        parsed_modi_seq = prepare_parser_sample(fn_modi_seq).parse()
-        parsed_modi_add = prepare_parser_sample(fn_modi_add).parse()
-        parsed_modi_del = prepare_parser_sample(fn_modi_del).parse()
-
-        cmptor_cp = HeaderFileComparator(parsed, parsed_cp)
-        cmptor_modi = HeaderFileComparator(parsed, parsed_modi)
-        cmptor_modi_seq = HeaderFileComparator(parsed, parsed_modi_seq)
-        cmptor_modi_add = HeaderFileComparator(parsed, parsed_modi_add)
-        cmptor_modi_del = HeaderFileComparator(parsed, parsed_modi_del)
+        subdir = "sample_includes"
+        (
+            cmptor_cp,
+            cmptor_modi,
+            cmptor_modi_seq,
+            cmptor_modi_add,
+            cmptor_modi_del,
+        ) = prepare_comparator_sample(subdir)
 
         self.assertTrue(cmptor_cp.cmp_includes.is_same)
         self.assertFalse(cmptor_modi.cmp_includes.is_same)
@@ -57,4 +46,72 @@ class TestHeaderFileComparator(unittest.TestCase):
         self.assertFalse(cmptor_modi_del.cmp_includes.is_same)
 
     def test_cmp_defines(self):
-        pass
+        subdir = "sample_defines"
+        (
+            cmptor_cp,
+            cmptor_modi,
+            cmptor_modi_seq,
+            cmptor_modi_add,
+            cmptor_modi_del,
+        ) = prepare_comparator_sample(subdir)
+
+        self.assertTrue(cmptor_cp.cmp_defines.is_same)
+        self.assertFalse(cmptor_modi.cmp_defines.is_same)
+        self.assertTrue(cmptor_modi_seq.cmp_defines.is_same)
+        self.assertFalse(cmptor_modi_add.cmp_defines.is_same)
+        self.assertFalse(cmptor_modi_del.cmp_defines.is_same)
+
+    def test_cmp_enums(self):
+        subdir = "sample_enums"
+        (
+            cmptor_cp,
+            cmptor_modi,
+            cmptor_modi_seq,
+            cmptor_modi_add,
+            cmptor_modi_del,
+        ) = prepare_comparator_sample(subdir)
+
+        cmptor_modi_seq_inner = prepare_comparator_sample_seq_inner(subdir)
+
+        self.assertTrue(cmptor_cp.cmp_enums.is_same)
+        self.assertFalse(cmptor_modi.cmp_enums.is_same)
+        self.assertTrue(cmptor_modi_seq.cmp_enums.is_same)
+        self.assertFalse(cmptor_modi_seq_inner.cmp_enums.is_same)
+        self.assertFalse(cmptor_modi_add.cmp_enums.is_same)
+        self.assertFalse(cmptor_modi_del.cmp_enums.is_same)
+
+    def test_cmp_variables(self):
+        subdir = "sample_variables"
+        (
+            cmptor_cp,
+            cmptor_modi,
+            cmptor_modi_seq,
+            cmptor_modi_add,
+            cmptor_modi_del,
+        ) = prepare_comparator_sample(subdir)
+
+        self.assertTrue(cmptor_cp.cmp_variables.is_same)
+        self.assertFalse(cmptor_modi.cmp_variables.is_same)
+        self.assertTrue(cmptor_modi_seq.cmp_variables.is_same)
+        self.assertFalse(cmptor_modi_add.cmp_variables.is_same)
+        self.assertFalse(cmptor_modi_del.cmp_variables.is_same)
+
+    def test_cmp_structs(self):
+        subdir = "sample_structs"
+        (
+            cmptor_cp,
+            cmptor_modi,
+            cmptor_modi_seq,
+            cmptor_modi_add,
+            cmptor_modi_del,
+        ) = prepare_comparator_sample(subdir)
+
+        cmptor_modi_seq_inner = prepare_comparator_sample_seq_inner(subdir)
+
+        self.assertTrue(cmptor_cp.cmp_structs.is_same)
+        self.assertFalse(cmptor_modi.cmp_structs.is_same)
+        self.assertTrue(cmptor_modi_seq.cmp_structs.is_same)
+        self.assertFalse(cmptor_modi_seq_inner.cmp_structs.is_same)
+        self.assertFalse(cmptor_modi_add.cmp_structs.is_same)
+        self.assertFalse(cmptor_modi_del.cmp_structs.is_same)
+

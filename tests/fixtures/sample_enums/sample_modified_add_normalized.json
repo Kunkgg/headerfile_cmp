@@ -1,0 +1,240 @@
+{
+    "headerFileName": "tests/fixtures/sample_enums/sample_modified_add_normalized.h",
+    "curClass": "",
+    "classes": {},
+    "functions": [],
+    "pragmas": [],
+    "pragmas_detail": [],
+    "defines": [],
+    "defines_detail": [],
+    "includes": [],
+    "includes_detail": [],
+    "headerFileNames": [
+        "tests/fixtures/sample_enums/sample_modified_add_normalized.h"
+    ],
+    "enums": [
+        {
+            "name": "PyUnicode_Kind",
+            "namespace": "",
+            "typedef": false,
+            "isclass": false,
+            "values": [
+                {
+                    "name": "PyUnicode_WCHAR_KIND",
+                    "value": 0
+                },
+                {
+                    "name": "PyUnicode_1BYTE_KIND",
+                    "value": 1
+                },
+                {
+                    "name": "PyUnicode_2BYTE_KIND",
+                    "value": 2
+                },
+                {
+                    "name": "PyUnicode_4BYTE_KIND",
+                    "value": 4
+                }
+            ],
+            "filename": "tests/fixtures/sample_enums/sample_modified_add_normalized.h",
+            "line_number": 1,
+            "type": "???"
+        },
+        {
+            "name": "PyUnicode_Kind_AA",
+            "namespace": "",
+            "typedef": false,
+            "isclass": false,
+            "values": [
+                {
+                    "name": "PyUnicode_WCHAR_KIND_AA",
+                    "value": 0
+                },
+                {
+                    "name": "PyUnicode_1BYTE_KIND_AA",
+                    "value": 1
+                },
+                {
+                    "name": "PyUnicode_2BYTE_KIND_AA",
+                    "value": 2
+                },
+                {
+                    "name": "PyUnicode_4BYTE_KIND_AA",
+                    "value": 4
+                }
+            ],
+            "filename": "tests/fixtures/sample_enums/sample_modified_add_normalized.h",
+            "line_number": 7,
+            "type": "???"
+        },
+        {
+            "name": "PyUnicode_Kind_BB",
+            "namespace": "",
+            "typedef": false,
+            "isclass": false,
+            "values": [
+                {
+                    "name": "PyUnicode_WCHAR_KIND_BB",
+                    "value": 0
+                },
+                {
+                    "name": "PyUnicode_1BYTE_KIND_BB",
+                    "value": 1
+                },
+                {
+                    "name": "PyUnicode_2BYTE_KIND_BB",
+                    "value": 2
+                },
+                {
+                    "name": "PyUnicode_4BYTE_KIND_BB",
+                    "value": 4
+                }
+            ],
+            "filename": "tests/fixtures/sample_enums/sample_modified_add_normalized.h",
+            "line_number": 13,
+            "type": "???"
+        },
+        {
+            "name": "PyUnicode_Kind_add",
+            "namespace": "",
+            "typedef": false,
+            "isclass": false,
+            "values": [
+                {
+                    "name": "PyUnicode_WCHAR_KIND_BB",
+                    "value": 0
+                },
+                {
+                    "name": "PyUnicode_1BYTE_KIND_BB",
+                    "value": 1
+                },
+                {
+                    "name": "PyUnicode_2BYTE_KIND_BB",
+                    "value": 2
+                },
+                {
+                    "name": "PyUnicode_4BYTE_KIND_BB",
+                    "value": 4
+                }
+            ],
+            "filename": "tests/fixtures/sample_enums/sample_modified_add_normalized.h",
+            "line_number": 19,
+            "type": "???"
+        }
+    ],
+    "extern_templates": [],
+    "variables": [],
+    "global_enums": {
+        "PyUnicode_Kind": {
+            "name": "PyUnicode_Kind",
+            "namespace": "",
+            "typedef": false,
+            "isclass": false,
+            "values": [
+                {
+                    "name": "PyUnicode_WCHAR_KIND",
+                    "value": 0
+                },
+                {
+                    "name": "PyUnicode_1BYTE_KIND",
+                    "value": 1
+                },
+                {
+                    "name": "PyUnicode_2BYTE_KIND",
+                    "value": 2
+                },
+                {
+                    "name": "PyUnicode_4BYTE_KIND",
+                    "value": 4
+                }
+            ],
+            "filename": "tests/fixtures/sample_enums/sample_modified_add_normalized.h",
+            "line_number": 1,
+            "type": "???"
+        },
+        "PyUnicode_Kind_AA": {
+            "name": "PyUnicode_Kind_AA",
+            "namespace": "",
+            "typedef": false,
+            "isclass": false,
+            "values": [
+                {
+                    "name": "PyUnicode_WCHAR_KIND_AA",
+                    "value": 0
+                },
+                {
+                    "name": "PyUnicode_1BYTE_KIND_AA",
+                    "value": 1
+                },
+                {
+                    "name": "PyUnicode_2BYTE_KIND_AA",
+                    "value": 2
+                },
+                {
+                    "name": "PyUnicode_4BYTE_KIND_AA",
+                    "value": 4
+                }
+            ],
+            "filename": "tests/fixtures/sample_enums/sample_modified_add_normalized.h",
+            "line_number": 7,
+            "type": "???"
+        },
+        "PyUnicode_Kind_BB": {
+            "name": "PyUnicode_Kind_BB",
+            "namespace": "",
+            "typedef": false,
+            "isclass": false,
+            "values": [
+                {
+                    "name": "PyUnicode_WCHAR_KIND_BB",
+                    "value": 0
+                },
+                {
+                    "name": "PyUnicode_1BYTE_KIND_BB",
+                    "value": 1
+                },
+                {
+                    "name": "PyUnicode_2BYTE_KIND_BB",
+                    "value": 2
+                },
+                {
+                    "name": "PyUnicode_4BYTE_KIND_BB",
+                    "value": 4
+                }
+            ],
+            "filename": "tests/fixtures/sample_enums/sample_modified_add_normalized.h",
+            "line_number": 13,
+            "type": "???"
+        },
+        "PyUnicode_Kind_add": {
+            "name": "PyUnicode_Kind_add",
+            "namespace": "",
+            "typedef": false,
+            "isclass": false,
+            "values": [
+                {
+                    "name": "PyUnicode_WCHAR_KIND_BB",
+                    "value": 0
+                },
+                {
+                    "name": "PyUnicode_1BYTE_KIND_BB",
+                    "value": 1
+                },
+                {
+                    "name": "PyUnicode_2BYTE_KIND_BB",
+                    "value": 2
+                },
+                {
+                    "name": "PyUnicode_4BYTE_KIND_BB",
+                    "value": 4
+                }
+            ],
+            "filename": "tests/fixtures/sample_enums/sample_modified_add_normalized.h",
+            "line_number": 19,
+            "type": "???"
+        }
+    },
+    "typedefs": {},
+    "namespaces": [],
+    "using": {}
+}
