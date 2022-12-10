@@ -5,7 +5,7 @@ import re
 from dataclasses import asdict, dataclass, field
 from enum import Enum
 from functools import cached_property
-from typing import Dict, List, NamedTuple, Optional, Tuple
+from typing import Dict, List
 
 import CppHeaderParser
 
@@ -95,6 +95,19 @@ class ParsedHeaderFile:
             + f" [variables: {variables_count}] [structs: {structs_count}]>"
         )
 
+    def to_dict(self):
+        return asdict(self)
+
+    def to_json(self, fn, encoding='utf-8'):
+        class ParsedHeaderFileJSONEncoder(json.JSONEncoder):
+            def default(self, obj):
+                if isinstance(obj, SyntaxType):
+                    return obj.value
+                return json.JSONEncoder.default(self, obj)
+
+        with open(fn, "w", encoding=encoding) as fp:
+            json.dump(self.to_dict(), fp, indent=2, cls=ParsedHeaderFileJSONEncoder)
+        logger.info(f"Dumped headerfile parse result to: {fn}")
 
 class HeaderFileParser:
     def __init__(self, fn: str):
@@ -111,18 +124,10 @@ class HeaderFileParser:
         )
 
     def to_dict(self) -> Dict:
-        return asdict(self.parse())
+        return self.parse().to_dict()
 
     def to_json(self, fn: str, encoding: str = "utf-8"):
-        class ParsedHeaderFileJSONEncoder(json.JSONEncoder):
-            def default(self, obj):
-                if isinstance(obj, SyntaxType):
-                    return obj.value
-                return json.JSONEncoder.default(self, obj)
-
-        with open(fn, "w", encoding=encoding) as fp:
-            json.dump(self.to_dict(), fp, indent=2, cls=ParsedHeaderFileJSONEncoder)
-        logger.info(f"Dumped headerfile parse result to: {fn}")
+        return self.parse().to_json(fn, encoding)
 
     @cached_property
     def lines(self) -> List[str]:
@@ -258,4 +263,5 @@ if __name__ == "__main__":
     fn_json = "./tests/fixtures/parsed_sample_normalized.json"
     parser = HeaderFileParser(fn)
     print(parser.parse())
+    parsed_dict = parser.to_dict()
     parser.to_json(fn_json)

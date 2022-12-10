@@ -1,33 +1,59 @@
 import unittest
 
-from headerfile_comparator import HeaderFileComparator
-
-from prepare import prepare_parser_sample
 from prepare import prepare_comparator_sample
 from prepare import prepare_comparator_sample_seq_inner
 
 
 class TestHeaderFileComparator(unittest.TestCase):
-    def setUp(self) -> None:
-        fn = "ast.h"
-        fn_cp = "ast_copy.h"
-        fn_modi = "ast_modified.h"
-        self.parsed = prepare_parser_sample(fn).parse()
-        self.parsed_cp = prepare_parser_sample(fn_cp).parse()
-        self.parsed_modi = prepare_parser_sample(fn_modi).parse()
+    def test_is_text_same(self):
+        subdir = "sample_is_same"
+        (
+            cmptor_cp,
+            cmptor_modi,
+            cmptor_modi_seq,
+            cmptor_modi_add,
+            cmptor_modi_del,
+        ) = prepare_comparator_sample(subdir)
 
-    def test_is_same(self):
-        cmptor_cp = HeaderFileComparator(self.parsed, self.parsed_cp)
-        cmptor_modi = HeaderFileComparator(self.parsed, self.parsed_modi)
         self.assertTrue(cmptor_cp.is_text_same)
         self.assertFalse(cmptor_modi.is_text_same)
+        self.assertFalse(cmptor_modi_seq.is_text_same)
+        self.assertFalse(cmptor_modi_add.is_text_same)
+        self.assertFalse(cmptor_modi_del.is_text_same)
+
+    def test_is_interface_same(self):
+        subdir = "sample_is_same"
+        (
+            cmptor_cp,
+            cmptor_modi,
+            cmptor_modi_seq,
+            cmptor_modi_add,
+            cmptor_modi_del,
+        ) = prepare_comparator_sample(subdir)
+
+        self.assertTrue(cmptor_cp.is_interface_same)
+        self.assertFalse(cmptor_modi.is_interface_same)
+        self.assertTrue(cmptor_modi_seq.is_interface_same)
+        self.assertFalse(cmptor_modi_add.is_interface_same)
+        self.assertFalse(cmptor_modi_del.is_interface_same)
+
 
     def test_cmp_text(self):
-        cmptor_cp = HeaderFileComparator(self.parsed, self.parsed_cp)
-        cmptor_modi = HeaderFileComparator(self.parsed, self.parsed_modi)
+        subdir = "sample_is_same"
+        (
+            cmptor_cp,
+            cmptor_modi,
+            cmptor_modi_seq,
+            cmptor_modi_add,
+            cmptor_modi_del,
+        ) = prepare_comparator_sample(subdir)
+
         self.assertEqual(cmptor_cp.cmp_text.name, "__text__")
         self.assertTrue(cmptor_cp.cmp_text.is_same)
         self.assertFalse(cmptor_modi.cmp_text.is_same)
+        self.assertFalse(cmptor_modi_seq.cmp_text.is_same)
+        self.assertFalse(cmptor_modi_add.cmp_text.is_same)
+        self.assertFalse(cmptor_modi_del.cmp_text.is_same)
 
     def test_cmp_includes(self):
         subdir = "sample_includes"

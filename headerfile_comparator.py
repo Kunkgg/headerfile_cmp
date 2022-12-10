@@ -55,7 +55,7 @@ class ComparedSyntaxElementCollection:
 
 @dataclass
 class ComparedHeaderFile:
-    from_fn: pathlib.Path
+    from_fn: str
     to_fn: pathlib.Path
     from_desc: str
     to_desc: str
@@ -90,12 +90,20 @@ class HeaderFileComparator:
         pass
 
     @cached_property
-    def is_text_same(self):
+    def is_text_same(self) -> bool:
         return filecmp.cmp(self.from_.file, self.to_.file)
 
     @cached_property
-    def is_interface_same(self):
-        pass
+    def is_interface_same(self) -> bool:
+        if self.is_text_same:
+            return True
+
+        cmps = []
+        for syntax_type in SyntaxType:
+            attr_name = f'cmp_{syntax_type.value}s'
+            cmps.append(getattr(self, attr_name).is_same)
+
+        return all(cmps)
 
     @cached_property
     def from_lines(self):
