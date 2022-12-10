@@ -4,7 +4,7 @@ import logging
 import pathlib
 from dataclasses import dataclass, field
 from functools import cached_property, partial
-from typing import Dict, List
+from typing import Dict, List, Tuple
 
 import common.init_log
 from common.utils import readlines
@@ -36,19 +36,19 @@ class ComparedSyntaxElementCollection:
     SyntaxType: SyntaxType
     from_onlys: List = field(default_factory=list)
     to_onlys: List = field(default_factory=list)
-    commons: List[ComparedSyntaxElement] = field(default_factory=list)
+    intersection: List[ComparedSyntaxElement] = field(default_factory=list)
     is_same: bool = field(init=False)
     diff_count: int = field(init=False)
-    common_diffs: List[ComparedSyntaxElement] = field(init=False)
+    intersection_diffs: List[ComparedSyntaxElement] = field(init=False)
 
     def __post_init__(self):
-        self.common_diffs = [
+        self.intersection_diffs = [
             common_compared
-            for common_compared in self.commons
+            for common_compared in self.intersection
             if not common_compared.is_same
         ]
         self.diff_count = (
-            len(self.from_onlys) + len(self.to_onlys) + len(self.common_diffs)
+            len(self.from_onlys) + len(self.to_onlys) + len(self.intersection_diffs)
         )
         self.is_same = True if self.diff_count == 0 else False
 
@@ -80,7 +80,6 @@ class HeaderFileComparator:
     @cached_property
     def is_interface_same(self):
         pass
-        # return self.from_ == self.to_
 
     @cached_property
     def from_lines(self):
@@ -109,32 +108,13 @@ class HeaderFileComparator:
             differ=self.differ,
         )
 
-    @cached_property
-    def cmp_includes(self) -> ComparedSyntaxElementCollection:
-        from_desc = self.make_from_desc([self.from_fn, "include"])
-        to_desc = self.make_to_desc([self.to_fn, "include"])
-        DescComparedSyntaxElement = partial(
-            ComparedSyntaxElement,
-            from_desc=from_desc,
-            to_desc=to_desc,
-            differ=self.differ,
-        )
+    def cmp_syntax_element_collection(self, syntax_type: SyntaxType):
+        attr_name = f'{syntax_type.value}s'
+        from_attr = getattr(self.from_, attr_name)
+        to_attr = getattr(self.to_, attr_name)
         from_onlys = self.from_.includes - self.to_.includes
         to_onlys = self.to_.includes - self.from_.includes
-        # common_names = self.from_.includes.common_names(self.to_.includes)
-        common_dicts = self.from_.includes.commons(self.to_.includes)
-        extracted_common_dicts = [
-            {
-                "name": common_dict.get("name"),
-                "from_content": common_dict.get("content"),
-                "to_content": common_dict.get("other_content"),
-            }
-            for common_dict in common_dicts
-        ]
-        common_compares = [
-            DescComparedSyntaxElement(**common_dict)
-            for common_dict in extracted_common_dicts
-        ]
+        intersection_compares = self.cmp_includes_intersection()
 
         # from_onlys: List = field(default_factory=list)
         # to_onlys: List = field(default_factory=list)
@@ -143,5 +123,49 @@ class HeaderFileComparator:
             SyntaxType=SyntaxType.INCLUDE,
             from_onlys=from_onlys,
             to_onlys=to_onlys,
-            commons=common_compares,
+            intersection=intersection_compares,
+        )
+
+    def cmp_syntax_element_collection_intersection(self, syntax_type: SyntaxType):
+        pass
+
+    def cmp_includes_intersection(self):
+        from_desc = self.make_from_desc([self.from_fn, "include"])
+        to_desc = self.make_to_desc([self.to_fn, "include"])
+        DescComparedSyntaxElement = partial(
+            ComparedSyntaxElement,
+            from_desc=from_desc,
+            to_desc=to_desc,
+            differ=self.differ,
+        )
+
+        intersection = self.from_.includes.intersection(self.to_.includes)
+        extracted_intersection = [
+            {
+                "name": intersection_el.get("name"),
+                "from_content": intersection_el.get("content"),
+                "to_content": intersection_el.get("other_content"),
+            }
+            for intersection_el in intersection
+        ]
+        intersection_compares = [
+            DescComparedSyntaxElement(**common_dict)
+            for common_dict in extracted_intersection
+        ]
+        return intersection_compares
+
+    @cached_property
+    def cmp_includes(self) -> ComparedSyntaxElementCollection:
+        from_onlys = self.from_.includes - self.to_.includes
+        to_onlys = self.to_.includes - self.from_.includes
+        intersection_compares = self.cmp_includes_intersection()
+
+        # from_onlys: List = field(default_factory=list)
+        # to_onlys: List = field(default_factory=list)
+        # commons: List[ComparedSyntaxElement] = field(default_factory=list)
+        return ComparedSyntaxElementCollection(
+            SyntaxType=SyntaxType.INCLUDE,
+            from_onlys=from_onlys,
+            to_onlys=to_onlys,
+            intersection=intersection_compares,
         )

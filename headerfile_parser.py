@@ -1,11 +1,11 @@
 import json
-import pathlib
 import logging
+import pathlib
 import re
 from dataclasses import asdict, dataclass, field
 from enum import Enum
 from functools import cached_property
-from typing import Dict, List, NamedTuple, Tuple, Optional
+from typing import Dict, List, NamedTuple, Optional, Tuple
 
 import CppHeaderParser
 
@@ -17,7 +17,6 @@ logger = logging.getLogger(__name__)
 
 
 class SyntaxType(Enum):
-    TEXT = "text"
     INCLUDE = "include"
     DEFINE = "define"
     ENUM = "enum"
@@ -40,9 +39,6 @@ class SyntaxElementCollection:
         self_only_set = set(self) - set(other)
         return [element for element in self.elements if element.name in self_only_set]
 
-    # def __set__(self):
-    #     return set([element.name for element in self.elements])
-
     def __iter__(self):
         self.n = 0
         return self
@@ -55,16 +51,15 @@ class SyntaxElementCollection:
         else:
             raise StopIteration
 
-    def common_names(self, other) -> List[str]:
-        # other_name_set = set([element.name for element in other.elements])
+    def intersection_names(self, other) -> List[str]:
         other_name_set = set(other)
         return [
             element.name for element in self.elements if element.name in other_name_set
         ]
 
-    def commons(self, other) -> List[Dict]:
+    def intersection(self, other) -> List[Dict]:
         res = []
-        for name in self.common_names(other):
+        for name in self.intersection_names(other):
             self_element = self.find_element_by_name(name)
             other_element = other.find_element_by_name(name)
             d = {**self_element.__dict__}
@@ -180,7 +175,8 @@ class HeaderFileParser:
         return SyntaxElementCollection(extracted_structs)
 
     def extract_enum(self, ast_enum: Dict) -> SyntaxElement:
-        name: str = str(ast_enum.get("name", ""))  # 直接返回的不是 str
+        # 将 CppHeaderParser 对象转化为字符串
+        name: str = str(ast_enum.get("name", ""))
         content = [
             f"{value.get('name')} = {value.get('value')}"
             for value in ast_enum.get("values", {})
@@ -218,7 +214,8 @@ class HeaderFileParser:
                     break
             return combine_splited_line("".join(lines)).strip()
 
-        name: str = str(ast_variable.get("name", ""))  # 直接返回的不是 str
+        # 将 CppHeaderParser 对象转化为字符串
+        name: str = str(ast_variable.get("name", ""))
         line_number = ast_variable.get("line_number")
         if not line_number:
             msg = f"Not found line number of variable: {name}."
@@ -244,7 +241,8 @@ class HeaderFileParser:
 
             return lines
 
-        name: str = str(ast_class.get("name", ""))  # 直接返回的不是 str
+        # 将 CppHeaderParser 对象转化为字符串
+        name: str = str(ast_class.get("name", ""))
         line_number = ast_class.get("line_number")
         if not line_number:
             msg = f"Not found line number of struct: {name}."
