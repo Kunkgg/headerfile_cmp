@@ -1,5 +1,5 @@
 {
-    "headerFileName": "tests/fixtures/sample_include_modified_del_normalized.h",
+    "headerFileName": "tests/fixtures/sample_includes/sample_modified_del_normalized.h",
     "curClass": "",
     "classes": {},
     "functions": [],
@@ -13,12 +13,12 @@
     "includes_detail": [
         {
             "value": "\"Python-ast.h\"",
-            "filename": "tests/fixtures/sample_include_modified_del_normalized.h",
+            "filename": "tests/fixtures/sample_includes/sample_modified_del_normalized.h",
             "line_number": 2
         }
     ],
     "headerFileNames": [
-        "tests/fixtures/sample_include_modified_del_normalized.h"
+        "tests/fixtures/sample_includes/sample_modified_del_normalized.h"
     ],
     "enums": [],
     "extern_templates": [],

@@ -1,5 +1,5 @@
 {
-    "headerFileName": "tests/fixtures/sample_include_modified_normalized.h",
+    "headerFileName": "tests/fixtures/sample_includes/sample_copy_normalized.h",
     "curClass": "",
     "classes": {},
     "functions": [],
@@ -9,22 +9,22 @@
     "defines_detail": [],
     "includes": [
         "\"Python-ast.h\"",
-        "\"nade.h\""
+        "\"node.h\""
     ],
     "includes_detail": [
         {
             "value": "\"Python-ast.h\"",
-            "filename": "tests/fixtures/sample_include_modified_normalized.h",
+            "filename": "tests/fixtures/sample_includes/sample_copy_normalized.h",
             "line_number": 2
         },
         {
-            "value": "\"nade.h\"",
-            "filename": "tests/fixtures/sample_include_modified_normalized.h",
+            "value": "\"node.h\"",
+            "filename": "tests/fixtures/sample_includes/sample_copy_normalized.h",
             "line_number": 3
         }
     ],
     "headerFileNames": [
-        "tests/fixtures/sample_include_modified_normalized.h"
+        "tests/fixtures/sample_includes/sample_copy_normalized.h"
     ],
     "enums": [],
     "extern_templates": [],

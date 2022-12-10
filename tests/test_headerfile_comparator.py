@@ -29,12 +29,13 @@ class TestHeaderFileComparator(unittest.TestCase):
         self.assertFalse(cmptor_modi.cmp_text.is_same)
 
     def test_cmp_includes(self):
-        fn = "sample_include.h"
-        fn_cp = "sample_include_copy.h"
-        fn_modi = "sample_include_modified.h"
-        fn_modi_seq = "sample_include_modified_sequence.h"
-        fn_modi_add = "sample_include_modified_add.h"
-        fn_modi_del = "sample_include_modified_del.h"
+        sub_dir = "sample_includes"
+        fn = f"{sub_dir}/sample.h"
+        fn_cp = f"{sub_dir}/sample_copy.h"
+        fn_modi = f"{sub_dir}/sample_modified.h"
+        fn_modi_seq = f"{sub_dir}/sample_modified_sequence.h"
+        fn_modi_add = f"{sub_dir}/sample_modified_add.h"
+        fn_modi_del = f"{sub_dir}/sample_modified_del.h"
 
         parsed = prepare_parser_sample(fn).parse()
         parsed_cp = prepare_parser_sample(fn_cp).parse()
