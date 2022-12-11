@@ -1,6 +1,7 @@
 #include "test-node1.h"         /* test-node */
 #include "test-node2.h"         /* test-node */
 #include "test-node3.h"         /* test-node */
+#include "test-node4.h"         /* test-node */
 
 // test-variables
 int test_var_int_empty;
@@ -11,6 +12,7 @@ int test_var_int = 10001;
 int test_var_int_expr = test_var_int + 222;
 int test_var_float = 3.14;
 int test_var_char = 'aaa';
+int test_var_char_test = 'test';
 char test_a, test_b, testc;
 int x = 5, y = 6, z = 50;
 int xx = 5 \
@@ -308,6 +310,16 @@ typedef struct {
         Py_UCS4 *ucs4;
     } data;                     /* Canonical, smallest-form Unicode buffer */
 } PyUnicodeObject;
+
+typedef struct {
+    PyCompactUnicodeObject _base;
+    union {
+        void *any;
+        Py_UCS1 *latin1;
+        Py_UCS2 *ucs2;
+        Py_UCS4 *ucs4;
+    } data;                     /* Canonical, smallest-form Unicode buffer */
+} TestPyUnicodeObject;
 
 /* Fast access macros */
 #define PyUnicode_WSTR_LENGTH(op) \

@@ -1,6 +1,7 @@
 #include "test-node1.h"
 #include "test-node2.h"
 #include "test-node3.h"
+#include "test-node4.h"
 int test_var_int_empty;
 float test_var_float_empty;
 char test_var_char_empty;
@@ -8,6 +9,7 @@ int test_var_int = 10001;
 int test_var_int_expr = test_var_int + 222;
 int test_var_float = 3.14;
 int test_var_char = 'aaa';
+int test_var_char_test = 'test';
 char test_a, test_b, testc;
 int x = 5, y = 6, z = 50;
 int xx = 5 + 50 * 100 + 3600 * 24 + 3600 * 1 - 3600 * 1 + 3600 * 24 -
@@ -111,6 +113,15 @@ typedef struct {
     Py_UCS4 *ucs4;
   } data;
 } PyUnicodeObject;
+typedef struct {
+  PyCompactUnicodeObject _base;
+  union {
+    void *any;
+    Py_UCS1 *latin1;
+    Py_UCS2 *ucs2;
+    Py_UCS4 *ucs4;
+  } data;
+} TestPyUnicodeObject;
 #define PyUnicode_WSTR_LENGTH(op)                                              \
   (PyUnicode_IS_COMPACT_ASCII(op)                                              \
        ? ((PyASCIIObject *)op)->length                                         \

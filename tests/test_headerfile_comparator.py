@@ -2,6 +2,7 @@ import unittest
 
 from prepare import prepare_comparator_sample
 from prepare import prepare_comparator_sample_seq_inner
+from headerfile_parser import CppSyntaxType
 
 
 class TestHeaderFileComparator(unittest.TestCase):
@@ -80,6 +81,7 @@ class TestHeaderFileComparator(unittest.TestCase):
             cmptor_modi_del,
         ) = prepare_comparator_sample(subdir)
 
+        self.assertEqual(cmptor_cp.cmp_includes.syntax_type, CppSyntaxType.INCLUDE)
         self.assertTrue(cmptor_cp.cmp_includes.is_same)
         self.assertFalse(cmptor_modi.cmp_includes.is_same)
         self.assertTrue(cmptor_modi_seq.cmp_includes.is_same)
@@ -96,6 +98,7 @@ class TestHeaderFileComparator(unittest.TestCase):
             cmptor_modi_del,
         ) = prepare_comparator_sample(subdir)
 
+        self.assertEqual(cmptor_cp.cmp_defines.syntax_type, CppSyntaxType.DEFINE)
         self.assertTrue(cmptor_cp.cmp_defines.is_same)
         self.assertFalse(cmptor_modi.cmp_defines.is_same)
         self.assertTrue(cmptor_modi_seq.cmp_defines.is_same)
@@ -114,6 +117,7 @@ class TestHeaderFileComparator(unittest.TestCase):
 
         cmptor_modi_seq_inner = prepare_comparator_sample_seq_inner(subdir)
 
+        self.assertEqual(cmptor_cp.cmp_enums.syntax_type, CppSyntaxType.ENUM)
         self.assertTrue(cmptor_cp.cmp_enums.is_same)
         self.assertFalse(cmptor_modi.cmp_enums.is_same)
         self.assertTrue(cmptor_modi_seq.cmp_enums.is_same)
@@ -131,6 +135,7 @@ class TestHeaderFileComparator(unittest.TestCase):
             cmptor_modi_del,
         ) = prepare_comparator_sample(subdir)
 
+        self.assertEqual(cmptor_cp.cmp_variables.syntax_type, CppSyntaxType.VARIABLE)
         self.assertTrue(cmptor_cp.cmp_variables.is_same)
         self.assertFalse(cmptor_modi.cmp_variables.is_same)
         self.assertTrue(cmptor_modi_seq.cmp_variables.is_same)
@@ -149,6 +154,7 @@ class TestHeaderFileComparator(unittest.TestCase):
 
         cmptor_modi_seq_inner = prepare_comparator_sample_seq_inner(subdir)
 
+        self.assertEqual(cmptor_cp.cmp_structs.syntax_type, CppSyntaxType.STRUCT)
         self.assertTrue(cmptor_cp.cmp_structs.is_same)
         self.assertFalse(cmptor_modi.cmp_structs.is_same)
         self.assertTrue(cmptor_modi_seq.cmp_structs.is_same)

@@ -3,27 +3,27 @@
   "includes": {
     "elements": [
       {
-        "syntaxType": "include",
+        "syntax_type": "include",
         "name": "\"test-node1.h\"",
         "content": []
       },
       {
-        "syntaxType": "include",
+        "syntax_type": "include",
         "name": "\"test-node2.h\"",
         "content": []
       },
       {
-        "syntaxType": "include",
+        "syntax_type": "include",
         "name": "\"test-node3.h\"",
         "content": []
       },
       {
-        "syntaxType": "include",
+        "syntax_type": "include",
         "name": "\"Python-ast.h\"",
         "content": []
       },
       {
-        "syntaxType": "include",
+        "syntax_type": "include",
         "name": "\"node.h\"",
         "content": []
       }
@@ -32,397 +32,397 @@
   "defines": {
     "elements": [
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "Py_AST_H",
         "content": []
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "PY_UNICODE_TYPE",
         "content": [
           "wchar_t"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "Py_UNICODE_ISSPACE(ch)",
         "content": [
           "((ch) < 128U ? _Py_ascii_whitespace[(ch)] : _PyUnicode_IsWhitespace(ch))"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "Py_UNICODE_ISLOWER(ch)",
         "content": [
           "_PyUnicode_IsLowercase(ch)"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "Py_UNICODE_ISUPPER(ch)",
         "content": [
           "_PyUnicode_IsUppercase(ch)"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "Py_UNICODE_ISTITLE(ch)",
         "content": [
           "_PyUnicode_IsTitlecase(ch)"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "Py_UNICODE_ISLINEBREAK(ch)",
         "content": [
           "_PyUnicode_IsLinebreak(ch)"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "Py_UNICODE_TOLOWER(ch)",
         "content": [
           "_PyUnicode_ToLowercase(ch)"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "Py_UNICODE_TOUPPER(ch)",
         "content": [
           "_PyUnicode_ToUppercase(ch)"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "Py_UNICODE_TOTITLE(ch)",
         "content": [
           "_PyUnicode_ToTitlecase(ch)"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "Py_UNICODE_ISDECIMAL(ch)",
         "content": [
           "_PyUnicode_IsDecimalDigit(ch)"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "Py_UNICODE_ISDIGIT(ch)",
         "content": [
           "_PyUnicode_IsDigit(ch)"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "Py_UNICODE_ISNUMERIC(ch)",
         "content": [
           "_PyUnicode_IsNumeric(ch)"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "Py_UNICODE_ISPRINTABLE(ch)",
         "content": [
           "_PyUnicode_IsPrintable(ch)"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "Py_UNICODE_TODECIMAL(ch)",
         "content": [
           "_PyUnicode_ToDecimalDigit(ch)"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "Py_UNICODE_TODIGIT(ch)",
         "content": [
           "_PyUnicode_ToDigit(ch)"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "Py_UNICODE_TONUMERIC(ch)",
         "content": [
           "_PyUnicode_ToNumeric(ch)"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "Py_UNICODE_ISALPHA(ch)",
         "content": [
           "_PyUnicode_IsAlpha(ch)"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "Py_UNICODE_ISALNUM(ch)",
         "content": [
           "(Py_UNICODE_ISALPHA(ch) || Py_UNICODE_ISDECIMAL(ch) || Py_UNICODE_ISDIGIT(ch) || Py_UNICODE_ISNUMERIC(ch))"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "Py_UNICODE_COPY(target, source, length)",
         "content": [
           "memcpy((target), (source), (length) * sizeof(Py_UNICODE))"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "Py_UNICODE_FILL(target, value, length)",
         "content": [
           "do { Py_ssize_t i_; Py_UNICODE *t_ = (target); Py_UNICODE v_ = (value); for (i_ = 0; i_ < (length); i_++) t_[i_] = v_; } while (0)"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "Py_UNICODE_IS_SURROGATE(ch)",
         "content": [
           "(0xD800 <= (ch) && (ch) <= 0xDFFF)"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "Py_UNICODE_IS_HIGH_SURROGATE(ch)",
         "content": [
           "(0xD800 <= (ch) && (ch) <= 0xDBFF)"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "Py_UNICODE_IS_LOW_SURROGATE(ch)",
         "content": [
           "(0xDC00 <= (ch) && (ch) <= 0xDFFF)"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "Py_UNICODE_JOIN_SURROGATES(high, low)",
         "content": [
           "(((((Py_UCS4)(high)&0x03FF) << 10) | ((Py_UCS4)(low)&0x03FF)) + 0x10000)"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "Py_UNICODE_HIGH_SURROGATE(ch)",
         "content": [
           "(0xD800 - (0x10000 >> 10) + ((ch) >> 10))"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "Py_UNICODE_LOW_SURROGATE(ch)",
         "content": [
           "(0xDC00 + ((ch)&0x3FF))"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "Py_UNICODE_MATCH(string, offset, substring)",
         "content": [
           "((*((string)->wstr + (offset)) == *((substring)->wstr)) && ((*((string)->wstr + (offset) + (substring)->wstr_length - 1) == *((substring)->wstr + (substring)->wstr_length - 1))) && !memcmp((string)->wstr + (offset), (substring)->wstr, (substring)->wstr_length * sizeof(Py_UNICODE)))"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "PyUnicode_WSTR_LENGTH(op)",
         "content": [
           "(PyUnicode_IS_COMPACT_ASCII(op) ? ((PyASCIIObject *)op)->length : ((PyCompactUnicodeObject *)op)->wstr_length)"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "PyUnicode_GET_SIZE(op)",
         "content": [
           "(assert(PyUnicode_Check(op)), (((PyASCIIObject *)(op))->wstr) ? PyUnicode_WSTR_LENGTH(op) : ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)), assert(((PyASCIIObject *)(op))->wstr), PyUnicode_WSTR_LENGTH(op)))"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "PyUnicode_GET_DATA_SIZE(op)",
         "content": [
           "(PyUnicode_GET_SIZE(op) * Py_UNICODE_SIZE)"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "PyUnicode_AS_UNICODE(op)",
         "content": [
           "(assert(PyUnicode_Check(op)), (((PyASCIIObject *)(op))->wstr) ? (((PyASCIIObject *)(op))->wstr) : PyUnicode_AsUnicode(_PyObject_CAST(op)))"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "PyUnicode_AS_DATA(op)",
         "content": [
           "((const char *)(PyUnicode_AS_UNICODE(op)))"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "SSTATE_NOT_INTERNED",
         "content": [
           "0"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "SSTATE_INTERNED_MORTAL",
         "content": [
           "1"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "SSTATE_INTERNED_IMMORTAL",
         "content": [
           "2"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "PyUnicode_IS_ASCII(op)",
         "content": [
           "(assert(PyUnicode_Check(op)), assert(PyUnicode_IS_READY(op)), ((PyASCIIObject *)op)->state.ascii)"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "PyUnicode_IS_COMPACT(op)",
         "content": [
           "(((PyASCIIObject *)(op))->state.compact)"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "PyUnicode_IS_COMPACT_ASCII(op)",
         "content": [
           "(((PyASCIIObject *)op)->state.ascii && PyUnicode_IS_COMPACT(op))"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "PyUnicode_1BYTE_DATA(op)",
         "content": [
           "((Py_UCS1 *)PyUnicode_DATA(op))"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "PyUnicode_2BYTE_DATA(op)",
         "content": [
           "((Py_UCS2 *)PyUnicode_DATA(op))"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "PyUnicode_4BYTE_DATA(op)",
         "content": [
           "((Py_UCS4 *)PyUnicode_DATA(op))"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "PyUnicode_KIND(op)",
         "content": [
           "(assert(PyUnicode_Check(op)), assert(PyUnicode_IS_READY(op)), ((PyASCIIObject *)(op))->state.kind)"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "_PyUnicode_COMPACT_DATA(op)",
         "content": [
           "(PyUnicode_IS_ASCII(op) ? ((void *)((PyASCIIObject *)(op) + 1)) : ((void *)((PyCompactUnicodeObject *)(op) + 1)))"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "_PyUnicode_NONCOMPACT_DATA(op)",
         "content": [
           "(assert(((PyUnicodeObject *)(op))->data.any), ((((PyUnicodeObject *)(op))->data.any)))"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "PyUnicode_DATA(op)",
         "content": [
           "(assert(PyUnicode_Check(op)), PyUnicode_IS_COMPACT(op) ? _PyUnicode_COMPACT_DATA(op) : _PyUnicode_NONCOMPACT_DATA(op))"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "PyUnicode_WRITE(kind, data, index, value)",
         "content": [
           "do { switch ((kind)) { case PyUnicode_1BYTE_KIND: { ((Py_UCS1 *)(data))[(index)] = (Py_UCS1)(value); break; } case PyUnicode_2BYTE_KIND: { ((Py_UCS2 *)(data))[(index)] = (Py_UCS2)(value); break; } default: { assert((kind) == PyUnicode_4BYTE_KIND); ((Py_UCS4 *)(data))[(index)] = (Py_UCS4)(value); } } } while (0)"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "PyUnicode_READ(kind, data, index)",
         "content": [
           "((Py_UCS4)((kind) == PyUnicode_1BYTE_KIND ? ((const Py_UCS1 *)(data))[(index)] : ((kind) == PyUnicode_2BYTE_KIND ? ((const Py_UCS2 *)(data))[(index)] : ((const Py_UCS4 *)(data))[(index)])))"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "PyUnicode_READ_CHAR(unicode, index)",
         "content": [
           "(assert(PyUnicode_Check(unicode)), assert(PyUnicode_IS_READY(unicode)), (Py_UCS4)(PyUnicode_KIND((unicode)) == PyUnicode_1BYTE_KIND ? ((const Py_UCS1 *)(PyUnicode_DATA((unicode))))[(index)] : (PyUnicode_KIND((unicode)) == PyUnicode_2BYTE_KIND ? ((const Py_UCS2 *)(PyUnicode_DATA( (unicode))))[(index)] : ((const Py_UCS4 *)(PyUnicode_DATA( (unicode))))[(index)])))"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "PyUnicode_GET_LENGTH(op)",
         "content": [
           "(assert(PyUnicode_Check(op)), assert(PyUnicode_IS_READY(op)), ((PyASCIIObject *)(op))->length)"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "PyUnicode_IS_READY(op)",
         "content": [
           "(((PyASCIIObject *)op)->state.ready)"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "PyUnicode_READY(op)",
         "content": [
           "(assert(PyUnicode_Check(op)), (PyUnicode_IS_READY(op) ? 0 : _PyUnicode_Ready(_PyObject_CAST(op))))"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "PyUnicode_MAX_CHAR_VALUE(op)",
         "content": [
           "(assert(PyUnicode_IS_READY(op)), (PyUnicode_IS_ASCII(op) ? (0x7f) : (PyUnicode_KIND(op) == PyUnicode_1BYTE_KIND ? (0xffU) : (PyUnicode_KIND(op) == PyUnicode_2BYTE_KIND ? (0xffffU) : (0x10ffffU)))))"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "_PyUnicodeWriter_Prepare(WRITER, LENGTH, MAXCHAR)",
         "content": [
           "(((MAXCHAR) <= (WRITER)->maxchar && (LENGTH) <= (WRITER)->size - (WRITER)->pos) ? 0 : (((LENGTH) == 0) ? 0 : _PyUnicodeWriter_PrepareInternal( (WRITER), (LENGTH), (MAXCHAR))))"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "_PyUnicodeWriter_PrepareKind(WRITER, KIND)",
         "content": [
           "(assert((KIND) != PyUnicode_WCHAR_KIND), (KIND) <= (WRITER)->kind ? 0 : _PyUnicodeWriter_PrepareKindInternal((WRITER), (KIND)))"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "_PyUnicode_AsStringAndSize",
         "content": [
           "PyUnicode_AsUTF8AndSize"
         ]
       },
       {
-        "syntaxType": "define",
+        "syntax_type": "define",
         "name": "_PyUnicode_AsString",
         "content": [
           "PyUnicode_AsUTF8"
@@ -433,7 +433,7 @@
   "enums": {
     "elements": [
       {
-        "syntaxType": "enum",
+        "syntax_type": "enum",
         "name": "PyUnicode_Kind",
         "content": [
           "PyUnicode_WCHAR_KIND = 0",
@@ -443,7 +443,7 @@
         ]
       },
       {
-        "syntaxType": "enum",
+        "syntax_type": "enum",
         "name": "PyUnicode_Kind_AA",
         "content": [
           "PyUnicode_WCHAR_KIND_AA = 0",
@@ -453,7 +453,7 @@
         ]
       },
       {
-        "syntaxType": "enum",
+        "syntax_type": "enum",
         "name": "PyUnicode_Kind_BB",
         "content": [
           "PyUnicode_WCHAR_KIND_BB = 0",
@@ -467,70 +467,70 @@
   "variables": {
     "elements": [
       {
-        "syntaxType": "variable",
+        "syntax_type": "variable",
         "name": "test_var_int_empty",
         "content": [
           "int test_var_int_empty;"
         ]
       },
       {
-        "syntaxType": "variable",
+        "syntax_type": "variable",
         "name": "test_var_float_empty",
         "content": [
           "float test_var_float_empty;"
         ]
       },
       {
-        "syntaxType": "variable",
+        "syntax_type": "variable",
         "name": "test_var_char_empty",
         "content": [
           "char test_var_char_empty;"
         ]
       },
       {
-        "syntaxType": "variable",
+        "syntax_type": "variable",
         "name": "test_var_int",
         "content": [
           "int test_var_int = 10000;"
         ]
       },
       {
-        "syntaxType": "variable",
+        "syntax_type": "variable",
         "name": "test_var_int_expr",
         "content": [
           "int test_var_int_expr = test_var_int + 222;"
         ]
       },
       {
-        "syntaxType": "variable",
+        "syntax_type": "variable",
         "name": "test_var_float",
         "content": [
           "int test_var_float = 3.14;"
         ]
       },
       {
-        "syntaxType": "variable",
+        "syntax_type": "variable",
         "name": "test_var_char",
         "content": [
           "int test_var_char = 'aaa';"
         ]
       },
       {
-        "syntaxType": "variable",
+        "syntax_type": "variable",
         "name": "testc",
         "content": [
           "char test_a, test_b, testc;"
         ]
       },
       {
-        "syntaxType": "variable",
+        "syntax_type": "variable",
         "name": "x",
         "content": [
           "int x = 5, y = 6, z = 50;"
         ]
       },
       {
-        "syntaxType": "variable",
+        "syntax_type": "variable",
         "name": "xx",
         "content": [
           "int xx = 5 + 50 * 100 + 3600 * 24 + 3600 * 1 - 3600 * 1 + 3600 * 24 - 3600 * 24 + 7200 * 1 - 7200 * 1;"
@@ -541,7 +541,7 @@
   "structs": {
     "elements": [
       {
-        "syntaxType": "struct",
+        "syntax_type": "struct",
         "name": "PyASCIIObject",
         "content": [
           "typedef struct {\n",
@@ -560,7 +560,7 @@
         ]
       },
       {
-        "syntaxType": "struct",
+        "syntax_type": "struct",
         "name": "PyCompactUnicodeObject",
         "content": [
           "typedef struct {\n",
@@ -572,7 +572,7 @@
         ]
       },
       {
-        "syntaxType": "struct",
+        "syntax_type": "struct",
         "name": "PyUnicodeObject",
         "content": [
           "typedef struct {\n",
@@ -587,7 +587,7 @@
         ]
       },
       {
-        "syntaxType": "struct",
+        "syntax_type": "struct",
         "name": "_PyUnicodeWriter",
         "content": [
           "typedef struct {\n",

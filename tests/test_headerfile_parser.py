@@ -18,7 +18,7 @@ class TestHeaderFileParser(unittest.TestCase):
     def test_includes(self):
         includes = self.parser.includes
         element = includes.elements[0]
-        self.assertEqual(element.syntaxType, CppSyntaxType.INCLUDE)
+        self.assertEqual(element.syntax_type, CppSyntaxType.INCLUDE)
         self.assertIsInstance(element.name, str)
         self.assertEqual(element.content, [])
 
@@ -70,21 +70,21 @@ class TestHeaderFileParser(unittest.TestCase):
     def test_defines(self):
         defines = self.parser.defines
         element = defines.elements[0]
-        self.assertEqual(element.syntaxType, CppSyntaxType.DEFINE)
+        self.assertEqual(element.syntax_type, CppSyntaxType.DEFINE)
         self.assertIsInstance(element.name, str)
         self.assertIsInstance(element.content, list)
 
     def test_enums(self):
         enums_ = self.parser.enums
         element = enums_.elements[0]
-        self.assertEqual(element.syntaxType, CppSyntaxType.ENUM)
+        self.assertEqual(element.syntax_type, CppSyntaxType.ENUM)
         self.assertIsInstance(element.name, str)
         self.assertIsInstance(element.content, list)
 
     def test_variables(self):
         variables = self.parser_variables.variables
         element = variables.elements[0]
-        self.assertEqual(element.syntaxType, CppSyntaxType.VARIABLE)
+        self.assertEqual(element.syntax_type, CppSyntaxType.VARIABLE)
         self.assertIsInstance(element.name, str)
         self.assertIsInstance(element.content, list)
 
@@ -147,7 +147,7 @@ class TestHeaderFileParser(unittest.TestCase):
     def test_structs(self):
         structs = self.parser_structs.structs
         element = structs.elements[0]
-        self.assertEqual(element.syntaxType, CppSyntaxType.STRUCT)
+        self.assertEqual(element.syntax_type, CppSyntaxType.STRUCT)
         self.assertIsInstance(element.name, str)
         self.assertIsInstance(element.content, list)
 

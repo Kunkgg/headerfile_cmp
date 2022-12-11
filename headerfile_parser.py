@@ -26,7 +26,7 @@ class CppSyntaxType(Enum):
 
 @dataclass(unsafe_hash=True)
 class SyntaxElement:
-    syntaxType: CppSyntaxType = field(hash=False)
+    syntax_type: CppSyntaxType = field(hash=False)
     name: str
     content: List[str] = field(repr=False, hash=False)
 

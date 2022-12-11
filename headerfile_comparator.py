@@ -9,7 +9,7 @@ from typing import Dict, List, Tuple
 
 import common.init_log
 from common.utils import readlines
-from headerfile_parser import ParsedHeaderFile, CppSyntaxType
+from headerfile_parser import ParsedHeaderFile, CppSyntaxType, SyntaxElement
 
 logger = logging.getLogger(__name__)
 
@@ -34,9 +34,9 @@ class ComparedSyntaxElement:
 
 @dataclass
 class ComparedSyntaxElementCollection:
-    SyntaxType: CppSyntaxType
-    from_onlys: List = field(default_factory=list)
-    to_onlys: List = field(default_factory=list)
+    syntax_type: CppSyntaxType
+    from_onlys: List[SyntaxElement] = field(default_factory=list)
+    to_onlys: List[SyntaxElement] = field(default_factory=list)
     intersection: List[ComparedSyntaxElement] = field(default_factory=list)
     is_same: bool = field(init=False)
     diff_count: int = field(init=False)
@@ -218,7 +218,7 @@ class HeaderFileComparator:
         # to_onlys: List = field(default_factory=list)
         # intersection: List[ComparedSyntaxElement] = field(default_factory=list)
         return ComparedSyntaxElementCollection(
-            SyntaxType=CppSyntaxType.INCLUDE,
+            syntax_type=syntax_type,
             from_onlys=from_onlys,
             to_onlys=to_onlys,
             intersection=intersection_compares,
