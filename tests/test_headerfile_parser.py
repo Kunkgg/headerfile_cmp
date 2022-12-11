@@ -1,6 +1,6 @@
 import unittest
 
-from headerfile_parser import CppSyntaxType
+from headerfile.parser import CppSyntaxType
 
 from prepare import prepare_parser_sample
 

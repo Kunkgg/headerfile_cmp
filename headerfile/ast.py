@@ -2,7 +2,6 @@ import logging
 
 import CppHeaderParser
 
-import common.init_log
 
 logger = logging.getLogger(__name__)
 

@@ -7,9 +7,8 @@ from dataclasses import dataclass, field, asdict
 from functools import cached_property, partial
 from typing import Dict, List, Tuple
 
-import common.init_log
 from common.utils import readlines
-from headerfile_parser import ParsedHeaderFile, CppSyntaxType, SyntaxElement
+from headerfile.parser import ParsedHeaderFile, CppSyntaxType, SyntaxElement
 
 logger = logging.getLogger(__name__)
 
@@ -297,21 +296,3 @@ class HeaderFileComparator:
     def cmp_structs_intersection(self):
         return self.cmp_syntax_element_collection_intersection(CppSyntaxType.STRUCT)
 
-
-if __name__ == "__main__":
-    from tests.prepare import prepare_comparator_sample
-
-    subdir = "sample_is_same"
-
-    (
-        cmptor_cp,
-        cmptor_modi,
-        cmptor_modi_seq,
-        cmptor_modi_add,
-        cmptor_modi_del,
-    ) = prepare_comparator_sample(subdir)
-
-    print(cmptor_modi.compare())
-    cmp_dict = cmptor_modi.to_dict()
-    fn_json = "./tests/fixtures/compared_sample.json"
-    cmptor_modi.to_json(fn_json)

@@ -9,9 +9,8 @@ from typing import Dict, List
 
 import CppHeaderParser
 
-import common.init_log
 from common.utils import readlines
-from headerfile_formatter import combine_splited_line
+from headerfile.formatter import combine_splited_line
 
 logger = logging.getLogger(__name__)
 
@@ -256,12 +255,3 @@ class HeaderFileParser:
         content = struct_content(line_number)
         logger.debug(f"Extracted struct: {name}")
         return SyntaxElement(CppSyntaxType.STRUCT, name, content)
-
-
-if __name__ == "__main__":
-    fn = "./tests/fixtures/sample_normalized.h"
-    fn_json = "./tests/fixtures/parsed_sample_normalized.json"
-    parser = HeaderFileParser(fn)
-    print(parser.parse())
-    parsed_dict = parser.to_dict()
-    parser.to_json(fn_json)

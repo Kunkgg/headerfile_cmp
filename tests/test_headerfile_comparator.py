@@ -2,7 +2,7 @@ import unittest
 
 from prepare import prepare_comparator_sample
 from prepare import prepare_comparator_sample_seq_inner
-from headerfile_parser import CppSyntaxType
+from headerfile.parser import CppSyntaxType
 
 
 class TestHeaderFileComparator(unittest.TestCase):

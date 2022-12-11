@@ -7,7 +7,6 @@ import subprocess
 import charset_normalizer
 import clang_format
 
-import common.init_log
 
 logger = logging.getLogger(__name__)
 
@@ -131,9 +130,3 @@ def normalize_clike(input: str, output: str):
 
     except (FileNotFoundError, UnicodeDecodeError, UnicodeEncodeError) as e:
         logger.error(e)
-
-
-if __name__ == "__main__":
-    fn_sample = "./tests/fixtures/sample.h"
-    fn_sample_normalized = "./tests/fixtures/sample_normalized.h"
-    normalize_clike(fn_sample, fn_sample_normalized)

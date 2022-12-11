@@ -1,9 +1,9 @@
 import pathlib
 
-from headerfile_ast import dump_ast
-from headerfile_formatter import normalize_clike
-from headerfile_parser import HeaderFileParser
-from headerfile_comparator import HeaderFileComparator
+from headerfile.ast import dump_ast
+from headerfile.formatter import normalize_clike
+from headerfile.parser import HeaderFileParser
+from headerfile.comparator import HeaderFileComparator
 
 FIXTURES_PATH = pathlib.Path("./tests/fixtures")
 
