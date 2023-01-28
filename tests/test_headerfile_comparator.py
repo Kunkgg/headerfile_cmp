@@ -1,7 +1,9 @@
 import unittest
+import pathlib
 
 from prepare import prepare_comparator_sample
 from prepare import prepare_comparator_sample_seq_inner
+from prepare import FIXTURES_PATH
 from headerfile.parser import CppSyntaxType
 
 
@@ -162,3 +164,32 @@ class TestHeaderFileComparator(unittest.TestCase):
         self.assertFalse(cmptor_modi_add.cmp_structs.is_same)
         self.assertFalse(cmptor_modi_del.cmp_structs.is_same)
 
+    def test_to_json(self):
+        subdir = "sample_is_same"
+        (
+            cmptor_cp,
+            cmptor_modi,
+            cmptor_modi_seq,
+            cmptor_modi_add,
+            cmptor_modi_del,
+        ) = prepare_comparator_sample(subdir)
+
+        subdir_path = FIXTURES_PATH / subdir
+
+        fp_cp = subdir_path / 'compared_copy.json'
+        fp_modi = subdir_path / 'compared_modified.json'
+        fp_modi_seq = subdir_path / 'compared_modified_sequence.json'
+        fp_modi_add = subdir_path / 'compared_modified_add.json'
+        fp_modi_del = subdir_path / 'compared_modified_del.json'
+
+        cmptor_cp.to_json(str(fp_cp))
+        cmptor_modi.to_json(str(fp_modi))
+        cmptor_modi_seq.to_json(str(fp_modi_seq))
+        cmptor_modi_add.to_json(str(fp_modi_add))
+        cmptor_modi_del.to_json(str(fp_modi_del))
+
+        self.assertTrue(fp_cp.is_file())
+        self.assertTrue(fp_modi.is_file())
+        self.assertTrue(fp_modi_seq.is_file())
+        self.assertTrue(fp_modi_add.is_file())
+        self.assertTrue(fp_modi_del.is_file())
